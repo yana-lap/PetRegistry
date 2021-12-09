@@ -14,22 +14,5 @@ namespace Приложение
         {
 
         }
-        public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
-        {
-
-        }
-        private void ExportDataToExcel(string pathToFile, string[] data)
-        {
-
-        }
-        public void GetRabiesVaccineData(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
-        {
-
-        }
-        private void ExportRabiesRegistryToWord(string pathToFile, string[] data)
-        {
-            //в ворд регистр вакцинирванных
-
-        }
     }
 }

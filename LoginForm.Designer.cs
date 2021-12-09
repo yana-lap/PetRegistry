@@ -63,7 +63,7 @@ namespace PetRegistry
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(144, 125);
+            this.loginLabel.Location = new System.Drawing.Point(218, 105);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(51, 17);
             this.loginLabel.TabIndex = 3;
@@ -72,7 +72,7 @@ namespace PetRegistry
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(134, 187);
+            this.passwordLabel.Location = new System.Drawing.Point(218, 167);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(61, 17);
             this.passwordLabel.TabIndex = 4;
