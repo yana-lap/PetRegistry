@@ -11,7 +11,7 @@ namespace Приложение
 
         }
 
-        private void CheckAuthorization(string password, string passwordFromServer)
+        public void CheckAuthorization(string password, string passwordFromServer)
         {
 
         }

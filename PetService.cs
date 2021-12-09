@@ -7,7 +7,10 @@ namespace Приложение
     class PetService
     {
 
-        
+        public void DeleteCard(long cardNumber)
+        {         
+
+        }
         public void GetPets(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
 
@@ -23,10 +26,6 @@ namespace Приложение
         public void ChangePetData(long cardNumber, string[] data)
         {
  
-        }
-        public void DeleteCard(long cardNumber)
-        {
-
         }
     }
 }
