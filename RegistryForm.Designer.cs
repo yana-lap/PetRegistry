@@ -29,68 +29,79 @@ namespace PetRegistry
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.реестрЖивотныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.реестрВладелцевToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
+            this.addingButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.sortButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // tabControl1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.реестрЖивотныхToolStripMenuItem,
-            this.реестрВладелцевToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 449);
+            this.tabControl1.TabIndex = 0;
             // 
-            // реестрЖивотныхToolStripMenuItem
+            // tabPage1
             // 
-            this.реестрЖивотныхToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.реестрЖивотныхToolStripMenuItem.Name = "реестрЖивотныхToolStripMenuItem";
-            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.реестрЖивотныхToolStripMenuItem.Text = "Реестр животных";
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(792, 423);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // реестрВладелцевToolStripMenuItem
+            // tabPage2
             // 
-            this.реестрВладелцевToolStripMenuItem.Name = "реестрВладелцевToolStripMenuItem";
-            this.реестрВладелцевToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.реестрВладелцевToolStripMenuItem.Text = "Реестр владелцев";
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.sortButton);
+            this.tabPage2.Controls.Add(this.deleteButton);
+            this.tabPage2.Controls.Add(this.openButton);
+            this.tabPage2.Controls.Add(this.addingButton);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(792, 423);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Реестр животных";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(12, 33);
+            this.label1.Location = new System.Drawing.Point(8, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Реестр животных";
+            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Реестр жвотных";
             // 
-            // addButton
+            // addingButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.CadetBlue;
-            this.addButton.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addButton.Location = new System.Drawing.Point(17, 61);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
-            this.addButton.TabIndex = 2;
-            this.addButton.Text = "Добавить";
-            this.addButton.UseVisualStyleBackColor = false;
+            this.addingButton.BackColor = System.Drawing.Color.CadetBlue;
+            this.addingButton.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
+            this.addingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addingButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addingButton.Location = new System.Drawing.Point(13, 31);
+            this.addingButton.Name = "addingButton";
+            this.addingButton.Size = new System.Drawing.Size(75, 23);
+            this.addingButton.TabIndex = 1;
+            this.addingButton.Text = "Добавить";
+            this.addingButton.UseVisualStyleBackColor = false;
             // 
             // openButton
             // 
@@ -98,10 +109,10 @@ namespace PetRegistry
             this.openButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.openButton.Location = new System.Drawing.Point(98, 61);
+            this.openButton.Location = new System.Drawing.Point(94, 31);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(75, 23);
-            this.openButton.TabIndex = 3;
+            this.openButton.TabIndex = 2;
             this.openButton.Text = "Открыть";
             this.openButton.UseVisualStyleBackColor = false;
             // 
@@ -111,10 +122,10 @@ namespace PetRegistry
             this.deleteButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.deleteButton.Location = new System.Drawing.Point(179, 61);
+            this.deleteButton.Location = new System.Drawing.Point(175, 31);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 4;
+            this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
@@ -124,10 +135,10 @@ namespace PetRegistry
             this.sortButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.sortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.sortButton.Location = new System.Drawing.Point(610, 61);
+            this.sortButton.Location = new System.Drawing.Point(613, 31);
             this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(178, 23);
-            this.sortButton.TabIndex = 5;
+            this.sortButton.Size = new System.Drawing.Size(171, 23);
+            this.sortButton.TabIndex = 4;
             this.sortButton.Text = "Параметры фильтрации...";
             this.sortButton.UseVisualStyleBackColor = false;
             // 
@@ -136,10 +147,10 @@ namespace PetRegistry
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 348);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.Size = new System.Drawing.Size(771, 354);
+            this.dataGridView1.TabIndex = 5;
             // 
             // Form2
             // 
@@ -147,33 +158,27 @@ namespace PetRegistry
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.sortButton);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.openButton);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form2";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "Приложение";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem реестрЖивотныхToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem реестрВладелцевToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button openButton;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button sortButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button sortButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button openButton;
+        private System.Windows.Forms.Button addingButton;
     }
 }
