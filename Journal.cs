@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Приложение
 {
-    class Log
+    class Journal
     {
         public string OperationType;
         public User User;
