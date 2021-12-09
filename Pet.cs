@@ -16,7 +16,8 @@ namespace Приложение
         public bool Chipped;
         public string ChipNum;
         public int OwnerType;
-        public User Owner;
+        public User OwnerUser;
+        public Organization OwnerOrganization;
 
         internal Pet(string Breed, string Category, string Wool, string Size,
         string Name, string Photo, string Gender, bool Chipped, string ChipNum, int OwnerType,
@@ -43,15 +44,5 @@ namespace Приложение
         {
 
         }
-
-        public void ExportPetCardToWord(string pathToFile, long cardNumber, long documentType)
-        {
-
-        }
-        private void ExportDataToWord(string pathToFile, string[] data, long documentType)
-        {
-
-        }
-
     }
 }

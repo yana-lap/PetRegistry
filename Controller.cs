@@ -17,7 +17,11 @@ namespace Приложение
         public void OpenPetCard(string cardNumber)
         {
 
-        } 
+        }
+        private bool roleIsMaching(string operation)
+        {
+            return true;
+        }
         public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
 
@@ -42,10 +46,6 @@ namespace Приложение
         public void DeletePetCard(string cardNumber)
         {
 
-        }
-        private bool roleIsMaching(string operation)
-        {
-            return true;
-        }        
+        }     
     }
 }
