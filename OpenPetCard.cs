@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PetRegistry
 {
-    public partial class AddPet : Form
+    public partial class OpenPetCard : Form
     {
-        public AddPet()
+        public OpenPetCard()
         {
             InitializeComponent();
         }

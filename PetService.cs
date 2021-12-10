@@ -14,14 +14,13 @@ namespace PetRegistry
         }
         public static DataTable GetPets(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
-            string query = "select * from Pets";
-            DataTable data = Database.ExecuteQuery(query);
-
-            return data;
+            string query = "select * from Pets;";
+            return Database.ExecuteQuery(query);
         }
-        public static void GetPetCard(long cardNumber)
+        public static DataTable GetPetCard(int cardNumber)
         {
-
+            string query = "select * from Pets Where IDPet ='"+cardNumber+"';";
+            return Database.ExecuteQuery(query);         
         }
         public static void AddNewPet(Pet newPet)
         {

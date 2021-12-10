@@ -1,6 +1,6 @@
 ﻿namespace PetRegistry
 {
-    partial class AddPet
+    partial class OpenPetCard
     {
         /// <summary>
         /// Required designer variable.
@@ -35,20 +35,27 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.woolLabel = new System.Windows.Forms.Label();
-            this.chippedLabel = new System.Windows.Forms.Label();
             this.breedTextBox = new System.Windows.Forms.TextBox();
             this.breedLabel = new System.Windows.Forms.Label();
             this.NumberTextBox = new System.Windows.Forms.TextBox();
             this.chippedNameLabel = new System.Windows.Forms.Label();
             this.typeTextBox = new System.Windows.Forms.TextBox();
             this.typeLabel = new System.Windows.Forms.Label();
-            this.chippedCheckBox = new System.Windows.Forms.CheckBox();
             this.ownerTextBox = new System.Windows.Forms.TextBox();
             this.ownerLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.genderTextBox = new System.Windows.Forms.ComboBox();
             this.sizeTextBox = new System.Windows.Forms.ComboBox();
             this.woolTextBox = new System.Windows.Forms.ComboBox();
+            this.nameLabelValue = new System.Windows.Forms.Label();
+            this.categoryLabelValue = new System.Windows.Forms.Label();
+            this.breedLabelValue = new System.Windows.Forms.Label();
+            this.genderLabelValue = new System.Windows.Forms.Label();
+            this.sizeLabelValue = new System.Windows.Forms.Label();
+            this.woolLabelValue = new System.Windows.Forms.Label();
+            this.chippedNameLabelValue = new System.Windows.Forms.Label();
+            this.typeLabelValue = new System.Windows.Forms.Label();
+            this.ownerLabelValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // categoryLabel
@@ -122,17 +129,6 @@
             this.woolLabel.TabIndex = 12;
             this.woolLabel.Text = "Размер шерсти";
             // 
-            // chippedLabel
-            // 
-            this.chippedLabel.AutoSize = true;
-            this.chippedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chippedLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.chippedLabel.Location = new System.Drawing.Point(40, 280);
-            this.chippedLabel.Name = "chippedLabel";
-            this.chippedLabel.Size = new System.Drawing.Size(93, 20);
-            this.chippedLabel.TabIndex = 14;
-            this.chippedLabel.Text = "Есть чип";
-            // 
             // breedTextBox
             // 
             this.breedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -155,7 +151,7 @@
             // NumberTextBox
             // 
             this.NumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NumberTextBox.Location = new System.Drawing.Point(281, 321);
+            this.NumberTextBox.Location = new System.Drawing.Point(281, 279);
             this.NumberTextBox.Name = "NumberTextBox";
             this.NumberTextBox.Size = new System.Drawing.Size(243, 22);
             this.NumberTextBox.TabIndex = 19;
@@ -165,7 +161,7 @@
             this.chippedNameLabel.AutoSize = true;
             this.chippedNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chippedNameLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.chippedNameLabel.Location = new System.Drawing.Point(40, 320);
+            this.chippedNameLabel.Location = new System.Drawing.Point(40, 278);
             this.chippedNameLabel.Name = "chippedNameLabel";
             this.chippedNameLabel.Size = new System.Drawing.Size(119, 20);
             this.chippedNameLabel.TabIndex = 18;
@@ -174,7 +170,7 @@
             // typeTextBox
             // 
             this.typeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.typeTextBox.Location = new System.Drawing.Point(281, 363);
+            this.typeTextBox.Location = new System.Drawing.Point(281, 321);
             this.typeTextBox.Name = "typeTextBox";
             this.typeTextBox.Size = new System.Drawing.Size(243, 22);
             this.typeTextBox.TabIndex = 21;
@@ -184,25 +180,16 @@
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.typeLabel.Location = new System.Drawing.Point(40, 362);
+            this.typeLabel.Location = new System.Drawing.Point(40, 320);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(149, 20);
             this.typeLabel.TabIndex = 20;
             this.typeLabel.Text = "Тип владельца";
             // 
-            // chippedCheckBox
-            // 
-            this.chippedCheckBox.AutoSize = true;
-            this.chippedCheckBox.Location = new System.Drawing.Point(355, 280);
-            this.chippedCheckBox.Name = "chippedCheckBox";
-            this.chippedCheckBox.Size = new System.Drawing.Size(18, 17);
-            this.chippedCheckBox.TabIndex = 22;
-            this.chippedCheckBox.UseVisualStyleBackColor = true;
-            // 
             // ownerTextBox
             // 
             this.ownerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ownerTextBox.Location = new System.Drawing.Point(281, 405);
+            this.ownerTextBox.Location = new System.Drawing.Point(281, 363);
             this.ownerTextBox.Name = "ownerTextBox";
             this.ownerTextBox.Size = new System.Drawing.Size(243, 22);
             this.ownerTextBox.TabIndex = 24;
@@ -212,7 +199,7 @@
             this.ownerLabel.AutoSize = true;
             this.ownerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ownerLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.ownerLabel.Location = new System.Drawing.Point(40, 404);
+            this.ownerLabel.Location = new System.Drawing.Point(40, 362);
             this.ownerLabel.Name = "ownerLabel";
             this.ownerLabel.Size = new System.Drawing.Size(101, 20);
             this.ownerLabel.TabIndex = 23;
@@ -232,6 +219,10 @@
             // genderTextBox
             // 
             this.genderTextBox.FormattingEnabled = true;
+            this.genderTextBox.Items.AddRange(new object[] {
+            "Мужской",
+            "Женский",
+            "Нет"});
             this.genderTextBox.Location = new System.Drawing.Point(281, 153);
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(243, 24);
@@ -240,6 +231,10 @@
             // sizeTextBox
             // 
             this.sizeTextBox.FormattingEnabled = true;
+            this.sizeTextBox.Items.AddRange(new object[] {
+            "Большой",
+            "Средний",
+            "Маленький"});
             this.sizeTextBox.Location = new System.Drawing.Point(281, 195);
             this.sizeTextBox.Name = "sizeTextBox";
             this.sizeTextBox.Size = new System.Drawing.Size(243, 24);
@@ -248,31 +243,141 @@
             // woolTextBox
             // 
             this.woolTextBox.FormattingEnabled = true;
+            this.woolTextBox.Items.AddRange(new object[] {
+            "Длинный",
+            "Средний",
+            "Короткий"});
             this.woolTextBox.Location = new System.Drawing.Point(281, 237);
             this.woolTextBox.Name = "woolTextBox";
             this.woolTextBox.Size = new System.Drawing.Size(243, 24);
             this.woolTextBox.TabIndex = 28;
             // 
-            // AddPet
+            // nameLabelValue
+            // 
+            this.nameLabelValue.AutoSize = true;
+            this.nameLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.nameLabelValue.Location = new System.Drawing.Point(277, 27);
+            this.nameLabelValue.Name = "nameLabelValue";
+            this.nameLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.nameLabelValue.TabIndex = 29;
+            this.nameLabelValue.Text = "Кличка";
+            // 
+            // categoryLabelValue
+            // 
+            this.categoryLabelValue.AutoSize = true;
+            this.categoryLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.categoryLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.categoryLabelValue.Location = new System.Drawing.Point(277, 69);
+            this.categoryLabelValue.Name = "categoryLabelValue";
+            this.categoryLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.categoryLabelValue.TabIndex = 30;
+            this.categoryLabelValue.Text = "Кличка";
+            // 
+            // breedLabelValue
+            // 
+            this.breedLabelValue.AutoSize = true;
+            this.breedLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.breedLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.breedLabelValue.Location = new System.Drawing.Point(277, 111);
+            this.breedLabelValue.Name = "breedLabelValue";
+            this.breedLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.breedLabelValue.TabIndex = 31;
+            this.breedLabelValue.Text = "Кличка";
+            // 
+            // genderLabelValue
+            // 
+            this.genderLabelValue.AutoSize = true;
+            this.genderLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genderLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.genderLabelValue.Location = new System.Drawing.Point(277, 153);
+            this.genderLabelValue.Name = "genderLabelValue";
+            this.genderLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.genderLabelValue.TabIndex = 32;
+            this.genderLabelValue.Text = "Кличка";
+            // 
+            // sizeLabelValue
+            // 
+            this.sizeLabelValue.AutoSize = true;
+            this.sizeLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sizeLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.sizeLabelValue.Location = new System.Drawing.Point(277, 195);
+            this.sizeLabelValue.Name = "sizeLabelValue";
+            this.sizeLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.sizeLabelValue.TabIndex = 33;
+            this.sizeLabelValue.Text = "Кличка";
+            // 
+            // woolLabelValue
+            // 
+            this.woolLabelValue.AutoSize = true;
+            this.woolLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.woolLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.woolLabelValue.Location = new System.Drawing.Point(277, 237);
+            this.woolLabelValue.Name = "woolLabelValue";
+            this.woolLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.woolLabelValue.TabIndex = 34;
+            this.woolLabelValue.Text = "Кличка";
+            // 
+            // chippedNameLabelValue
+            // 
+            this.chippedNameLabelValue.AutoSize = true;
+            this.chippedNameLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chippedNameLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.chippedNameLabelValue.Location = new System.Drawing.Point(277, 281);
+            this.chippedNameLabelValue.Name = "chippedNameLabelValue";
+            this.chippedNameLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.chippedNameLabelValue.TabIndex = 35;
+            this.chippedNameLabelValue.Text = "Кличка";
+            // 
+            // typeLabelValue
+            // 
+            this.typeLabelValue.AutoSize = true;
+            this.typeLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.typeLabelValue.Location = new System.Drawing.Point(277, 320);
+            this.typeLabelValue.Name = "typeLabelValue";
+            this.typeLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.typeLabelValue.TabIndex = 36;
+            this.typeLabelValue.Text = "Кличка";
+            // 
+            // ownerLabelValue
+            // 
+            this.ownerLabelValue.AutoSize = true;
+            this.ownerLabelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ownerLabelValue.ForeColor = System.Drawing.Color.Black;
+            this.ownerLabelValue.Location = new System.Drawing.Point(277, 362);
+            this.ownerLabelValue.Name = "ownerLabelValue";
+            this.ownerLabelValue.Size = new System.Drawing.Size(75, 20);
+            this.ownerLabelValue.TabIndex = 37;
+            this.ownerLabelValue.Text = "Кличка";
+            // 
+            // OpenPetCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ownerLabelValue);
+            this.Controls.Add(this.typeLabelValue);
+            this.Controls.Add(this.chippedNameLabelValue);
+            this.Controls.Add(this.woolLabelValue);
+            this.Controls.Add(this.sizeLabelValue);
+            this.Controls.Add(this.genderLabelValue);
+            this.Controls.Add(this.breedLabelValue);
+            this.Controls.Add(this.categoryLabelValue);
+            this.Controls.Add(this.nameLabelValue);
             this.Controls.Add(this.woolTextBox);
             this.Controls.Add(this.sizeTextBox);
             this.Controls.Add(this.genderTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ownerTextBox);
             this.Controls.Add(this.ownerLabel);
-            this.Controls.Add(this.chippedCheckBox);
             this.Controls.Add(this.typeTextBox);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.NumberTextBox);
             this.Controls.Add(this.chippedNameLabel);
             this.Controls.Add(this.breedTextBox);
             this.Controls.Add(this.breedLabel);
-            this.Controls.Add(this.chippedLabel);
             this.Controls.Add(this.woolLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.nameLabel);
@@ -280,7 +385,7 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.categoryTextBox);
             this.Controls.Add(this.categoryLabel);
-            this.Name = "AddPet";
+            this.Name = "OpenPetCard";
             this.Text = "Добавить питомца";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,19 +401,26 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label woolLabel;
-        private System.Windows.Forms.Label chippedLabel;
         private System.Windows.Forms.TextBox breedTextBox;
         private System.Windows.Forms.Label breedLabel;
         private System.Windows.Forms.TextBox NumberTextBox;
         private System.Windows.Forms.Label chippedNameLabel;
         private System.Windows.Forms.TextBox typeTextBox;
         private System.Windows.Forms.Label typeLabel;
-        private System.Windows.Forms.CheckBox chippedCheckBox;
         private System.Windows.Forms.TextBox ownerTextBox;
         private System.Windows.Forms.Label ownerLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox genderTextBox;
         private System.Windows.Forms.ComboBox sizeTextBox;
         private System.Windows.Forms.ComboBox woolTextBox;
+        private System.Windows.Forms.Label nameLabelValue;
+        private System.Windows.Forms.Label categoryLabelValue;
+        private System.Windows.Forms.Label breedLabelValue;
+        private System.Windows.Forms.Label genderLabelValue;
+        private System.Windows.Forms.Label sizeLabelValue;
+        private System.Windows.Forms.Label woolLabelValue;
+        private System.Windows.Forms.Label chippedNameLabelValue;
+        private System.Windows.Forms.Label typeLabelValue;
+        private System.Windows.Forms.Label ownerLabelValue;
     }
 }

@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 
 namespace PetRegistry
 {
     public partial class RegistryForm : Form
     {
+        Controller controller = new Controller();
         public RegistryForm()
         {
             InitializeComponent();
@@ -25,12 +25,11 @@ namespace PetRegistry
             openPetButton.Visible = true;
             deletePetButton.Visible = true;
             sortPetButton.Visible = true;
-
-            Controller controller = new Controller();
             DataTable data = controller.OpenPetsRegistry();
 
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Имя", "Имя");
             dataGridView.Columns.Add("Категория", "Категория");
             dataGridView.Columns.Add("Порода", "Порода");
@@ -40,12 +39,28 @@ namespace PetRegistry
             dataGridView.Columns.Add("Номер чипа", "Номер чипа");
             dataGridView.Columns.Add("Владелец", "Владелец");
             dataGridView.Columns.Add("Организация", "Организация");
+            dataGridView.Columns[0].Visible = false;
 
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var row = data.Rows[i];
-                dataGridView.Rows.Add(row[5], row[2], row[1], row[7], row[4], row[3], row[9], row[11], row[12]);
+                dataGridView.Rows.Add(row[0], row[5], row[2], row[1], row[7], row[4], row[3], row[9], row[11], row[12]);
             }
+        }
+
+        private void openPetButton_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
+            controller.OpenPetCard(dataGridView[0, selectedIndex].Value.ToString());
+        }
+
+        private void реестрВладельцевToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("ID", "ID");
+            dataGridView.Columns.Add("Имя", "Имя");
+            dataGridView.Columns.Add("Организация", "Организация");
         }
     }
 }

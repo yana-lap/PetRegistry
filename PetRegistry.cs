@@ -13,9 +13,9 @@ namespace PetRegistry
 
             return data;
         }
-        public DataTable OpenPetCard(string cardNumber)
+        public DataTable OpenPetCard(int cardNumber)
         {
-            return null;
+            return PetService.GetPetCard(cardNumber); 
         }
         
     }

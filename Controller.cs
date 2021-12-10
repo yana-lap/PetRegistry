@@ -8,6 +8,7 @@ namespace PetRegistry
 {
     class Controller
     {
+        PetRegistry petRegistry = new PetRegistry();
         public void Login(string login, string password)
         {
             Authorization authorization = new Authorization();
@@ -23,14 +24,12 @@ namespace PetRegistry
         }  
         public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
         {
-            PetRegistry petRegistry = new PetRegistry();
-
             DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
-
             return data;
         }
         public void OpenPetCard(string cardNumber)
         {
+            DataTable data = petRegistry.OpenPetCard(Int32.Parse(cardNumber));
 
         } 
         public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)

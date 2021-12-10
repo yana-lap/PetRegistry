@@ -11,7 +11,7 @@ namespace PetRegistry
     {
         public static DataTable GetPassword(string login)
         {
-            string query = "SELECT UserPassword From Users Where UserLogin='" + login+ "'";
+            string query = "SELECT UserPassword From Users Where UserLogin='" + login+ "';";
           
             DataTable data = Database.ExecuteQuery(query);
             return data; 

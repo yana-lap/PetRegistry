@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPet.cs">
+    <Compile Include="OpenPetCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPet.Designer.cs">
-      <DependentUpon>AddPet.cs</DependentUpon>
+    <Compile Include="OpenPetCard.Designer.cs">
+      <DependentUpon>OpenPetCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationService.cs" />
@@ -87,8 +87,8 @@
     <Compile Include="Role.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserService.cs" />
-    <EmbeddedResource Include="AddPet.resx">
-      <DependentUpon>AddPet.cs</DependentUpon>
+    <EmbeddedResource Include="OpenPetCard.resx">
+      <DependentUpon>OpenPetCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
