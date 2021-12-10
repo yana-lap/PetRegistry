@@ -64,6 +64,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyPetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyPetsForm.Designer.cs">
+      <DependentUpon>MyPetsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Organization.cs" />
     <Compile Include="OwnerRegistry.cs" />
     <Compile Include="OwnerService.cs" />
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPetsForm.resx">
+      <DependentUpon>MyPetsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

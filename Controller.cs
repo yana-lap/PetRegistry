@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PetRegistry
 {
@@ -20,9 +21,13 @@ namespace PetRegistry
             }
 
         }  
-        public void OpenPetsRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
         {
+            PetRegistry petRegistry = new PetRegistry();
 
+            DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
+
+            return data;
         }
         public void OpenPetCard(string cardNumber)
         {

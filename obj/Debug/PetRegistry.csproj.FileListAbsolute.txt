@@ -10,3 +10,16 @@ C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.csproj.CoreCo
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.exe
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.pdb
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.RegistryForm.resources
+C:\ПИС\PetRegistry\bin\Debug\PetRegistry.exe.config
+C:\ПИС\PetRegistry\bin\Debug\PetRegistry.exe
+C:\ПИС\PetRegistry\bin\Debug\PetRegistry.pdb
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.AssemblyReference.cache
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.AddPet.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.LoginForm.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.Properties.Resources.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.RegistryForm.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.GenerateResource.cache
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.CoreCompileInputs.cache
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.exe
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.pdb
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.MyPetsForm.resources

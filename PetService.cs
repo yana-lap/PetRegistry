@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
 
 namespace PetRegistry
 {
-    class PetService
+    static class PetService
     {
 
-        public void DeleteCard(long cardNumber)
+        public static void DeleteCard(long cardNumber)
         {         
 
         }
-        public void GetPets(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public static DataTable GetPets(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        {
+            string query = "select * from Pets";
+            DataTable data = Database.ExecuteQuery(query);
+
+            return data;
+        }
+        public static void GetPetCard(long cardNumber)
         {
 
         }
-        public void GetPetCard(long cardNumber)
+        public static void AddNewPet(Pet newPet)
         {
 
         }
-        public void AddNewPet(Pet newPet)
-        {
-
-        }
-        public void ChangePetData(long cardNumber, string[] data)
+        public static void ChangePetData(long cardNumber, string[] data)
         {
  
         }
