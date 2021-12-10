@@ -59,6 +59,7 @@ namespace PetRegistry
             this.logInButton.TabIndex = 2;
             this.logInButton.Text = "Войти";
             this.logInButton.UseVisualStyleBackColor = false;
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
             // 
             // loginLabel
             // 

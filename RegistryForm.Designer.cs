@@ -1,7 +1,7 @@
 ﻿
 namespace PetRegistry
 {
-    partial class Form2
+    partial class RegistryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,9 @@ namespace PetRegistry
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ownersSortButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.petsSortButton = new System.Windows.Forms.Button();
@@ -38,15 +41,12 @@ namespace PetRegistry
             this.openButton = new System.Windows.Forms.Button();
             this.addingButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ownersSortButton = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -55,7 +55,7 @@ namespace PetRegistry
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1067, 553);
@@ -67,13 +67,51 @@ namespace PetRegistry
             this.tabPage1.Controls.Add(this.ownersSortButton);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1059, 524);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Реестр владельцев";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(17, 74);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(1028, 436);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // ownersSortButton
+            // 
+            this.ownersSortButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ownersSortButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.ownersSortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ownersSortButton.ForeColor = System.Drawing.Color.CadetBlue;
+            this.ownersSortButton.Location = new System.Drawing.Point(817, 38);
+            this.ownersSortButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ownersSortButton.Name = "ownersSortButton";
+            this.ownersSortButton.Size = new System.Drawing.Size(228, 28);
+            this.ownersSortButton.TabIndex = 5;
+            this.ownersSortButton.Text = "Параметры фильтрации...";
+            this.ownersSortButton.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label2.Location = new System.Drawing.Point(9, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(259, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Реестр владельцев";
             // 
             // tabPage2
             // 
@@ -85,9 +123,9 @@ namespace PetRegistry
             this.tabPage2.Controls.Add(this.addingButton);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1059, 524);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Реестр животных";
@@ -98,7 +136,7 @@ namespace PetRegistry
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 74);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1028, 436);
@@ -111,7 +149,7 @@ namespace PetRegistry
             this.petsSortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.petsSortButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.petsSortButton.Location = new System.Drawing.Point(817, 38);
-            this.petsSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.petsSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.petsSortButton.Name = "petsSortButton";
             this.petsSortButton.Size = new System.Drawing.Size(228, 28);
             this.petsSortButton.TabIndex = 4;
@@ -125,7 +163,7 @@ namespace PetRegistry
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.deleteButton.Location = new System.Drawing.Point(233, 38);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(100, 28);
             this.deleteButton.TabIndex = 3;
@@ -139,7 +177,7 @@ namespace PetRegistry
             this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.openButton.Location = new System.Drawing.Point(125, 38);
-            this.openButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openButton.Margin = new System.Windows.Forms.Padding(4);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(100, 28);
             this.openButton.TabIndex = 2;
@@ -153,7 +191,7 @@ namespace PetRegistry
             this.addingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addingButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.addingButton.Location = new System.Drawing.Point(17, 38);
-            this.addingButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addingButton.Margin = new System.Windows.Forms.Padding(4);
             this.addingButton.Name = "addingButton";
             this.addingButton.Size = new System.Drawing.Size(100, 28);
             this.addingButton.TabIndex = 1;
@@ -172,44 +210,6 @@ namespace PetRegistry
             this.label1.TabIndex = 0;
             this.label1.Text = "Реестр животных";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(9, 4);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Реестр владельцев";
-            // 
-            // ownersSortButton
-            // 
-            this.ownersSortButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ownersSortButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.ownersSortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ownersSortButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.ownersSortButton.Location = new System.Drawing.Point(817, 38);
-            this.ownersSortButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ownersSortButton.Name = "ownersSortButton";
-            this.ownersSortButton.Size = new System.Drawing.Size(228, 28);
-            this.ownersSortButton.TabIndex = 5;
-            this.ownersSortButton.Text = "Параметры фильтрации...";
-            this.ownersSortButton.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 74);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1028, 436);
-            this.dataGridView2.TabIndex = 6;
-            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
@@ -220,23 +220,24 @@ namespace PetRegistry
             this.tabPage3.Text = "Мои домашние животные";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // RegistryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "RegistryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }

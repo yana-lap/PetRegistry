@@ -16,5 +16,11 @@ namespace PetRegistry
         {
             InitializeComponent();
         }
+
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+            Controller controller = new Controller();
+            controller.Login(loginTextBox.Text, passwordTextBox.Text);
+        }
     }
 }

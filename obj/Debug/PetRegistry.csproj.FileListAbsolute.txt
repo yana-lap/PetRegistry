@@ -5,8 +5,8 @@ C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.csproj.Assemb
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.AddPet.resources
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.LoginForm.resources
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.Properties.Resources.resources
-C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.Form2.resources
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.csproj.GenerateResource.cache
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.csproj.CoreCompileInputs.cache
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.exe
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.pdb
+C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.RegistryForm.resources

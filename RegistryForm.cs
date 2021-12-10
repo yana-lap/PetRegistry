@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PetRegistry
 {
-    public partial class Form2 : Form
+    public partial class RegistryForm : Form
     {
-        public Form2()
+        public RegistryForm()
         {
             InitializeComponent();
         }

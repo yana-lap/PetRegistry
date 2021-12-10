@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace PetRegistry
 {
@@ -8,6 +9,15 @@ namespace PetRegistry
     {
         public void Login(string login, string password)
         {
+            Authorization authorization = new Authorization();
+            if (login != "" && password != "" && authorization.Login(login, password))
+            {
+                Form f2 = new RegistryForm();
+                f2.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }  
         public void OpenPetsRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
