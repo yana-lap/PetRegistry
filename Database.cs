@@ -11,7 +11,7 @@ namespace PetRegistry
     {
         private SqlDataReader ExecuteQuery(string query)
         {
-            return;
+            return null;
         }
     }
 }
