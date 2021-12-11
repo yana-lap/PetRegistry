@@ -24,11 +24,11 @@ namespace PetRegistry
                 Login = data.Rows[0][0].ToString();
                 FIO = data.Rows[0][1].ToString();
                 Role = data.Rows[0][2].ToString();
-                Organization = data.Rows[0][3].ToString();
-                Country = data.Rows[0][4].ToString();
-                Address = data.Rows[0][5].ToString();
-                Phone = data.Rows[0][6].ToString();
-                Email = data.Rows[0][7].ToString();
+                Country = data.Rows[0][3].ToString();
+                Address = data.Rows[0][4].ToString();
+                Phone = data.Rows[0][5].ToString();
+                Email = data.Rows[0][6].ToString();
+                if(data.Columns.Count ==8) Organization = data.Rows[0][7].ToString();
             }
         }
     }

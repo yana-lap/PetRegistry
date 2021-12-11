@@ -9,6 +9,7 @@ namespace PetRegistry
     class Controller
     {
         PetRegistry petRegistry = new PetRegistry();
+        OwnerRegistry ownerRegistry = new OwnerRegistry();
         public void Login(string login, string password)
         {
             Authorization authorization = new Authorization();
@@ -26,6 +27,16 @@ namespace PetRegistry
         public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
         {
             DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
+            return data;
+        }
+        public DataTable OpenOwnersUserRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        {
+            DataTable data = ownerRegistry.OpenOwnersUserRegistry(filtersNames, sortNames);
+            return data;
+        }
+        public DataTable OpenOwnersOrgRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        {
+            DataTable data = ownerRegistry.OpenOwnersOrgRegistry(filtersNames, sortNames);
             return data;
         }
         public void OpenPetCard(string cardNumber)
