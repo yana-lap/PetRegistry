@@ -17,6 +17,8 @@ namespace PetRegistry
             {
                 User user = new User();
                 user.LoadUserInfo(login);
+                Variables.CurrentUser = user;
+                
                 return true;
             }
             else return false;

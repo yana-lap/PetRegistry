@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Variables.cs" />
     <Compile Include="OpenPetCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,7 +85,6 @@
     <Compile Include="RegistryForm.Designer.cs">
       <DependentUpon>RegistryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserService.cs" />
     <EmbeddedResource Include="OpenPetCard.resx">

@@ -12,10 +12,11 @@ namespace PetRegistry
         public void Login(string login, string password)
         {
             Authorization authorization = new Authorization();
+
             if (login != "" && password != "" && authorization.Login(login, password))
             {
-                Form f2 = new RegistryForm();
-                f2.ShowDialog();
+                Form registryForm = new RegistryForm();
+                registryForm.ShowDialog();
             } else
             {
                 MessageBox.Show("Неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
