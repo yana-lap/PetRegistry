@@ -38,6 +38,8 @@ namespace PetRegistry
             this.openPetButton = new System.Windows.Forms.Button();
             this.addPetButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
+            this.физическиеЛицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.юридическиеЛицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +65,9 @@ namespace PetRegistry
             // 
             // реестрВладельцевToolStripMenuItem
             // 
+            this.реестрВладельцевToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.физическиеЛицаToolStripMenuItem,
+            this.юридическиеЛицаToolStripMenuItem});
             this.реестрВладельцевToolStripMenuItem.Name = "реестрВладельцевToolStripMenuItem";
             this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
             this.реестрВладельцевToolStripMenuItem.Text = "Реестр владельцев";
@@ -76,7 +81,7 @@ namespace PetRegistry
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(23, 95);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
@@ -91,7 +96,7 @@ namespace PetRegistry
             this.sortPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortPetButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.sortPetButton.Location = new System.Drawing.Point(823, 69);
-            this.sortPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.sortPetButton.Name = "sortPetButton";
             this.sortPetButton.Size = new System.Drawing.Size(228, 28);
             this.sortPetButton.TabIndex = 10;
@@ -106,7 +111,7 @@ namespace PetRegistry
             this.deletePetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePetButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.deletePetButton.Location = new System.Drawing.Point(239, 69);
-            this.deletePetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deletePetButton.Margin = new System.Windows.Forms.Padding(4);
             this.deletePetButton.Name = "deletePetButton";
             this.deletePetButton.Size = new System.Drawing.Size(100, 28);
             this.deletePetButton.TabIndex = 9;
@@ -121,7 +126,7 @@ namespace PetRegistry
             this.openPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openPetButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.openPetButton.Location = new System.Drawing.Point(131, 69);
-            this.openPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.openPetButton.Name = "openPetButton";
             this.openPetButton.Size = new System.Drawing.Size(100, 28);
             this.openPetButton.TabIndex = 8;
@@ -137,7 +142,7 @@ namespace PetRegistry
             this.addPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.addPetButton.Location = new System.Drawing.Point(23, 69);
-            this.addPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.addPetButton.Name = "addPetButton";
             this.addPetButton.Size = new System.Drawing.Size(100, 28);
             this.addPetButton.TabIndex = 7;
@@ -156,6 +161,18 @@ namespace PetRegistry
             this.label.Size = new System.Drawing.Size(0, 31);
             this.label.TabIndex = 6;
             // 
+            // физическиеЛицаToolStripMenuItem
+            // 
+            this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
+            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
+            // 
+            // юридическиеЛицаToolStripMenuItem
+            // 
+            this.юридическиеЛицаToolStripMenuItem.Name = "юридическиеЛицаToolStripMenuItem";
+            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.юридическиеЛицаToolStripMenuItem.Text = "Юридические лица";
+            // 
             // RegistryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -170,7 +187,7 @@ namespace PetRegistry
             this.Controls.Add(this.label);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение";
@@ -193,5 +210,7 @@ namespace PetRegistry
         private System.Windows.Forms.Button openPetButton;
         private System.Windows.Forms.Button addPetButton;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ToolStripMenuItem физическиеЛицаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem юридическиеЛицаToolStripMenuItem;
     }
 }
