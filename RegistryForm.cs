@@ -18,6 +18,8 @@ namespace PetRegistry
         {
             InitializeComponent();
             //MessageBox.Show(Variables.CurrentUser.Role);
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             if (Variables.MatchingRoles["открытие реестров"].Contains(Variables.CurrentUser.Role))
             {
                 реестрЖивотныхToolStripMenuItem.Visible = true;
@@ -55,7 +57,7 @@ namespace PetRegistry
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]);
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10), row[4], row[5], row[6], row[7], row[8]);
             }
         }
 
@@ -81,6 +83,8 @@ namespace PetRegistry
             dataGridView.Columns.Add("Телефон", "Телефон");
             dataGridView.Columns.Add("Электронная почта", "Электронная почта");
             dataGridView.Columns.Add("Количество животных", "Количество животных");
+            dataGridView.Columns.Add("Количество кошек", "Количество кошек");
+            dataGridView.Columns.Add("Количество собак", "Количество собак");
             dataGridView.Columns[0].Visible = false;
 
 
@@ -89,7 +93,7 @@ namespace PetRegistry
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]);
             }
 
         }
@@ -112,14 +116,44 @@ namespace PetRegistry
             dataGridView.Columns.Add("Телефон", "Телефон");
             dataGridView.Columns.Add("Электронная почта", "Электронная почта");
             dataGridView.Columns.Add("Количество животных", "Количество животных");
+            dataGridView.Columns.Add("Количество кошек", "Количество кошек");
+            dataGridView.Columns.Add("Количество собак", "Количество собак");
             dataGridView.Columns[0].Visible = false;
 
             DataTable data = controller.OpenOwnersOrgRegistry();
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]);
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
             }
+        }
+
+        private void моиДомашниеЖивотныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label.Text = "Мои домашние животные";
+            addPetButton.Visible = false;
+            openPetButton.Visible = false;
+            deletePetButton.Visible = false;
+
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("ID", "ID");
+            dataGridView.Columns.Add("Категория животного", "Категория животного");
+            dataGridView.Columns.Add("Кличка", "Кличка");
+            dataGridView.Columns.Add("Дата рождения", "Дата рождения");
+            dataGridView.Columns.Add("Порода", "Порода;");
+            dataGridView.Columns.Add("Дата регистрации животного", "Дата регистрации животного");
+            dataGridView.Columns.Add("Номер паспорта домашнего животного", "Номер паспорта домашнего животного");
+            dataGridView.Columns.Add("Владелец", "Владелец");
+            dataGridView.Columns[0].Visible = false;
+
+            DataTable data = controller.OpenMyPetsRegistry();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                var row = data.Rows[i];
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0,10), row[4], row[5].ToString().Substring(0, 10), row[6], row[7]);
+            }
+
         }
     }
 }

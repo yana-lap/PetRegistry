@@ -29,6 +29,11 @@ namespace PetRegistry
             DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
             return data;
         }
+        public DataTable OpenMyPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        {
+            DataTable data = petRegistry.OpenMyPetsRegistry(filtersNames, sortNames);
+            return data; //после создания фильтров снести метод, объединив с OpenPetsRegistry
+        }
         public DataTable OpenOwnersUserRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
         {
             DataTable data = ownerRegistry.OpenOwnersUserRegistry(filtersNames, sortNames);
@@ -39,6 +44,9 @@ namespace PetRegistry
             DataTable data = ownerRegistry.OpenOwnersOrgRegistry(filtersNames, sortNames);
             return data;
         }
+
+       
+
         public void OpenPetCard(string cardNumber)
         {
             DataTable data = petRegistry.OpenPetCard(Int32.Parse(cardNumber));

@@ -18,7 +18,7 @@ Where Users.UserLogin = '" + login + "'";
 
             if(dataOrg.Rows.Count == 0) //если нет значит пользователь
             {
-                string queryUser = @"SELECT Users.UserLogin, Users.UserName, Roles.RoleName, Users.Country, Users.Adress, Users.Phone, Users.Email From Users
+                string queryUser = @"SELECT Users.IDUser, Users.UserLogin, Users.UserName, Roles.RoleName, Users.Country, Users.Adress, Users.Phone, Users.Email From Users
 inner join Roles on Users.RoleId = Roles.IDRole
 Where Users.UserLogin ='" + login + "'";
 
@@ -26,7 +26,7 @@ Where Users.UserLogin ='" + login + "'";
             }
             else //если есть значит организация
             {
-                string queryOrg = @"SELECT Users.UserLogin, Users.UserName, Roles.RoleName, Users.Country, Users.Adress, Users.Phone, Users.Email, Organizations.OrgName From Users 
+                string queryOrg = @"SELECT Users.IDUser, Users.UserLogin, Users.UserName, Roles.RoleName, Users.Country, Users.Adress, Users.Phone, Users.Email, Organizations.OrgName From Users 
 inner join Roles on Users.RoleId = Roles.IDRole 
 inner join Organizations on Users.OrgId = Organizations.IDOrganization 
 Where Users.UserLogin='" + login + "'";

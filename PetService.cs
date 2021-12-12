@@ -36,7 +36,18 @@ namespace PetRegistry
              dataTable.Merge(dataTableOrg);
 
              return dataTable;*/
-            
+
+        }
+
+        public static DataTable GetMyPets(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        {
+            string query = @"select Pets.IDPet, Categories.CategoryName, Pets.PetName, Pets.BirthDate, Pets.Breed, Pets.RegistrationDate, Pets.PassportNum, Users.UserName
+from Pets
+inner join Categories on Pets.Category = Categories.IDCategory
+inner
+join Users on Pets.OwnerUser = Users.IDUser
+Where Pets.OwnerUser = '" +Variables.CurrentUser.ID+"'";
+            return Database.ExecuteQuery(query);
         }
         public static DataTable GetPetCard(int cardNumber)
         {

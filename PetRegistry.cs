@@ -13,6 +13,12 @@ namespace PetRegistry
 
             return data;
         }
+        public DataTable OpenMyPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        {
+            DataTable data = PetService.GetMyPets(filtersNames, sortNames);
+            return data;
+        }
+
         public DataTable OpenPetCard(int cardNumber)
         {
             return PetService.GetPetCard(cardNumber); 

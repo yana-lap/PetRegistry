@@ -9,10 +9,10 @@ namespace PetRegistry
     {
         public static DataTable GetOwnersUserRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
-            string query = @"SELECT Users.IDUser, Users.Username, Users.Country, Users.Adress,  Users.Phone, Users.Email, Count(Pets.OwnerUser) as PetsCount
+            string query = @"SELECT Users.IDUser, Users.Username, Users.Country, Users.Adress,  Users.Phone, Users.Email,
+Count(Pets.OwnerUser) as PetsCount, dbo.GetCatDogCount(1,Users.IDUser,1) as CatCount, dbo.GetCatDogCount(1,Users.IDUser,2) as DogCount
  FROM Users 
 INNER JOIN Pets ON Users.IDUser = Pets.OwnerUser 
-WHERE Pets.OwnerType='1'
 Group By Users.IDUser, Users.Username, Users.Country, Users.Adress,  Users.Phone, Users.Email";
 
             DataTable data = Database.ExecuteQuery(query);
@@ -21,11 +21,14 @@ Group By Users.IDUser, Users.Username, Users.Country, Users.Adress,  Users.Phone
 
         public static DataTable GetOwnersOrgRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
-            string query = @"SELECT Organizations.IDOrganization, Organizations.OrgName, Organizations.INN, Organizations.KPP, Organizations.Country, Organizations.Adress,  Organizations.Phone, Organizations.Email, Count(Pets.OwnerCompany) as PetsCount
+            string query = @"SELECT Organizations.IDOrganization, Organizations.OrgName, Organizations.INN,
+Organizations.KPP, Organizations.Country, Organizations.Adress,  Organizations.Phone, Organizations.Email, 
+Count(Pets.OwnerCompany) as PetsCount, 
+dbo.GetCatDogCount(2,Organizations.IDOrganization,1) as CatCount, dbo.GetCatDogCount(2,Organizations.IDOrganization,2) as DogCount
  FROM Organizations 
-INNER JOIN Pets ON Organizations.IDOrganization = Pets.OwnerCompany 
-WHERE Pets.OwnerType='2'
-Group By Organizations.IDOrganization, Organizations.OrgName, Organizations.INN, Organizations.KPP, Organizations.Country, Organizations.Adress,  Organizations.Phone, Organizations.Email";
+INNER JOIN Pets ON Organizations.IDOrganization = Pets.OwnerCompany
+Group By Organizations.IDOrganization, Organizations.OrgName, Organizations.INN, Organizations.KPP,
+Organizations.Country, Organizations.Adress,  Organizations.Phone, Organizations.Email";
             DataTable data = Database.ExecuteQuery(query);
             return data;
         }

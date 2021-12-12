@@ -55,7 +55,7 @@ namespace PetRegistry
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1229, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,31 +97,35 @@ namespace PetRegistry
             this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.моиДомашниеЖивотныеToolStripMenuItem.Text = "Мои домашние животные";
             this.моиДомашниеЖивотныеToolStripMenuItem.Visible = false;
+            this.моиДомашниеЖивотныеToolStripMenuItem.Click += new System.EventHandler(this.моиДомашниеЖивотныеToolStripMenuItem_Click);
             // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(23, 130);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1028, 409);
+            this.dataGridView.Size = new System.Drawing.Size(1193, 409);
             this.dataGridView.TabIndex = 11;
             // 
             // sortPetButton
             // 
+            this.sortPetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sortPetButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sortPetButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.sortPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortPetButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.sortPetButton.Location = new System.Drawing.Point(823, 80);
-            this.sortPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortPetButton.Location = new System.Drawing.Point(988, 80);
+            this.sortPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.sortPetButton.Name = "sortPetButton";
             this.sortPetButton.Size = new System.Drawing.Size(228, 28);
             this.sortPetButton.TabIndex = 10;
@@ -136,7 +140,7 @@ namespace PetRegistry
             this.deletePetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePetButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.deletePetButton.Location = new System.Drawing.Point(239, 80);
-            this.deletePetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deletePetButton.Margin = new System.Windows.Forms.Padding(4);
             this.deletePetButton.Name = "deletePetButton";
             this.deletePetButton.Size = new System.Drawing.Size(100, 28);
             this.deletePetButton.TabIndex = 9;
@@ -151,7 +155,7 @@ namespace PetRegistry
             this.openPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openPetButton.ForeColor = System.Drawing.Color.CadetBlue;
             this.openPetButton.Location = new System.Drawing.Point(131, 80);
-            this.openPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.openPetButton.Name = "openPetButton";
             this.openPetButton.Size = new System.Drawing.Size(100, 28);
             this.openPetButton.TabIndex = 8;
@@ -167,7 +171,7 @@ namespace PetRegistry
             this.addPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.addPetButton.Location = new System.Drawing.Point(23, 80);
-            this.addPetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPetButton.Margin = new System.Windows.Forms.Padding(4);
             this.addPetButton.Name = "addPetButton";
             this.addPetButton.Size = new System.Drawing.Size(100, 28);
             this.addPetButton.TabIndex = 7;
@@ -191,7 +195,7 @@ namespace PetRegistry
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1229, 554);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.sortPetButton);
@@ -200,7 +204,7 @@ namespace PetRegistry
             this.Controls.Add(this.addPetButton);
             this.Controls.Add(this.label);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение";
