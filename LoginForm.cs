@@ -20,7 +20,13 @@ namespace PetRegistry
         private void logInButton_Click(object sender, EventArgs e)
         {
             Controller controller = new Controller();
-            controller.Login(loginTextBox.Text, passwordTextBox.Text);
+            if (controller.Login(loginTextBox.Text, passwordTextBox.Text))
+            {
+                Form registryForm = new RegistryForm();
+                registryForm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

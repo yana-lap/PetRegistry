@@ -55,14 +55,14 @@ namespace PetRegistry
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1229, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1229, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // реестрЖивотныхToolStripMenuItem
             // 
             this.реестрЖивотныхToolStripMenuItem.Name = "реестрЖивотныхToolStripMenuItem";
-            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
             this.реестрЖивотныхToolStripMenuItem.Text = "Реестр животных";
             this.реестрЖивотныхToolStripMenuItem.Visible = false;
             this.реестрЖивотныхToolStripMenuItem.Click += new System.EventHandler(this.реестрЖивотныхToolStripMenuItem_Click);
@@ -73,28 +73,28 @@ namespace PetRegistry
             this.физическиеЛицаToolStripMenuItem,
             this.юридическиеЛицаToolStripMenuItem});
             this.реестрВладельцевToolStripMenuItem.Name = "реестрВладельцевToolStripMenuItem";
-            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.реестрВладельцевToolStripMenuItem.Text = "Реестр владельцев";
             this.реестрВладельцевToolStripMenuItem.Visible = false;
             // 
             // физическиеЛицаToolStripMenuItem
             // 
             this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
-            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
             this.физическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.физическиеЛицаToolStripMenuItem_Click);
             // 
             // юридическиеЛицаToolStripMenuItem
             // 
             this.юридическиеЛицаToolStripMenuItem.Name = "юридическиеЛицаToolStripMenuItem";
-            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.юридическиеЛицаToolStripMenuItem.Text = "Юридические лица";
             this.юридическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.юридическиеЛицаToolStripMenuItem_Click);
             // 
             // моиДомашниеЖивотныеToolStripMenuItem
             // 
             this.моиДомашниеЖивотныеToolStripMenuItem.Name = "моиДомашниеЖивотныеToolStripMenuItem";
-            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
             this.моиДомашниеЖивотныеToolStripMenuItem.Text = "Мои домашние животные";
             this.моиДомашниеЖивотныеToolStripMenuItem.Visible = false;
             this.моиДомашниеЖивотныеToolStripMenuItem.Click += new System.EventHandler(this.моиДомашниеЖивотныеToolStripMenuItem_Click);
@@ -178,6 +178,7 @@ namespace PetRegistry
             this.addPetButton.Text = "Добавить";
             this.addPetButton.UseVisualStyleBackColor = false;
             this.addPetButton.Visible = false;
+            this.addPetButton.Click += new System.EventHandler(this.addPetButton_Click);
             // 
             // label
             // 

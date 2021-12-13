@@ -155,5 +155,11 @@ namespace PetRegistry
             }
 
         }
+
+        private void addPetButton_Click(object sender, EventArgs e)
+        {
+            Form addPetCard = new AddPetCard();
+            addPetCard.ShowDialog();
+        }
     }
 }

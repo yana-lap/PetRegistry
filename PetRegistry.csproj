@@ -48,11 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Variables.cs" />
-    <Compile Include="OpenPetCard.cs">
+    <Compile Include="AddPetCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenPetCard.Designer.cs">
-      <DependentUpon>OpenPetCard.cs</DependentUpon>
+    <Compile Include="AddPetCard.Designer.cs">
+      <DependentUpon>AddPetCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationService.cs" />
@@ -64,12 +64,6 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyPetsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MyPetsForm.Designer.cs">
-      <DependentUpon>MyPetsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Organization.cs" />
     <Compile Include="OwnerRegistry.cs" />
@@ -87,14 +81,11 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserService.cs" />
-    <EmbeddedResource Include="OpenPetCard.resx">
-      <DependentUpon>OpenPetCard.cs</DependentUpon>
+    <EmbeddedResource Include="AddPetCard.resx">
+      <DependentUpon>AddPetCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyPetsForm.resx">
-      <DependentUpon>MyPetsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

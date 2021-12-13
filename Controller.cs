@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.Data;
+using System.Linq;
 
 namespace PetRegistry
 {
@@ -10,19 +11,11 @@ namespace PetRegistry
     {
         PetRegistry petRegistry = new PetRegistry();
         OwnerRegistry ownerRegistry = new OwnerRegistry();
-        public void Login(string login, string password)
+        public bool Login(string login, string password)
         {
             Authorization authorization = new Authorization();
 
-            if (login != "" && password != "" && authorization.Login(login, password))
-            {
-                Form registryForm = new RegistryForm();
-                registryForm.ShowDialog();
-            } else
-            {
-                MessageBox.Show("Неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            return (login != "" && password != "" && authorization.Login(login, password));
         }  
         public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
         {
@@ -66,7 +59,13 @@ namespace PetRegistry
         }
         public void RegisterNewPet(string[] data)
         {
-
+            if (roleIsMaching("добавление"))
+            {
+                Pet newPet = new Pet();
+                newPet.RegisterNewPet(data);
+                MessageBox.Show("C");
+            }
+            else { MessageBox.Show("NOTROLE"); }
         }
 
         public void UpdatePetData(long cardNumber, string[] data)
@@ -79,7 +78,7 @@ namespace PetRegistry
         }
         private bool roleIsMaching(string operation)
         {
-            return true;
+            return Variables.MatchingRoles[operation].Contains(Variables.CurrentUser.Role);
         }        
     }
 }
