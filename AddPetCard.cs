@@ -28,7 +28,7 @@ namespace PetRegistry
                 birthDate.Value.ToString("yyyy-MM-dd"), registrationDate.Value.ToString("yyyy-MM-dd"),
                 passportNum.Text, identificationNum.Text, numberTextBox.Text, vacinationDate.Value.ToString("yyyy-MM-dd"),
                 vacinationDateEnd.Value.ToString("yyyy-MM-dd"), dewormingDate.Value.ToString("yyyy-MM-dd"),
-                dewormingDateEnd.Value.ToString("yyyy-MM-dd"), vetAppointments.Text,(ownerTypeComboBox.SelectedIndex+1).ToString(), ownerTextBox.Text, ""});
+                dewormingDateEnd.Value.ToString("yyyy-MM-dd"), vetAppointments.Text,(ownerTypeComboBox.SelectedIndex+1).ToString(), ownerComboBox.Text, ""});
         }
     }
 }

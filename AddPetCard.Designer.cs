@@ -37,7 +37,6 @@
             this.numberTextBox = new System.Windows.Forms.TextBox();
             this.chippedNameLabel = new System.Windows.Forms.Label();
             this.typeLabel = new System.Windows.Forms.Label();
-            this.ownerTextBox = new System.Windows.Forms.TextBox();
             this.ownerLabel = new System.Windows.Forms.Label();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.addPetButton = new System.Windows.Forms.Button();
             this.ownerTypeComboBox = new System.Windows.Forms.ComboBox();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.ownerComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // categoryLabel
@@ -152,14 +152,6 @@
             this.typeLabel.Size = new System.Drawing.Size(149, 20);
             this.typeLabel.TabIndex = 20;
             this.typeLabel.Text = "Тип владельца";
-            // 
-            // ownerTextBox
-            // 
-            this.ownerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ownerTextBox.Location = new System.Drawing.Point(957, 378);
-            this.ownerTextBox.Name = "ownerTextBox";
-            this.ownerTextBox.Size = new System.Drawing.Size(243, 22);
-            this.ownerTextBox.TabIndex = 24;
             // 
             // ownerLabel
             // 
@@ -387,12 +379,24 @@
             this.categoryComboBox.Size = new System.Drawing.Size(243, 24);
             this.categoryComboBox.TabIndex = 61;
             // 
+            // ownerComboBox
+            // 
+            this.ownerComboBox.FormattingEnabled = true;
+            this.ownerComboBox.Items.AddRange(new object[] {
+            "Физическое лицо",
+            "Юридическое лицо"});
+            this.ownerComboBox.Location = new System.Drawing.Point(957, 376);
+            this.ownerComboBox.Name = "ownerComboBox";
+            this.ownerComboBox.Size = new System.Drawing.Size(243, 24);
+            this.ownerComboBox.TabIndex = 62;
+            // 
             // AddPetCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1231, 520);
+            this.Controls.Add(this.ownerComboBox);
             this.Controls.Add(this.categoryComboBox);
             this.Controls.Add(this.ownerTypeComboBox);
             this.Controls.Add(this.addPetButton);
@@ -415,7 +419,6 @@
             this.Controls.Add(this.birthDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.genderComboBox);
-            this.Controls.Add(this.ownerTextBox);
             this.Controls.Add(this.ownerLabel);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.numberTextBox);
@@ -444,7 +447,6 @@
         private System.Windows.Forms.TextBox numberTextBox;
         private System.Windows.Forms.Label chippedNameLabel;
         private System.Windows.Forms.Label typeLabel;
-        private System.Windows.Forms.TextBox ownerTextBox;
         private System.Windows.Forms.Label ownerLabel;
         private System.Windows.Forms.ComboBox genderComboBox;
         private System.Windows.Forms.Label label2;
@@ -468,5 +470,6 @@
         private System.Windows.Forms.Button addPetButton;
         private System.Windows.Forms.ComboBox ownerTypeComboBox;
         private System.Windows.Forms.ComboBox categoryComboBox;
+        private System.Windows.Forms.ComboBox ownerComboBox;
     }
 }
