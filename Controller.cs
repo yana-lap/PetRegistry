@@ -64,6 +64,7 @@ namespace PetRegistry
         public void GetRabiesVaccineData(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
 
+
         }
         public string RegisterNewPet(string[] data)
         {

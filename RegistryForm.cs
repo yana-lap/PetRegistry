@@ -39,11 +39,12 @@ namespace PetRegistry
             openPetButton.Visible = true;
             deletePetButton.Visible = true;
             sortPetButton.Visible = true;
-           
+            exportButton.Visible = true;
+
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Категория", "Категория");
             dataGridView.Columns.Add("Пол", "Пол");
-            dataGridView.Columns.Add("Год рождения", "Год рождения");
+            dataGridView.Columns.Add("Дата рождения", "Дата рождения");
             dataGridView.Columns.Add("Идентификационная метка", "Идентификационная метка");
             dataGridView.Columns.Add("Номер электронного чипа", "Номер электронного чипа");
             dataGridView.Columns.Add("Кличка", "Кличка");
@@ -163,9 +164,12 @@ namespace PetRegistry
             openPetButton.Visible = false;
             deletePetButton.Visible = false;
             sortPetButton.Visible = false;
+            exportButton.Visible = false;
 
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
+
+            petGroupBox.Visible = false;
         }
         private void openPetButton_Click(object sender, EventArgs e)
         {
@@ -200,5 +204,25 @@ namespace PetRegistry
             }
         }
 
+        private void rabiesButton_Click(object sender, EventArgs e)
+        {
+            Form cardParams = new CardParams();
+            cardParams.ShowDialog();
+        }
+
+        private void sortPetButton_Click(object sender, EventArgs e)
+        {
+            petGroupBox.Visible = true;
+        }
+
+        private void petGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void getPetParams_Click(object sender, EventArgs e)
+        {
+            petGroupBox.Visible = false;
+        }
     }
 }
