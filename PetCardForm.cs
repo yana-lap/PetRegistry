@@ -16,73 +16,68 @@ namespace PetRegistry
         string CurrentPetID;
         Pet CurrentPet;
         
-        public PetCardForm(string petID, Pet pet)
+        public PetCardForm()
         {
             InitializeComponent();
-            CurrentPetID = petID;
-            CurrentPet = pet;
+            CurrentPetID = Variables.CurrentPet.PetID;
+            CurrentPet = Variables.CurrentPet;
         }
 
         private void PetCardForm_Activated(object sender, EventArgs e)
         {
-            petName.Text = CurrentPet.PetName;
-            gender.Text = CurrentPet.Gender;
-            birthDate.Value = CurrentPet.BirthDate;
-            category.Text = CurrentPet.Category;
-            breed.Text = CurrentPet.Breed;
-            ownerType.Text = CurrentPet.OwnerType;
-            owner.Text = CurrentPet.Owner;
-            registrationDate.Value = CurrentPet.RegistrationDate;
-            vacinationDate.Value = CurrentPet.VacinationDate;
-            vacinationDateEnd.Value = CurrentPet.VacinationDateEnd;
-            dewormingDate.Value = CurrentPet.DewormingDate;
-            dewormingDateEnd.Value = CurrentPet.DewormingDateEnd;
-            vetAppointments.Text = CurrentPet.VetAppointments;
-            label.Text = CurrentPet.PassportNum;
-            identificationNum.Text = CurrentPet.IdentificationNum;
-            chipNum.Text = CurrentPet.ChipNum;
+            CurrentPetID = Variables.CurrentPet.PetID;
+            CurrentPet = Variables.CurrentPet;
+            UpdateForm();
         }
 
         private void changeCardButton_Click(object sender, EventArgs e)
         {
-            changeCardButton.Enabled = false; //кнопки
-            changeCardButton.Visible = false;
+            ResetVisibility();
+
             okButton.Enabled = true;
             okButton.Visible = true;
 
-            gender.Visible = false;           //комбобоксы
-            category.Visible = false;
-            ownerType.Visible = false;
-            owner.Visible = false;
-
             genderComboBox.Visible = true;
+            genderComboBox.SelectedIndex = genderComboBox.Items.IndexOf(gender.Text);
             categoryComboBox.Visible = true;
+            categoryComboBox.SelectedIndex = categoryComboBox.Items.IndexOf(category.Text);
             ownerTypeComboBox.Visible = true;
+            ownerTypeComboBox.SelectedIndex = ownerTypeComboBox.Items.IndexOf(ownerType.Text);
             ownerComboBox.Visible = true;
-
-            petName.ReadOnly = false;        //все остальное
+            //ownerComboBox.SelectedIndex = ownerComboBox.Items.IndexOf(owner.Text);
+            //ownerComboBox.SelectedIndex = 1;
+            //MessageBox.Show(ownerComboBox.Items.IndexOf(owner.Text).ToString());
             birthDate.Enabled = true;
-            breed.ReadOnly = false;
             registrationDate.Enabled = true;
             vacinationDate.Enabled = true;
             vacinationDateEnd.Enabled = true;
             dewormingDate.Enabled = true;
             dewormingDateEnd.Enabled = true;
-            vetAppointments.ReadOnly = false;
-            passportNum.ReadOnly = false;
-            identificationNum.ReadOnly = false;
-            chipNum.ReadOnly = false;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string[] petData = new string[] {petName.Text, (categoryComboBox.SelectedIndex + 1).ToString(), breed.Text, genderComboBox.Text,
-                birthDate.Value.ToString("yyyy-MM-dd"), registrationDate.Value.ToString("yyyy-MM-dd"),
-                passportNum.Text, identificationNum.Text, chipNum.Text,
-                vacinationDate.Value.ToString("yyyy-MM-dd"), vacinationDateEnd.Value.ToString("yyyy-MM-dd"),
-                dewormingDate.Value.ToString("yyyy-MM-dd"), dewormingDateEnd.Value.ToString("yyyy-MM-dd"),
-                vetAppointments.Text, (ownerTypeComboBox.SelectedIndex + 1).ToString(),
-                ownerComboBox.SelectedValue.ToString(), ownerComboBox.SelectedValue.ToString() };
+            
+            string[] petData = new string[] {
+                petName.Text, //0
+                (categoryComboBox.SelectedIndex + 1).ToString(), //1
+                breed.Text, //2
+                genderComboBox.Text, //3
+                birthDate.Value.ToString("yyyy-MM-dd"), //4
+                registrationDate.Value.ToString("yyyy-MM-dd"), //5
+                passportNum.Text, //6
+                identificationNum.Text, //7
+                chipNum.Text, //8
+                vacinationDate.Value.ToString("yyyy-MM-dd"), //9
+                vacinationDateEnd.Value.ToString("yyyy-MM-dd"), //10
+                dewormingDate.Value.ToString("yyyy-MM-dd"), //11
+                dewormingDateEnd.Value.ToString("yyyy-MM-dd"), //12
+                vetAppointments.Text, //13
+                (ownerTypeComboBox.SelectedIndex + 1).ToString(), //14
+                ownerComboBox.SelectedValue.ToString(), //15
+                ownerComboBox.SelectedValue.ToString() //16
+            };
+
             string answer = Controller.UpdatePetData(CurrentPetID, petData);
 
             switch (answer)
@@ -98,33 +93,73 @@ namespace PetRegistry
                     break;
             }
 
-            changeCardButton.Enabled = true; //кнопки
-            changeCardButton.Visible = true;
-            okButton.Enabled = false;
-            okButton.Visible = false;
+            ResetVisibility();
 
-            gender.Visible = true;           //комбобоксы
+            changeCardButton.Enabled = true;
+            changeCardButton.Visible = true;
+
+            gender.Visible = true;       
             category.Visible = true;
             ownerType.Visible = true;
             owner.Visible = true;
+
+            petName.ReadOnly = true;    
+            breed.ReadOnly = true;
+            vetAppointments.ReadOnly = true;
+            passportNum.ReadOnly = true;
+            identificationNum.ReadOnly = true;
+            chipNum.ReadOnly = true;
+        }
+
+        private void ResetVisibility()
+        {
+            changeCardButton.Enabled = false; //кнопки
+            changeCardButton.Visible = false;
+            okButton.Enabled = false;
+            okButton.Visible = false;
+
+            gender.Visible = false;           //комбобоксы
+            category.Visible = false;
+            ownerType.Visible = false;
+            owner.Visible = false;
 
             genderComboBox.Visible = false;
             categoryComboBox.Visible = false;
             ownerTypeComboBox.Visible = false;
             ownerComboBox.Visible = false;
 
-            petName.ReadOnly = true;        //все остальное
+            petName.ReadOnly = false;        //все остальное
             birthDate.Enabled = false;
-            breed.ReadOnly = true;
+            breed.ReadOnly = false;
             registrationDate.Enabled = false;
             vacinationDate.Enabled = false;
             vacinationDateEnd.Enabled = false;
             dewormingDate.Enabled = false;
             dewormingDateEnd.Enabled = false;
-            vetAppointments.ReadOnly = true;
-            passportNum.ReadOnly = true;
-            identificationNum.ReadOnly = true;
-            chipNum.ReadOnly = true;
+            vetAppointments.ReadOnly = false;
+            passportNum.ReadOnly = false;
+            identificationNum.ReadOnly = false;
+            chipNum.ReadOnly = false;
+        }
+
+        private void UpdateForm()
+        {
+            petName.Text = CurrentPet.PetName;
+            gender.Text = CurrentPet.Gender;
+            birthDate.Value = CurrentPet.BirthDate;
+            category.Text = CurrentPet.Category;
+            breed.Text = CurrentPet.Breed;
+            ownerType.Text = CurrentPet.OwnerType;
+            owner.Text = CurrentPet.Owner;
+            registrationDate.Value = CurrentPet.RegistrationDate;
+            vacinationDate.Value = CurrentPet.VacinationDate;
+            vacinationDateEnd.Value = CurrentPet.VacinationDateEnd;
+            dewormingDate.Value = CurrentPet.DewormingDate;
+            dewormingDateEnd.Value = CurrentPet.DewormingDateEnd;
+            vetAppointments.Text = CurrentPet.VetAppointments;
+            passportNum.Text = CurrentPet.PassportNum;
+            identificationNum.Text = CurrentPet.IdentificationNum;
+            chipNum.Text = CurrentPet.ChipNum;
         }
 
         private void ownerTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

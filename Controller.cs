@@ -40,18 +40,15 @@ namespace PetRegistry
 
        
 
-        public string OpenPetCard(string cardNumber)
+        public Pet OpenPetCard(string cardNumber)
         {
-            DataTable data = petRegistry.OpenPetCard(Int32.Parse(cardNumber));
-            Pet currentPet = new Pet(data.Rows[0][1].ToString(), data.Rows[0][2].ToString(), DateTime.Parse(data.Rows[0][3].ToString()), data.Rows[0][4].ToString(),
+            DataTable data = petRegistry.OpenPetCard(cardNumber);
+            Pet currentPet = new Pet(data.Rows[0][0].ToString(), data.Rows[0][1].ToString(), data.Rows[0][2].ToString(), DateTime.Parse(data.Rows[0][3].ToString()), data.Rows[0][4].ToString(),
                 data.Rows[0][5].ToString(), DateTime.Parse(data.Rows[0][6].ToString()), data.Rows[0][7].ToString(), data.Rows[0][8].ToString(),
                 DateTime.Parse(data.Rows[0][9].ToString()), DateTime.Parse(data.Rows[0][10].ToString()), DateTime.Parse(data.Rows[0][11].ToString()),
                 DateTime.Parse(data.Rows[0][12].ToString()), data.Rows[0][13].ToString(), data.Rows[0][14].ToString(), data.Rows[0][15].ToString(), data.Rows[0][16].ToString());
             
-            Form petCard = new PetCardForm(data.Rows[0][0].ToString(), currentPet);
-            petCard.ShowDialog();
-            
-            return null;
+            return currentPet;
         } 
         public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {

@@ -19,7 +19,7 @@ namespace PetRegistry
             return data;
         }
 
-        public DataTable OpenPetCard(int cardNumber)
+        public DataTable OpenPetCard(string cardNumber)
         {
             return PetService.GetPetCard(cardNumber); 
         }

@@ -31,47 +31,47 @@ namespace PetRegistry
         {
             this.petCardTabControl = new System.Windows.Forms.TabControl();
             this.petCharacteristicsTab = new System.Windows.Forms.TabPage();
-            this.vacinationTab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dewormingTab = new System.Windows.Forms.TabPage();
-            this.vetAppointmentsTab = new System.Windows.Forms.TabPage();
-            this.documentsTab = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.registrationDate = new System.Windows.Forms.DateTimePicker();
-            this.birthDate = new System.Windows.Forms.DateTimePicker();
-            this.genderComboBox = new System.Windows.Forms.ComboBox();
-            this.categoryComboBox = new System.Windows.Forms.ComboBox();
-            this.breed = new System.Windows.Forms.TextBox();
+            this.owner = new System.Windows.Forms.TextBox();
+            this.ownerType = new System.Windows.Forms.TextBox();
+            this.category = new System.Windows.Forms.TextBox();
+            this.gender = new System.Windows.Forms.TextBox();
+            this.ownerTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ownerComboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.petName = new System.Windows.Forms.TextBox();
-            this.vacinationDate = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
+            this.breed = new System.Windows.Forms.TextBox();
+            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.birthDate = new System.Windows.Forms.DateTimePicker();
+            this.registrationDate = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.vacinationTab = new System.Windows.Forms.TabPage();
             this.vacinationDateEnd = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.vacinationDate = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dewormingTab = new System.Windows.Forms.TabPage();
             this.dewormingDateEnd = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.dewormingDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
+            this.vetAppointmentsTab = new System.Windows.Forms.TabPage();
             this.vetAppointments = new System.Windows.Forms.TextBox();
-            this.passportNum = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
-            this.identificationNum = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.documentsTab = new System.Windows.Forms.TabPage();
             this.chipNum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.ownerComboBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.identificationNum = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.passportNum = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.changeCardButton = new System.Windows.Forms.Button();
-            this.ownerTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.gender = new System.Windows.Forms.TextBox();
-            this.category = new System.Windows.Forms.TextBox();
-            this.ownerType = new System.Windows.Forms.TextBox();
-            this.owner = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.petCardTabControl.SuspendLayout();
             this.petCharacteristicsTab.SuspendLayout();
@@ -125,169 +125,112 @@ namespace PetRegistry
             this.petCharacteristicsTab.TabIndex = 0;
             this.petCharacteristicsTab.Text = "Основные характеристики животного";
             // 
-            // vacinationTab
+            // owner
             // 
-            this.vacinationTab.Controls.Add(this.vacinationDateEnd);
-            this.vacinationTab.Controls.Add(this.label9);
-            this.vacinationTab.Controls.Add(this.vacinationDate);
-            this.vacinationTab.Controls.Add(this.label8);
-            this.vacinationTab.Location = new System.Drawing.Point(4, 22);
-            this.vacinationTab.Name = "vacinationTab";
-            this.vacinationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.vacinationTab.Size = new System.Drawing.Size(792, 343);
-            this.vacinationTab.TabIndex = 1;
-            this.vacinationTab.Text = "Вакцинация";
-            this.vacinationTab.UseVisualStyleBackColor = true;
+            this.owner.BackColor = System.Drawing.SystemColors.Control;
+            this.owner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.owner.Location = new System.Drawing.Point(562, 59);
+            this.owner.Name = "owner";
+            this.owner.ReadOnly = true;
+            this.owner.Size = new System.Drawing.Size(200, 20);
+            this.owner.TabIndex = 19;
             // 
-            // label1
+            // ownerType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Карточка питомца";
+            this.ownerType.BackColor = System.Drawing.SystemColors.Control;
+            this.ownerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ownerType.Location = new System.Drawing.Point(562, 29);
+            this.ownerType.Name = "ownerType";
+            this.ownerType.ReadOnly = true;
+            this.ownerType.Size = new System.Drawing.Size(200, 20);
+            this.ownerType.TabIndex = 18;
             // 
-            // dewormingTab
+            // category
             // 
-            this.dewormingTab.Controls.Add(this.dewormingDateEnd);
-            this.dewormingTab.Controls.Add(this.label10);
-            this.dewormingTab.Controls.Add(this.dewormingDate);
-            this.dewormingTab.Controls.Add(this.label11);
-            this.dewormingTab.Location = new System.Drawing.Point(4, 22);
-            this.dewormingTab.Name = "dewormingTab";
-            this.dewormingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.dewormingTab.Size = new System.Drawing.Size(792, 343);
-            this.dewormingTab.TabIndex = 2;
-            this.dewormingTab.Text = "Дегельминтизация";
-            this.dewormingTab.UseVisualStyleBackColor = true;
+            this.category.BackColor = System.Drawing.SystemColors.Control;
+            this.category.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.category.Location = new System.Drawing.Point(164, 126);
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            this.category.Size = new System.Drawing.Size(200, 20);
+            this.category.TabIndex = 17;
             // 
-            // vetAppointmentsTab
+            // gender
             // 
-            this.vetAppointmentsTab.Controls.Add(this.vetAppointments);
-            this.vetAppointmentsTab.Location = new System.Drawing.Point(4, 22);
-            this.vetAppointmentsTab.Name = "vetAppointmentsTab";
-            this.vetAppointmentsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.vetAppointmentsTab.Size = new System.Drawing.Size(792, 343);
-            this.vetAppointmentsTab.TabIndex = 3;
-            this.vetAppointmentsTab.Text = "Ветеринарные назначения";
-            this.vetAppointmentsTab.UseVisualStyleBackColor = true;
+            this.gender.BackColor = System.Drawing.SystemColors.Control;
+            this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gender.Location = new System.Drawing.Point(164, 59);
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Size = new System.Drawing.Size(200, 20);
+            this.gender.TabIndex = 16;
             // 
-            // documentsTab
+            // ownerTypeComboBox
             // 
-            this.documentsTab.Controls.Add(this.chipNum);
-            this.documentsTab.Controls.Add(this.label13);
-            this.documentsTab.Controls.Add(this.identificationNum);
-            this.documentsTab.Controls.Add(this.label12);
-            this.documentsTab.Controls.Add(this.passportNum);
-            this.documentsTab.Controls.Add(this.label);
-            this.documentsTab.Location = new System.Drawing.Point(4, 22);
-            this.documentsTab.Name = "documentsTab";
-            this.documentsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.documentsTab.Size = new System.Drawing.Size(792, 343);
-            this.documentsTab.TabIndex = 4;
-            this.documentsTab.Text = "Фото/Документы";
-            this.documentsTab.UseVisualStyleBackColor = true;
+            this.ownerTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ownerTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ownerTypeComboBox.FormattingEnabled = true;
+            this.ownerTypeComboBox.Items.AddRange(new object[] {
+            "ФЛ",
+            "ЮЛ"});
+            this.ownerTypeComboBox.Location = new System.Drawing.Point(562, 29);
+            this.ownerTypeComboBox.Name = "ownerTypeComboBox";
+            this.ownerTypeComboBox.Size = new System.Drawing.Size(200, 21);
+            this.ownerTypeComboBox.TabIndex = 15;
+            this.ownerTypeComboBox.Visible = false;
+            this.ownerTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ownerTypeComboBox_SelectedIndexChanged);
             // 
-            // label2
+            // label15
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(19, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Кличка:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label15.Location = new System.Drawing.Point(432, 30);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 16);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Тип владельца:";
             // 
-            // label3
+            // ownerComboBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label3.Location = new System.Drawing.Point(19, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Категория:";
+            this.ownerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ownerComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ownerComboBox.FormattingEnabled = true;
+            this.ownerComboBox.Location = new System.Drawing.Point(562, 59);
+            this.ownerComboBox.Name = "ownerComboBox";
+            this.ownerComboBox.Size = new System.Drawing.Size(200, 21);
+            this.ownerComboBox.TabIndex = 13;
+            this.ownerComboBox.Visible = false;
             // 
-            // label4
+            // label14
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label4.Location = new System.Drawing.Point(19, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Порода:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label14.Location = new System.Drawing.Point(432, 60);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 16);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Владелец:";
             // 
-            // label5
+            // petName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label5.Location = new System.Drawing.Point(19, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Пол:";
+            this.petName.BackColor = System.Drawing.SystemColors.Control;
+            this.petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.petName.Location = new System.Drawing.Point(164, 21);
+            this.petName.Name = "petName";
+            this.petName.ReadOnly = true;
+            this.petName.Size = new System.Drawing.Size(200, 20);
+            this.petName.TabIndex = 11;
             // 
-            // label6
+            // breed
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label6.Location = new System.Drawing.Point(19, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 16);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Дата рождения:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label7.Location = new System.Drawing.Point(19, 312);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 16);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Дата регистраци:";
-            // 
-            // registrationDate
-            // 
-            this.registrationDate.Enabled = false;
-            this.registrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registrationDate.Location = new System.Drawing.Point(164, 312);
-            this.registrationDate.Name = "registrationDate";
-            this.registrationDate.Size = new System.Drawing.Size(200, 20);
-            this.registrationDate.TabIndex = 6;
-            // 
-            // birthDate
-            // 
-            this.birthDate.Enabled = false;
-            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthDate.Location = new System.Drawing.Point(164, 90);
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(200, 20);
-            this.birthDate.TabIndex = 7;
-            // 
-            // genderComboBox
-            // 
-            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.genderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.genderComboBox.FormattingEnabled = true;
-            this.genderComboBox.Items.AddRange(new object[] {
-            "Мужской",
-            "Женский"});
-            this.genderComboBox.Location = new System.Drawing.Point(164, 59);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(200, 21);
-            this.genderComboBox.TabIndex = 8;
-            this.genderComboBox.Visible = false;
+            this.breed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.breed.Location = new System.Drawing.Point(164, 153);
+            this.breed.Name = "breed";
+            this.breed.ReadOnly = true;
+            this.breed.Size = new System.Drawing.Size(200, 20);
+            this.breed.TabIndex = 10;
             // 
             // categoryComboBox
             // 
@@ -303,24 +246,137 @@ namespace PetRegistry
             this.categoryComboBox.TabIndex = 9;
             this.categoryComboBox.Visible = false;
             // 
-            // breed
+            // genderComboBox
             // 
-            this.breed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.breed.Location = new System.Drawing.Point(164, 153);
-            this.breed.Name = "breed";
-            this.breed.ReadOnly = true;
-            this.breed.Size = new System.Drawing.Size(200, 20);
-            this.breed.TabIndex = 10;
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.genderComboBox.FormattingEnabled = true;
+            this.genderComboBox.Items.AddRange(new object[] {
+            "Мужской",
+            "Женский"});
+            this.genderComboBox.Location = new System.Drawing.Point(164, 59);
+            this.genderComboBox.Name = "genderComboBox";
+            this.genderComboBox.Size = new System.Drawing.Size(200, 21);
+            this.genderComboBox.TabIndex = 8;
+            this.genderComboBox.Visible = false;
             // 
-            // petName
+            // birthDate
             // 
-            this.petName.BackColor = System.Drawing.SystemColors.Control;
-            this.petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.petName.Location = new System.Drawing.Point(164, 21);
-            this.petName.Name = "petName";
-            this.petName.ReadOnly = true;
-            this.petName.Size = new System.Drawing.Size(200, 20);
-            this.petName.TabIndex = 11;
+            this.birthDate.Enabled = false;
+            this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthDate.Location = new System.Drawing.Point(164, 90);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Size = new System.Drawing.Size(200, 20);
+            this.birthDate.TabIndex = 7;
+            // 
+            // registrationDate
+            // 
+            this.registrationDate.Enabled = false;
+            this.registrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationDate.Location = new System.Drawing.Point(164, 312);
+            this.registrationDate.Name = "registrationDate";
+            this.registrationDate.Size = new System.Drawing.Size(200, 20);
+            this.registrationDate.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label7.Location = new System.Drawing.Point(19, 312);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 16);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Дата регистраци:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label6.Location = new System.Drawing.Point(19, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Дата рождения:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label5.Location = new System.Drawing.Point(19, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Пол:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label4.Location = new System.Drawing.Point(19, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Порода:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label3.Location = new System.Drawing.Point(19, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Категория:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label2.Location = new System.Drawing.Point(19, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Кличка:";
+            // 
+            // vacinationTab
+            // 
+            this.vacinationTab.Controls.Add(this.vacinationDateEnd);
+            this.vacinationTab.Controls.Add(this.label9);
+            this.vacinationTab.Controls.Add(this.vacinationDate);
+            this.vacinationTab.Controls.Add(this.label8);
+            this.vacinationTab.Location = new System.Drawing.Point(4, 22);
+            this.vacinationTab.Name = "vacinationTab";
+            this.vacinationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.vacinationTab.Size = new System.Drawing.Size(792, 343);
+            this.vacinationTab.TabIndex = 1;
+            this.vacinationTab.Text = "Вакцинация";
+            this.vacinationTab.UseVisualStyleBackColor = true;
+            // 
+            // vacinationDateEnd
+            // 
+            this.vacinationDateEnd.Enabled = false;
+            this.vacinationDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.vacinationDateEnd.Location = new System.Drawing.Point(154, 52);
+            this.vacinationDateEnd.Name = "vacinationDateEnd";
+            this.vacinationDateEnd.Size = new System.Drawing.Size(200, 20);
+            this.vacinationDateEnd.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label9.Location = new System.Drawing.Point(10, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 16);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Вакцинация до:";
             // 
             // vacinationDate
             // 
@@ -342,25 +398,19 @@ namespace PetRegistry
             this.label8.TabIndex = 7;
             this.label8.Text = "Дата вакцинации:";
             // 
-            // vacinationDateEnd
+            // dewormingTab
             // 
-            this.vacinationDateEnd.Enabled = false;
-            this.vacinationDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vacinationDateEnd.Location = new System.Drawing.Point(154, 52);
-            this.vacinationDateEnd.Name = "vacinationDateEnd";
-            this.vacinationDateEnd.Size = new System.Drawing.Size(200, 20);
-            this.vacinationDateEnd.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label9.Location = new System.Drawing.Point(10, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Вакцинация до:";
+            this.dewormingTab.Controls.Add(this.dewormingDateEnd);
+            this.dewormingTab.Controls.Add(this.label10);
+            this.dewormingTab.Controls.Add(this.dewormingDate);
+            this.dewormingTab.Controls.Add(this.label11);
+            this.dewormingTab.Location = new System.Drawing.Point(4, 22);
+            this.dewormingTab.Name = "dewormingTab";
+            this.dewormingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.dewormingTab.Size = new System.Drawing.Size(792, 343);
+            this.dewormingTab.TabIndex = 2;
+            this.dewormingTab.Text = "Дегельминтизация";
+            this.dewormingTab.UseVisualStyleBackColor = true;
             // 
             // dewormingDateEnd
             // 
@@ -402,6 +452,17 @@ namespace PetRegistry
             this.label11.TabIndex = 11;
             this.label11.Text = "Дата дегельминтизации:";
             // 
+            // vetAppointmentsTab
+            // 
+            this.vetAppointmentsTab.Controls.Add(this.vetAppointments);
+            this.vetAppointmentsTab.Location = new System.Drawing.Point(4, 22);
+            this.vetAppointmentsTab.Name = "vetAppointmentsTab";
+            this.vetAppointmentsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.vetAppointmentsTab.Size = new System.Drawing.Size(792, 343);
+            this.vetAppointmentsTab.TabIndex = 3;
+            this.vetAppointmentsTab.Text = "Ветеринарные назначения";
+            this.vetAppointmentsTab.UseVisualStyleBackColor = true;
+            // 
             // vetAppointments
             // 
             this.vetAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -411,45 +472,21 @@ namespace PetRegistry
             this.vetAppointments.Size = new System.Drawing.Size(761, 20);
             this.vetAppointments.TabIndex = 12;
             // 
-            // passportNum
+            // documentsTab
             // 
-            this.passportNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passportNum.Location = new System.Drawing.Point(235, 19);
-            this.passportNum.Name = "passportNum";
-            this.passportNum.ReadOnly = true;
-            this.passportNum.Size = new System.Drawing.Size(200, 20);
-            this.passportNum.TabIndex = 13;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label.Location = new System.Drawing.Point(10, 20);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(134, 16);
-            this.label.TabIndex = 12;
-            this.label.Text = "Номер паспорта:";
-            // 
-            // identificationNum
-            // 
-            this.identificationNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.identificationNum.Location = new System.Drawing.Point(235, 45);
-            this.identificationNum.Name = "identificationNum";
-            this.identificationNum.ReadOnly = true;
-            this.identificationNum.Size = new System.Drawing.Size(200, 20);
-            this.identificationNum.TabIndex = 15;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label12.Location = new System.Drawing.Point(10, 46);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(219, 16);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Идентификационный номер:";
+            this.documentsTab.Controls.Add(this.chipNum);
+            this.documentsTab.Controls.Add(this.label13);
+            this.documentsTab.Controls.Add(this.identificationNum);
+            this.documentsTab.Controls.Add(this.label12);
+            this.documentsTab.Controls.Add(this.passportNum);
+            this.documentsTab.Controls.Add(this.label41);
+            this.documentsTab.Location = new System.Drawing.Point(4, 22);
+            this.documentsTab.Name = "documentsTab";
+            this.documentsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.documentsTab.Size = new System.Drawing.Size(792, 343);
+            this.documentsTab.TabIndex = 4;
+            this.documentsTab.Text = "Фото/Документы";
+            this.documentsTab.UseVisualStyleBackColor = true;
             // 
             // chipNum
             // 
@@ -471,27 +508,56 @@ namespace PetRegistry
             this.label13.TabIndex = 16;
             this.label13.Text = "Номер чипа:";
             // 
-            // ownerComboBox
+            // identificationNum
             // 
-            this.ownerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ownerComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ownerComboBox.FormattingEnabled = true;
-            this.ownerComboBox.Location = new System.Drawing.Point(562, 59);
-            this.ownerComboBox.Name = "ownerComboBox";
-            this.ownerComboBox.Size = new System.Drawing.Size(200, 21);
-            this.ownerComboBox.TabIndex = 13;
-            this.ownerComboBox.Visible = false;
+            this.identificationNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.identificationNum.Location = new System.Drawing.Point(235, 45);
+            this.identificationNum.Name = "identificationNum";
+            this.identificationNum.ReadOnly = true;
+            this.identificationNum.Size = new System.Drawing.Size(200, 20);
+            this.identificationNum.TabIndex = 15;
             // 
-            // label14
+            // label12
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label14.Location = new System.Drawing.Point(432, 60);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 16);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Владелец:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label12.Location = new System.Drawing.Point(10, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(219, 16);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Идентификационный номер:";
+            // 
+            // passportNum
+            // 
+            this.passportNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passportNum.Location = new System.Drawing.Point(235, 19);
+            this.passportNum.Name = "passportNum";
+            this.passportNum.ReadOnly = true;
+            this.passportNum.Size = new System.Drawing.Size(200, 20);
+            this.passportNum.TabIndex = 13;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label41.Location = new System.Drawing.Point(10, 20);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(134, 16);
+            this.label41.TabIndex = 12;
+            this.label41.Text = "Номер паспорта:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Карточка питомца";
             // 
             // changeCardButton
             // 
@@ -505,74 +571,7 @@ namespace PetRegistry
             this.changeCardButton.TabIndex = 8;
             this.changeCardButton.Text = "Изменить";
             this.changeCardButton.UseVisualStyleBackColor = false;
-            this.changeCardButton.Visible = false;
             this.changeCardButton.Click += new System.EventHandler(this.changeCardButton_Click);
-            // 
-            // ownerTypeComboBox
-            // 
-            this.ownerTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ownerTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ownerTypeComboBox.FormattingEnabled = true;
-            this.ownerTypeComboBox.Items.AddRange(new object[] {
-            "Физическое лицо",
-            "Юридическое лицо"});
-            this.ownerTypeComboBox.Location = new System.Drawing.Point(562, 29);
-            this.ownerTypeComboBox.Name = "ownerTypeComboBox";
-            this.ownerTypeComboBox.Size = new System.Drawing.Size(200, 21);
-            this.ownerTypeComboBox.TabIndex = 15;
-            this.ownerTypeComboBox.Visible = false;
-            this.ownerTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ownerTypeComboBox_SelectedIndexChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label15.Location = new System.Drawing.Point(432, 30);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 16);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Тип владельца:";
-            // 
-            // gender
-            // 
-            this.gender.BackColor = System.Drawing.SystemColors.Control;
-            this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gender.Location = new System.Drawing.Point(164, 59);
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Size = new System.Drawing.Size(200, 20);
-            this.gender.TabIndex = 16;
-            // 
-            // category
-            // 
-            this.category.BackColor = System.Drawing.SystemColors.Control;
-            this.category.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.category.Location = new System.Drawing.Point(164, 126);
-            this.category.Name = "category";
-            this.category.ReadOnly = true;
-            this.category.Size = new System.Drawing.Size(200, 20);
-            this.category.TabIndex = 17;
-            // 
-            // ownerType
-            // 
-            this.ownerType.BackColor = System.Drawing.SystemColors.Control;
-            this.ownerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ownerType.Location = new System.Drawing.Point(562, 29);
-            this.ownerType.Name = "ownerType";
-            this.ownerType.ReadOnly = true;
-            this.ownerType.Size = new System.Drawing.Size(200, 20);
-            this.ownerType.TabIndex = 18;
-            // 
-            // owner
-            // 
-            this.owner.BackColor = System.Drawing.SystemColors.Control;
-            this.owner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.owner.Location = new System.Drawing.Point(562, 59);
-            this.owner.Name = "owner";
-            this.owner.ReadOnly = true;
-            this.owner.Size = new System.Drawing.Size(200, 20);
-            this.owner.TabIndex = 19;
             // 
             // okButton
             // 
@@ -650,7 +649,7 @@ namespace PetRegistry
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox vetAppointments;
         private System.Windows.Forms.TextBox passportNum;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.ComboBox ownerComboBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox chipNum;

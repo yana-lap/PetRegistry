@@ -47,7 +47,7 @@ join Users on Pets.OwnerUser = Users.IDUser
 Where Pets.OwnerUser = '" +Variables.CurrentUser.ID+"'";
             return Database.ExecuteQuery(query);
         }
-        public static DataTable GetPetCard(int cardNumber)
+        public static DataTable GetPetCard(string cardNumber)
         {
             string query = @"select IDPet, PetName, Gender, BirthDate, CategoryName, Breed, RegistrationDate, 
                              TypeName, dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany), VacinationDate, VacinationDateEnd, 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -7,6 +8,7 @@ namespace PetRegistry
 {
     public class Pet
     {
+        public string PetID;
         public string PetName;
         public string Category;
         public string Breed;
@@ -24,10 +26,11 @@ namespace PetRegistry
         public string OwnerType;
         public string Owner;
 
-        public Pet(string name = null, string gender = null, DateTime birthDate = default, string category = null, string breed = null,  DateTime registrationDate = default, string ownerType = null, string owner = null,
+        public Pet(string petID = null, string name = null, string gender = null, DateTime birthDate = default, string category = null, string breed = null,  DateTime registrationDate = default, string ownerType = null, string owner = null,
             DateTime vacinationDate = default, DateTime vacinationDateEnd = default, DateTime dewormingDate = default, DateTime dewormingDateEnd = default, string vetAppointments = null, string passportNum = null,
             string identificationNum = null, string chipNum = null)
         {
+            PetID = petID;
             PetName = name;
             Category = category;
             Breed = breed;
@@ -54,8 +57,19 @@ namespace PetRegistry
                 {
                     if (data[i] == "" || data[i] == null) data[i] = "NULL";
                 }
-                if (data[14] == "0") data[16] = "NULL"; else data[15] = "NULL";
+                if (data[14] == "1") data[16] = "NULL"; else data[15] = "NULL";
+
                 PetService.ChangePetData(cardNumber, data);
+
+                DataTable newPetData = PetService.GetPetCard(cardNumber);
+                Variables.CurrentPet = new Pet(newPetData.Rows[0][0].ToString(), newPetData.Rows[0][1].ToString(), newPetData.Rows[0][2].ToString(), 
+                    DateTime.Parse(newPetData.Rows[0][3].ToString()), newPetData.Rows[0][4].ToString(), newPetData.Rows[0][5].ToString(),
+                    DateTime.Parse(newPetData.Rows[0][6].ToString()), newPetData.Rows[0][7].ToString(), newPetData.Rows[0][8].ToString(),
+                    DateTime.Parse(newPetData.Rows[0][9].ToString()), DateTime.Parse(newPetData.Rows[0][10].ToString()),
+                    DateTime.Parse(newPetData.Rows[0][11].ToString()), DateTime.Parse(newPetData.Rows[0][12].ToString()),
+                    newPetData.Rows[0][13].ToString(), newPetData.Rows[0][14].ToString(), 
+                    newPetData.Rows[0][15].ToString(), newPetData.Rows[0][16].ToString());
+
                 return "Карточка успешно изменена.";
             }
             else return "Неверные данные.";
@@ -68,7 +82,7 @@ namespace PetRegistry
                 {
                     if (data[i] == "" || data[i] == null) data[i] = "NULL";
                 }
-                if(data[14] == "0") data[16]="NULL"; else data[15] = "NULL";
+                if(data[14] == "1") data[16]="NULL"; else data[15] = "NULL";
                 PetService.AddNewPet(data);
                 return "Животное успешно добавлено.";
             }
