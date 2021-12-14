@@ -169,8 +169,12 @@ namespace PetRegistry
         }
         private void openPetButton_Click(object sender, EventArgs e)
         {
-            int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
-            controller.OpenPetCard(dataGridView[0, selectedIndex].Value.ToString());
+            if (controller.roleIsMaching("открытие"))
+            {
+                int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
+                controller.OpenPetCard(dataGridView[0, selectedIndex].Value.ToString());
+            }
+            else MessageBox.Show("Недостаточно прав.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void deletePetButton_Click(object sender, EventArgs e)

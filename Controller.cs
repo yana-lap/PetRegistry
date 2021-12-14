@@ -40,10 +40,18 @@ namespace PetRegistry
 
        
 
-        public void OpenPetCard(string cardNumber)
+        public string OpenPetCard(string cardNumber)
         {
             DataTable data = petRegistry.OpenPetCard(Int32.Parse(cardNumber));
-
+            Pet currentPet = new Pet(data.Rows[0][1].ToString(), data.Rows[0][2].ToString(), DateTime.Parse(data.Rows[0][3].ToString()), data.Rows[0][4].ToString(),
+                data.Rows[0][5].ToString(), DateTime.Parse(data.Rows[0][6].ToString()), data.Rows[0][7].ToString(), data.Rows[0][8].ToString(),
+                DateTime.Parse(data.Rows[0][9].ToString()), DateTime.Parse(data.Rows[0][10].ToString()), DateTime.Parse(data.Rows[0][11].ToString()),
+                DateTime.Parse(data.Rows[0][12].ToString()), data.Rows[0][13].ToString(), data.Rows[0][14].ToString(), data.Rows[0][15].ToString(), data.Rows[0][16].ToString());
+            
+            Form petCard = new PetCardForm(data.Rows[0][0].ToString(), currentPet);
+            petCard.ShowDialog();
+            
+            return null;
         } 
         public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
         {
@@ -67,9 +75,14 @@ namespace PetRegistry
             else { return "Недостаточно прав."; }
         }
 
-        public void UpdatePetData(string cardNumber, string[] data)
+        public string UpdatePetData(string cardNumber, string[] data)
         {
- 
+            if (roleIsMaching("изменение"))
+            {
+                Pet pet = new Pet();
+                return pet.UpdatePetData(cardNumber, data);
+            }
+            else return "Недостаточно прав.";
         }
         public string DeletePetCard(string cardNumber)
         {

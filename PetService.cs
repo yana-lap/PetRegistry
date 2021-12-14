@@ -49,7 +49,12 @@ Where Pets.OwnerUser = '" +Variables.CurrentUser.ID+"'";
         }
         public static DataTable GetPetCard(int cardNumber)
         {
-            string query = "select * from Pets Where IDPet ='"+cardNumber+"';";
+            string query = @"select IDPet, PetName, Gender, BirthDate, CategoryName, Breed, RegistrationDate, 
+                             TypeName, dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany), VacinationDate, VacinationDateEnd, 
+                             DewormingDate, DewormingDateEnd, VetAppointments, PassportNum, IdentificationNum, ChipNum from Pets
+                             inner join Categories on Pets.Category = Categories.IDCategory
+                             inner join OwnerTypes on Pets.OwnerType = OwnerTypes.IDType
+                             where IDPet = " + cardNumber+";";
             return Database.ExecuteQuery(query);         
         }
         public static void AddNewPet(string[] newPet)
@@ -67,9 +72,29 @@ VacinationDateEnd, DewormingDate, DewormingDateEnd, VetAppointments, Photo, Owne
             Database.ExecuteNonQuery(query);
         }
 
-        public static void ChangePetData(long cardNumber, string[] data)
+        public static void ChangePetData(string cardNumber, string[] data)
         {
- 
+            string query = @"update Pets
+                             set PetName = '"+ data[0] +"', " +
+                             "Category = "+ data[1] + ", " +
+                             "Breed = '"+ data[2] +"', " +
+                             "Gender = '" + data[3] + "', " +
+                             "BirthDate = '" + data[4] + "', " +
+                             "RegistrationDate = '" + data[5] + "', " +
+                             "PassportNum = '" + data[6] + "', " +
+                             "IdentificationNum = '"+ data[7] +"', " +
+                             "ChipNum = '" + data[8] + "'," +
+                             "VacinationDate = '" + data[9] + "', " +
+                             "VacinationDateEnd = '" + data[10] + "', " +
+                             "DewormingDate = '" + data[11] + "', " +
+                             "DewormingDateEnd = '" + data[12] + "', " +
+                             "VetAppointments = '" + data[13] + "', " +
+                             "Photo = NULL, " +
+                             "OwnerType = " + data[14] + ", " +
+                             "OwnerUser = " + data[15] + ", " +
+                             "OwnerCompany = " + data[16] + " " +
+                             "where IDPet ="+ cardNumber +";";
+            Database.ExecuteNonQuery(query);
         }
     }
 }

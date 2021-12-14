@@ -20,8 +20,6 @@ C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.GenerateResource.cache
 C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.CoreCompileInputs.cache
 C:\ПИС\PetRegistry\obj\Debug\PetRegistry.exe
 C:\ПИС\PetRegistry\obj\Debug\PetRegistry.pdb
-C:\ПИС\PetRegistry\obj\Debug\PetRegistry.MyPetsForm.resources
-C:\ПИС\PetRegistry\obj\Debug\PetRegistry.OpenPetCard.resources
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\bin\Debug\PetRegistry.exe.config
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\bin\Debug\PetRegistry.exe
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\bin\Debug\PetRegistry.pdb
@@ -35,3 +33,5 @@ C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\obj\Debug\PetRegistry.pdb
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\obj\Debug\PetRegistry.AddPetCard.resources
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.AddPetCard.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.AddPetCard.resources
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.PetCardForm.resources

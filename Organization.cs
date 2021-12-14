@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PetRegistry
 {
-    class Organization
+    public class Organization
     {
         public string Name;
         public string Phone;

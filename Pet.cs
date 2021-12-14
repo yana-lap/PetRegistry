@@ -5,25 +5,60 @@ using System.Windows.Forms;
 
 namespace PetRegistry
 {
-    class Pet
+    public class Pet
     {
-        public string Breed;
+        public string PetName;
         public string Category;
-        public string Wool;
-        public string Size;
-        public string Name;
-        public string Photo;
+        public string Breed;
         public string Gender;
-        public bool Chipped;
+        public DateTime BirthDate;
+        public DateTime RegistrationDate;
+        public string PassportNum;
+        public string IdentificationNum;
         public string ChipNum;
-        public int OwnerType;
-        public User OwnerUser;
-        public Organization OwnerOrganization;
+        public DateTime VacinationDate;
+        public DateTime VacinationDateEnd;
+        public DateTime DewormingDate;
+        public DateTime DewormingDateEnd;
+        public string VetAppointments;
+        public string OwnerType;
+        public string Owner;
 
-
-        public void UpdatePetData(long cardNumber, string[] data)
+        public Pet(string name = null, string gender = null, DateTime birthDate = default, string category = null, string breed = null,  DateTime registrationDate = default, string ownerType = null, string owner = null,
+            DateTime vacinationDate = default, DateTime vacinationDateEnd = default, DateTime dewormingDate = default, DateTime dewormingDateEnd = default, string vetAppointments = null, string passportNum = null,
+            string identificationNum = null, string chipNum = null)
         {
+            PetName = name;
+            Category = category;
+            Breed = breed;
+            Gender = gender;
+            BirthDate = birthDate;
+            RegistrationDate = registrationDate;
+            PassportNum = passportNum;
+            IdentificationNum = identificationNum;
+            ChipNum = chipNum;
+            VacinationDate = vacinationDate;
+            VacinationDateEnd = vacinationDateEnd;
+            DewormingDate = dewormingDate;
+            DewormingDateEnd = dewormingDateEnd;
+            VetAppointments = vetAppointments;
+            OwnerType = ownerType;
+            Owner = owner;
+        }
 
+        public string UpdatePetData(string cardNumber, string[] data)
+        {
+            if (dataIsCorrect(data))
+            {
+                for (int i = 0; i < data.Length; i++)
+                {
+                    if (data[i] == "" || data[i] == null) data[i] = "NULL";
+                }
+                if (data[14] == "0") data[16] = "NULL"; else data[15] = "NULL";
+                PetService.ChangePetData(cardNumber, data);
+                return "Карточка успешно изменена.";
+            }
+            else return "Неверные данные.";
         }
         public string RegisterNewPet(string[] data)
         {
