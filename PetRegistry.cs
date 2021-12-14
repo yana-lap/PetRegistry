@@ -23,6 +23,12 @@ namespace PetRegistry
         {
             return PetService.GetPetCard(cardNumber); 
         }
-        
+
+        public void DeletePetCard(int cardNumber)
+        {
+            PetService.DeleteCard(cardNumber);
+        }
+
+
     }
 }

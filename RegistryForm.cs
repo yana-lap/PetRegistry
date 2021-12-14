@@ -20,12 +20,12 @@ namespace PetRegistry
             //MessageBox.Show(Variables.CurrentUser.Role);
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            if (Variables.MatchingRoles["открытие реестров"].Contains(Variables.CurrentUser.Role))
+            if (controller.roleIsMaching("открытие реестров"))
             {
                 реестрЖивотныхToolStripMenuItem.Visible = true;
                 реестрВладельцевToolStripMenuItem.Visible = true;
             }
-            if (Variables.MatchingRoles["открытие дж"].Contains(Variables.CurrentUser.Role))
+            if (controller.roleIsMaching("открытие дж"))
             {
                 моиДомашниеЖивотныеToolStripMenuItem.Visible = true;
             }
@@ -33,14 +33,13 @@ namespace PetRegistry
 
         private void реестрЖивотныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ResetSettings();
             label.Text = "Реестр животных";
             addPetButton.Visible = true;
             openPetButton.Visible = true;
             deletePetButton.Visible = true;
             sortPetButton.Visible = true;
            
-            dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Категория", "Категория");
             dataGridView.Columns.Add("Пол", "Пол");
@@ -57,25 +56,17 @@ namespace PetRegistry
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10), row[4], row[5], row[6], row[7], row[8]);
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10), 
+                    row[4], row[5], row[6], row[7], row[8]);
             }
         }
 
-        private void openPetButton_Click(object sender, EventArgs e)
-        {
-            int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
-            controller.OpenPetCard(dataGridView[0, selectedIndex].Value.ToString());
-        }
+        
 
         private void физическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ResetSettings();
             label.Text = "Реестр владельцев";
-            addPetButton.Visible = false;
-            openPetButton.Visible = false;
-            deletePetButton.Visible = false;
-
-            dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("ФИО", "ФИО");
             dataGridView.Columns.Add("Страна", "Страна");
@@ -100,13 +91,9 @@ namespace PetRegistry
 
         private void юридическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            label.Text = "Реестр владельцев";
-            addPetButton.Visible = false;
-            openPetButton.Visible = false;
-            deletePetButton.Visible = false;
+            ResetSettings();
 
-            dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();
+            label.Text = "Реестр владельцев";
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Наименование организации", "Наименование организации");
             dataGridView.Columns.Add("ИНН", "ИНН");
@@ -130,13 +117,8 @@ namespace PetRegistry
 
         private void моиДомашниеЖивотныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ResetSettings();
             label.Text = "Мои домашние животные";
-            addPetButton.Visible = false;
-            openPetButton.Visible = false;
-            deletePetButton.Visible = false;
-
-            dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Категория животного", "Категория животного");
             dataGridView.Columns.Add("Кличка", "Кличка");
@@ -158,8 +140,61 @@ namespace PetRegistry
 
         private void addPetButton_Click(object sender, EventArgs e)
         {
-            Form addPetCard = new AddPetCard();
-            addPetCard.ShowDialog();
+            if (controller.roleIsMaching("добавление"))
+            {
+                Form addPetCard = new AddPetCard();
+                addPetCard.ShowDialog();
+                dataGridView.Rows.Clear();
+                DataTable data = controller.OpenPetsRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10),
+                        row[4], row[5], row[6], row[7], row[8]);
+                }
+            }
+            else MessageBox.Show("Недостаточно прав.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void ResetSettings()
+        {
+            label.Text = "   ";
+            addPetButton.Visible = false;
+            openPetButton.Visible = false;
+            deletePetButton.Visible = false;
+            sortPetButton.Visible = false;
+
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
+        }
+        private void openPetButton_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
+            controller.OpenPetCard(dataGridView[0, selectedIndex].Value.ToString());
+        }
+
+        private void deletePetButton_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = dataGridView.Rows.IndexOf(dataGridView.CurrentRow);
+            string answer = controller.DeletePetCard(dataGridView[0, selectedIndex].Value.ToString());
+            switch (answer)
+            {
+                case "Удаление завершено.":
+                    MessageBox.Show(answer, "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView.Rows.Clear();
+                    DataTable data = controller.OpenPetsRegistry();
+                    for (int i = 0; i < data.Rows.Count; i++)
+                    {
+                        var row = data.Rows[i];
+                        dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10),
+                            row[4], row[5], row[6], row[7], row[8]);
+                    }
+                    break;
+                case "Недостаточно прав.":
+                    MessageBox.Show(answer, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+        }
+
     }
 }

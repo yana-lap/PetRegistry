@@ -20,46 +20,38 @@ namespace PetRegistry
         public User OwnerUser;
         public Organization OwnerOrganization;
 
-        //internal Pet(string Breed, string Category, string Wool, string Size,
-        //string Name, string Photo, string Gender, bool Chipped, string ChipNum, int OwnerType,
-        //User Owner)
-        //{
-
-        //}
-
 
         public void UpdatePetData(long cardNumber, string[] data)
         {
 
         }
-        public void RegisterNewPet(string[] data)
+        public string RegisterNewPet(string[] data)
         {
             if (dataIsCorrect(data))
             {
-                MessageBox.Show("P");
                 for (int i = 0; i < data.Length; i++)
                 {
-                    if (data[i] == "") data[i] = "NULL";
+                    if (data[i] == "" || data[i] == null) data[i] = "NULL";
                 }
+                if(data[14] == "0") data[16]="NULL"; else data[15] = "NULL";
                 PetService.AddNewPet(data);
+                return "Животное успешно добавлено.";
             }
-            else{ MessageBox.Show("NC"); }
+            else{ return "Неверные данные."; }
             
         }
         private bool dataIsCorrect(string[] data)
         {
             bool isEverythingCorrect = true;
-            if (data[0] == "") isEverythingCorrect = false;
-            if (data[2] == "") isEverythingCorrect = false;
-           // if (data[3] != "М" && data[3] != "Ж") isEverythingCorrect = false;
+            if (data[0] == "" || data[0]==null) isEverythingCorrect = false;
+            if (data[1] == "" || data[1] == null) isEverythingCorrect = false;
+            if (data[2] == "" || data[2] == null) isEverythingCorrect = false;
+            if ((data[3] != "Мужской" && data[3] != "Женский") || data[3] == null) isEverythingCorrect = false;
+            if (data[5] == "" || data[5] == null) isEverythingCorrect = false;
             if (DateTime.Parse(data[9]) >= DateTime.Parse(data[10])) isEverythingCorrect = false;
             if (DateTime.Parse(data[11]) >= DateTime.Parse(data[12])) isEverythingCorrect = false;
+            if (data[14] == "" || data[14] == null) isEverythingCorrect = false;
             return isEverythingCorrect;
-        }
-
-        public void DeletePetCard(long cardNumber)
-        {
-
         }
 
         

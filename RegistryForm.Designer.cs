@@ -62,8 +62,8 @@ namespace PetRegistry
             // реестрЖивотныхToolStripMenuItem
             // 
             this.реестрЖивотныхToolStripMenuItem.Name = "реестрЖивотныхToolStripMenuItem";
-            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
-            this.реестрЖивотныхToolStripMenuItem.Text = "Реестр животных";
+            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.реестрЖивотныхToolStripMenuItem.Text = "Реест животных";
             this.реестрЖивотныхToolStripMenuItem.Visible = false;
             this.реестрЖивотныхToolStripMenuItem.Click += new System.EventHandler(this.реестрЖивотныхToolStripMenuItem_Click);
             // 
@@ -73,28 +73,28 @@ namespace PetRegistry
             this.физическиеЛицаToolStripMenuItem,
             this.юридическиеЛицаToolStripMenuItem});
             this.реестрВладельцевToolStripMenuItem.Name = "реестрВладельцевToolStripMenuItem";
-            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.реестрВладельцевToolStripMenuItem.Text = "Реестр владельцев";
             this.реестрВладельцевToolStripMenuItem.Visible = false;
             // 
             // физическиеЛицаToolStripMenuItem
             // 
             this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
-            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
             this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
             this.физическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.физическиеЛицаToolStripMenuItem_Click);
             // 
             // юридическиеЛицаToolStripMenuItem
             // 
             this.юридическиеЛицаToolStripMenuItem.Name = "юридическиеЛицаToolStripMenuItem";
-            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
             this.юридическиеЛицаToolStripMenuItem.Text = "Юридические лица";
             this.юридическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.юридическиеЛицаToolStripMenuItem_Click);
             // 
             // моиДомашниеЖивотныеToolStripMenuItem
             // 
             this.моиДомашниеЖивотныеToolStripMenuItem.Name = "моиДомашниеЖивотныеToolStripMenuItem";
-            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.моиДомашниеЖивотныеToolStripMenuItem.Text = "Мои домашние животные";
             this.моиДомашниеЖивотныеToolStripMenuItem.Visible = false;
             this.моиДомашниеЖивотныеToolStripMenuItem.Click += new System.EventHandler(this.моиДомашниеЖивотныеToolStripMenuItem_Click);
@@ -147,6 +147,7 @@ namespace PetRegistry
             this.deletePetButton.Text = "Удалить";
             this.deletePetButton.UseVisualStyleBackColor = false;
             this.deletePetButton.Visible = false;
+            this.deletePetButton.Click += new System.EventHandler(this.deletePetButton_Click);
             // 
             // openPetButton
             // 
@@ -185,11 +186,12 @@ namespace PetRegistry
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label.Location = new System.Drawing.Point(16, 46);
+            this.label.Location = new System.Drawing.Point(17, 45);
             this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(0, 31);
+            this.label.Size = new System.Drawing.Size(49, 31);
             this.label.TabIndex = 6;
+            this.label.Text = "     ";
             // 
             // RegistryForm
             // 
@@ -208,7 +210,7 @@ namespace PetRegistry
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Приложение";
+            this.Text = "Реестры";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

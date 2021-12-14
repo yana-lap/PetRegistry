@@ -34,7 +34,7 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.breedTextBox = new System.Windows.Forms.TextBox();
             this.breedLabel = new System.Windows.Forms.Label();
-            this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.chipNumberTextBox = new System.Windows.Forms.TextBox();
             this.chippedNameLabel = new System.Windows.Forms.Label();
             this.typeLabel = new System.Windows.Forms.Label();
             this.ownerLabel = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.ownerTypeComboBox = new System.Windows.Forms.ComboBox();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
             this.ownerComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // categoryLabel
@@ -123,13 +124,13 @@
             this.breedLabel.TabIndex = 16;
             this.breedLabel.Text = "Порода";
             // 
-            // numberTextBox
+            // chipNumberTextBox
             // 
-            this.numberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numberTextBox.Location = new System.Drawing.Point(957, 84);
-            this.numberTextBox.Name = "numberTextBox";
-            this.numberTextBox.Size = new System.Drawing.Size(243, 22);
-            this.numberTextBox.TabIndex = 19;
+            this.chipNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chipNumberTextBox.Location = new System.Drawing.Point(957, 84);
+            this.chipNumberTextBox.Name = "chipNumberTextBox";
+            this.chipNumberTextBox.Size = new System.Drawing.Size(243, 22);
+            this.chipNumberTextBox.TabIndex = 19;
             // 
             // chippedNameLabel
             // 
@@ -208,9 +209,9 @@
             this.label3.ForeColor = System.Drawing.Color.CadetBlue;
             this.label3.Location = new System.Drawing.Point(32, 300);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 20);
+            this.label3.Size = new System.Drawing.Size(180, 20);
             this.label3.TabIndex = 40;
-            this.label3.Text = "Дата авторизации";
+            this.label3.Text = "Дата регистрации";
             // 
             // passportNum
             // 
@@ -366,6 +367,7 @@
             this.ownerTypeComboBox.Name = "ownerTypeComboBox";
             this.ownerTypeComboBox.Size = new System.Drawing.Size(243, 24);
             this.ownerTypeComboBox.TabIndex = 60;
+            this.ownerTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ownerTypeComboBox_SelectedIndexChanged);
             // 
             // categoryComboBox
             // 
@@ -381,14 +383,23 @@
             // 
             // ownerComboBox
             // 
+            this.ownerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ownerComboBox.FormattingEnabled = true;
-            this.ownerComboBox.Items.AddRange(new object[] {
-            "Физическое лицо",
-            "Юридическое лицо"});
             this.ownerComboBox.Location = new System.Drawing.Point(957, 376);
             this.ownerComboBox.Name = "ownerComboBox";
             this.ownerComboBox.Size = new System.Drawing.Size(243, 24);
             this.ownerComboBox.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label1.Location = new System.Drawing.Point(32, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(506, 32);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Зарегистрировать нового питомца";
             // 
             // AddPetCard
             // 
@@ -396,6 +407,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1231, 520);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ownerComboBox);
             this.Controls.Add(this.categoryComboBox);
             this.Controls.Add(this.ownerTypeComboBox);
@@ -421,7 +433,7 @@
             this.Controls.Add(this.genderComboBox);
             this.Controls.Add(this.ownerLabel);
             this.Controls.Add(this.typeLabel);
-            this.Controls.Add(this.numberTextBox);
+            this.Controls.Add(this.chipNumberTextBox);
             this.Controls.Add(this.chippedNameLabel);
             this.Controls.Add(this.breedTextBox);
             this.Controls.Add(this.breedLabel);
@@ -430,7 +442,8 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.categoryLabel);
             this.Name = "AddPetCard";
-            this.Text = "Добавить питомца";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Новый питомец";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +457,7 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox breedTextBox;
         private System.Windows.Forms.Label breedLabel;
-        private System.Windows.Forms.TextBox numberTextBox;
+        private System.Windows.Forms.TextBox chipNumberTextBox;
         private System.Windows.Forms.Label chippedNameLabel;
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.Label ownerLabel;
@@ -471,5 +484,6 @@
         private System.Windows.Forms.ComboBox ownerTypeComboBox;
         private System.Windows.Forms.ComboBox categoryComboBox;
         private System.Windows.Forms.ComboBox ownerComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

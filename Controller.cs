@@ -57,26 +57,30 @@ namespace PetRegistry
         {
 
         }
-        public void RegisterNewPet(string[] data)
+        public string RegisterNewPet(string[] data)
         {
             if (roleIsMaching("добавление"))
             {
                 Pet newPet = new Pet();
-                newPet.RegisterNewPet(data);
-                MessageBox.Show("C");
+                return  newPet.RegisterNewPet(data);
             }
-            else { MessageBox.Show("NOTROLE"); }
+            else { return "Недостаточно прав."; }
         }
 
-        public void UpdatePetData(long cardNumber, string[] data)
+        public void UpdatePetData(string cardNumber, string[] data)
         {
  
         }
-        public void DeletePetCard(string cardNumber)
+        public string DeletePetCard(string cardNumber)
         {
+            if (roleIsMaching("удаление"))
+            {
+                petRegistry.DeletePetCard(Convert.ToInt32(cardNumber));
+                return "Удаление завершено.";
+            } else return "Недостаточно прав.";
 
         }
-        private bool roleIsMaching(string operation)
+        public bool roleIsMaching(string operation)
         {
             return Variables.MatchingRoles[operation].Contains(Variables.CurrentUser.Role);
         }        
