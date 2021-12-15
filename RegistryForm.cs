@@ -39,7 +39,7 @@ namespace PetRegistry
             openPetButton.Visible = true;
             deletePetButton.Visible = true;
             sortPetButton.Visible = true;
-            exportButton.Visible = true;
+            exportPetDataButton.Visible = true;
 
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Категория", "Категория");
@@ -145,6 +145,7 @@ namespace PetRegistry
             {
                 Form addPetCard = new AddPetCard();
                 addPetCard.ShowDialog();
+
                 dataGridView.Rows.Clear();
                 DataTable data = controller.OpenPetsRegistry();
                 for (int i = 0; i < data.Rows.Count; i++)
@@ -164,12 +165,12 @@ namespace PetRegistry
             openPetButton.Visible = false;
             deletePetButton.Visible = false;
             sortPetButton.Visible = false;
-            exportButton.Visible = false;
+            exportPetDataButton.Visible = false;
 
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
 
-            petGroupBox.Visible = false;
+            petFilterGroupBox.Visible = false;
         }
         private void openPetButton_Click(object sender, EventArgs e)
         {
@@ -180,6 +181,15 @@ namespace PetRegistry
 
                 Form petCard = new PetCardForm();
                 petCard.ShowDialog();
+
+                dataGridView.Rows.Clear();
+                DataTable data = controller.OpenPetsRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    dataGridView.Rows.Add(row[0], row[1], row[2], row[3].ToString().Substring(0, 10),
+                        row[4], row[5], row[6], row[7], row[8]);
+                }
             }
             else MessageBox.Show("Недостаточно прав.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -207,25 +217,101 @@ namespace PetRegistry
             }
         }
 
-        private void rabiesButton_Click(object sender, EventArgs e)
-        {
-            Form cardParams = new CardParams();
-            cardParams.ShowDialog();
-        }
 
         private void sortPetButton_Click(object sender, EventArgs e)
         {
-            petGroupBox.Visible = true;
-        }
-
-        private void petGroupBox_Enter(object sender, EventArgs e)
-        {
-
+            petFilterGroupBox.Visible = true;
         }
 
         private void getPetParams_Click(object sender, EventArgs e)
         {
-            petGroupBox.Visible = false;
+            Dictionary<string, List<string>> petFilter = new Dictionary<string, List<string>>();
+            if (categoryCheckedListBox.CheckedItems.Count != 0)
+            {
+                petFilter["Categories.CategoryName"] = new List<string>();
+                foreach (var el in categoryCheckedListBox.CheckedItems)
+                    petFilter["Categories.CategoryName"].Add(el.ToString());
+            }
+
+            if (genderCheckedListBox.CheckedItems.Count != 0)
+            {
+                petFilter["Pets.Gender"] = new List<string>();
+                foreach (var el in genderCheckedListBox.CheckedItems)
+                    petFilter["Pets.Gender"].Add(el.ToString());
+            }
+
+            if (ownerTypeCheckedListBox.CheckedItems.Count != 0)
+            {
+                petFilter["OwnerTypes.TypeName"] = new List<string>();
+                foreach (var el in ownerTypeCheckedListBox.CheckedItems)
+                    petFilter["OwnerTypes.TypeName"].Add(el.ToString());
+            }
+            //MessageBox.Show(petFilter["OwnerTypes.TypeName"][0] + petFilter["OwnerTypes.TypeName"][1]);
+            if (ownerCheckedListBox.CheckedItems.Count != 0)
+            {
+                petFilter["dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany)"] = new List<string>();
+                foreach (var el in ownerCheckedListBox.CheckedItems)
+                    petFilter["dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany)"].Add(el.ToString());
+            }
+
+           //НЕ ХВАТАЕТ ДАТ
+
+
+            petFilterGroupBox.Visible = false;
         }
+
+        private void exportPetDataButton_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void ownerTypeCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ownerTypeCheckedListBox.CheckedItems.Contains("Физическое лицо")
+                && ownerTypeCheckedListBox.CheckedItems.Contains("Юридическое лицо"))
+            {
+                ownerCheckedListBox.Items.Clear();
+                DataTable data = controller.OpenOwnersUserRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    if (!ownerCheckedListBox.Items.Contains(row[1]))
+                        ownerCheckedListBox.Items.Add(row[1]);
+                }
+                data = controller.OpenOwnersOrgRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    if (!ownerCheckedListBox.Items.Contains(row[1]))
+                        ownerCheckedListBox.Items.Add(row[1]);
+                }
+            } 
+            else if (ownerTypeCheckedListBox.CheckedItems.Contains("Физическое лицо"))
+            {
+                ownerCheckedListBox.Items.Clear();
+                DataTable data = controller.OpenOwnersUserRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    if (!ownerCheckedListBox.Items.Contains(row[1]))
+                        ownerCheckedListBox.Items.Add(row[1]);
+                }
+            }
+            else if (ownerTypeCheckedListBox.CheckedItems.Contains("Юридическое лицо"))
+            {
+                ownerCheckedListBox.Items.Clear();
+                DataTable data = controller.OpenOwnersOrgRegistry();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    var row = data.Rows[i];
+                    if (!ownerCheckedListBox.Items.Contains(row[1]))
+                        ownerCheckedListBox.Items.Add(row[1]);
+                }
+            }
+            else { ownerCheckedListBox.Items.Clear(); }
+        }
+
+        
     }
 }

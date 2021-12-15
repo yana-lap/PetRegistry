@@ -28,5 +28,17 @@ namespace PetRegistry
             else
                 MessageBox.Show("Неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loginTextBox.Text = "vet";
+            passwordTextBox.Text = "vet";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            loginTextBox.Text = "sapov";
+            passwordTextBox.Text = "sapov";
+        }
     }
 }

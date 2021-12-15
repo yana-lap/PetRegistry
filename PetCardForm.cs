@@ -34,19 +34,23 @@ namespace PetRegistry
         {
             ResetVisibility();
 
-            okButton.Enabled = true;
             okButton.Visible = true;
 
             genderComboBox.Visible = true;
-            genderComboBox.SelectedIndex = genderComboBox.Items.IndexOf(gender.Text);
+            //genderComboBox.SelectedIndex = genderComboBox.Items.IndexOf(gender.Text);
+            genderComboBox.Text = gender.Text;
+
             categoryComboBox.Visible = true;
-            categoryComboBox.SelectedIndex = categoryComboBox.Items.IndexOf(category.Text);
+            //categoryComboBox.SelectedIndex = categoryComboBox.Items.IndexOf(category.Text);
+            categoryComboBox.Text = category.Text;
+
             ownerTypeComboBox.Visible = true;
-            ownerTypeComboBox.SelectedIndex = ownerTypeComboBox.Items.IndexOf(ownerType.Text);
+            //ownerTypeComboBox.SelectedIndex = ownerTypeComboBox.Items.IndexOf(ownerType.Text);
+            ownerTypeComboBox.Text = ownerType.Text;
+
             ownerComboBox.Visible = true;
-            //ownerComboBox.SelectedIndex = ownerComboBox.Items.IndexOf(owner.Text);
-            //ownerComboBox.SelectedIndex = 1;
-            //MessageBox.Show(ownerComboBox.Items.IndexOf(owner.Text).ToString());
+            ownerComboBox.Text = owner.Text;
+
             birthDate.Enabled = true;
             registrationDate.Enabled = true;
             vacinationDate.Enabled = true;
@@ -95,7 +99,6 @@ namespace PetRegistry
 
             ResetVisibility();
 
-            changeCardButton.Enabled = true;
             changeCardButton.Visible = true;
 
             gender.Visible = true;       
@@ -113,9 +116,8 @@ namespace PetRegistry
 
         private void ResetVisibility()
         {
-            changeCardButton.Enabled = false; //кнопки
-            changeCardButton.Visible = false;
-            okButton.Enabled = false;
+            
+            changeCardButton.Visible = false;  //кнопки
             okButton.Visible = false;
 
             gender.Visible = false;           //комбобоксы

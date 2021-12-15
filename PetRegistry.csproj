@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardParams.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CardParams.Designer.cs">
-      <DependentUpon>CardParams.cs</DependentUpon>
-    </Compile>
     <Compile Include="PetCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +91,6 @@
     <Compile Include="UserService.cs" />
     <EmbeddedResource Include="AddPetCard.resx">
       <DependentUpon>AddPetCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CardParams.resx">
-      <DependentUpon>CardParams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
