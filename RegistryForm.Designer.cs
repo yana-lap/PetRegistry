@@ -58,7 +58,7 @@ namespace PetRegistry
             this.genderLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.sortOwnerUserButton = new System.Windows.Forms.Button();
-            this.ownerUserFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.ownerFilterGroupBox = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace PetRegistry
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.petFilterGroupBox.SuspendLayout();
-            this.ownerUserFilterGroupBox.SuspendLayout();
+            this.ownerFilterGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -450,36 +450,36 @@ namespace PetRegistry
             this.sortOwnerUserButton.Visible = false;
             this.sortOwnerUserButton.Click += new System.EventHandler(this.sortOwnerUserButton_Click);
             // 
-            // ownerUserFilterGroupBox
+            // ownerFilterGroupBox
             // 
-            this.ownerUserFilterGroupBox.Controls.Add(this.label12);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label13);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label11);
-            this.ownerUserFilterGroupBox.Controls.Add(this.catsNumberFrom);
-            this.ownerUserFilterGroupBox.Controls.Add(this.catsNumberTo);
-            this.ownerUserFilterGroupBox.Controls.Add(this.dogsNumberTo);
-            this.ownerUserFilterGroupBox.Controls.Add(this.dogsNumberFrom);
-            this.ownerUserFilterGroupBox.Controls.Add(this.petsNumberTo);
-            this.ownerUserFilterGroupBox.Controls.Add(this.petsNumberFrom);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label7);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label8);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label9);
-            this.ownerUserFilterGroupBox.Controls.Add(this.ownerCompanyCountryCheckedListBox);
-            this.ownerUserFilterGroupBox.Controls.Add(this.countryUsersCheckListBox);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label4);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label5);
-            this.ownerUserFilterGroupBox.Controls.Add(this.getOwnerUsersParams);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label6);
-            this.ownerUserFilterGroupBox.Controls.Add(this.label10);
-            this.ownerUserFilterGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ownerUserFilterGroupBox.Location = new System.Drawing.Point(752, 114);
-            this.ownerUserFilterGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ownerUserFilterGroupBox.Name = "ownerUserFilterGroupBox";
-            this.ownerUserFilterGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ownerUserFilterGroupBox.Size = new System.Drawing.Size(419, 425);
-            this.ownerUserFilterGroupBox.TabIndex = 141;
-            this.ownerUserFilterGroupBox.TabStop = false;
-            this.ownerUserFilterGroupBox.Visible = false;
+            this.ownerFilterGroupBox.Controls.Add(this.label12);
+            this.ownerFilterGroupBox.Controls.Add(this.label13);
+            this.ownerFilterGroupBox.Controls.Add(this.label11);
+            this.ownerFilterGroupBox.Controls.Add(this.catsNumberFrom);
+            this.ownerFilterGroupBox.Controls.Add(this.catsNumberTo);
+            this.ownerFilterGroupBox.Controls.Add(this.dogsNumberTo);
+            this.ownerFilterGroupBox.Controls.Add(this.dogsNumberFrom);
+            this.ownerFilterGroupBox.Controls.Add(this.petsNumberTo);
+            this.ownerFilterGroupBox.Controls.Add(this.petsNumberFrom);
+            this.ownerFilterGroupBox.Controls.Add(this.label7);
+            this.ownerFilterGroupBox.Controls.Add(this.label8);
+            this.ownerFilterGroupBox.Controls.Add(this.label9);
+            this.ownerFilterGroupBox.Controls.Add(this.ownerCompanyCountryCheckedListBox);
+            this.ownerFilterGroupBox.Controls.Add(this.countryUsersCheckListBox);
+            this.ownerFilterGroupBox.Controls.Add(this.label4);
+            this.ownerFilterGroupBox.Controls.Add(this.label5);
+            this.ownerFilterGroupBox.Controls.Add(this.getOwnerUsersParams);
+            this.ownerFilterGroupBox.Controls.Add(this.label6);
+            this.ownerFilterGroupBox.Controls.Add(this.label10);
+            this.ownerFilterGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ownerFilterGroupBox.Location = new System.Drawing.Point(752, 114);
+            this.ownerFilterGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ownerFilterGroupBox.Name = "ownerFilterGroupBox";
+            this.ownerFilterGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ownerFilterGroupBox.Size = new System.Drawing.Size(419, 425);
+            this.ownerFilterGroupBox.TabIndex = 141;
+            this.ownerFilterGroupBox.TabStop = false;
+            this.ownerFilterGroupBox.Visible = false;
             // 
             // label12
             // 
@@ -680,7 +680,7 @@ namespace PetRegistry
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1229, 554);
-            this.Controls.Add(this.ownerUserFilterGroupBox);
+            this.Controls.Add(this.ownerFilterGroupBox);
             this.Controls.Add(this.petFilterGroupBox);
             this.Controls.Add(this.exportPetDataButton);
             this.Controls.Add(this.menuStrip1);
@@ -701,8 +701,8 @@ namespace PetRegistry
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.petFilterGroupBox.ResumeLayout(false);
             this.petFilterGroupBox.PerformLayout();
-            this.ownerUserFilterGroupBox.ResumeLayout(false);
-            this.ownerUserFilterGroupBox.PerformLayout();
+            this.ownerFilterGroupBox.ResumeLayout(false);
+            this.ownerFilterGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -739,7 +739,7 @@ namespace PetRegistry
         private System.Windows.Forms.CheckedListBox ownerCheckedListBox;
         private System.Windows.Forms.CheckedListBox ownerTypeCheckedListBox;
         private System.Windows.Forms.Button sortOwnerUserButton;
-        private System.Windows.Forms.GroupBox ownerUserFilterGroupBox;
+        private System.Windows.Forms.GroupBox ownerFilterGroupBox;
         private System.Windows.Forms.CheckedListBox countryUsersCheckListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

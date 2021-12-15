@@ -83,6 +83,7 @@ namespace PetRegistry
             dataGridView.Columns.Add("Количество собак", "Количество собак");
             dataGridView.Columns[0].Visible = false;
             countryUsersCheckListBox.Visible = true;
+            exportPetDataButton.Visible = true;
 
 
             DataTable data = controller.OpenOwnersUserRegistry();
@@ -100,10 +101,47 @@ namespace PetRegistry
                     countryUsersCheckListBox.Items.Add(row[2]);
             }
         }
+        private void юридическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResetSettings();
+            typeOfOwner = "юридическиеЛица";
+
+            label.Text = "Реестр владельцев";
+            dataGridView.Columns.Add("ID", "ID");
+            dataGridView.Columns.Add("Наименование организации", "Наименование организации");
+            dataGridView.Columns.Add("ИНН", "ИНН");
+            dataGridView.Columns.Add("КПП", "КПП");
+            dataGridView.Columns.Add("Страна", "Страна");
+            dataGridView.Columns.Add("Адрес", "Адрес");
+            dataGridView.Columns.Add("Телефон", "Телефон");
+            dataGridView.Columns.Add("Электронная почта", "Электронная почта");
+            dataGridView.Columns.Add("Количество животных", "Количество животных");
+            dataGridView.Columns.Add("Количество кошек", "Количество кошек");
+            dataGridView.Columns.Add("Количество собак", "Количество собак");
+            dataGridView.Columns[0].Visible = false;
+            ownerCompanyCountryCheckedListBox.Visible = true;
+            exportPetDataButton.Visible = true;
+
+
+            DataTable data = controller.OpenOwnersOrgRegistry();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                var row = data.Rows[i];
+                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
+            }
+
+            ownerCompanyCountryCheckedListBox.Items.Clear();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                var row = data.Rows[i];
+                if (!countryUsersCheckListBox.Items.Contains(row[4]))
+                    countryUsersCheckListBox.Items.Add(row[4]);
+            }
+        }
 
         private void sortOwnerUserButton_Click(object sender, EventArgs e)
         {
-            ownerUserFilterGroupBox.Visible = true;
+            ownerFilterGroupBox.Visible = true;
         }
 
         private void getOwnerUsersParams_Click(object sender, EventArgs e) ////////////////
@@ -111,7 +149,7 @@ namespace PetRegistry
             if (countryUsersCheckListBox.CheckedItems.Count == 0 && petsNumberFrom.TextLength == 0 
                 && dogsNumberFrom.TextLength == 0 && catsNumberFrom.TextLength == 0)
             {
-                ownerUserFilterGroupBox.Visible = false;
+                ownerFilterGroupBox.Visible = false;
                 return;
             }
             
@@ -185,69 +223,8 @@ namespace PetRegistry
                 dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]);
             }
 
-            ownerUserFilterGroupBox.Visible = false;
+            ownerFilterGroupBox.Visible = false;
         }
-
-
-        //private void getOwCParams_Click(object sender, EventArgs e) ///////////////
-        //{
-        //    Dictionary<string, List<string>> ownerFilter = new Dictionary<string, List<string>>();
-
-            
-
-        //    DataTable data = controller.OpenOwnersOrgRegistry(ownerFilter);
-        //    dataGridView.Rows.Clear();
-        //    for (int i = 0; i < data.Rows.Count; i++)
-        //    {
-        //        var row = data.Rows[i];
-        //        dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
-        //    }
-
-        //    // ownerCompanyFilterGroupBox.Visible = false;
-        //}
-
-        private void юридическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ResetSettings();
-            //sortOwnerCompanyButton.Visible = true;
-            typeOfOwner = "юридическиеЛица";
-
-            label.Text = "Реестр владельцев";
-            dataGridView.Columns.Add("ID", "ID");
-            dataGridView.Columns.Add("Наименование организации", "Наименование организации");
-            dataGridView.Columns.Add("ИНН", "ИНН");
-            dataGridView.Columns.Add("КПП", "КПП");
-            dataGridView.Columns.Add("Страна", "Страна");
-            dataGridView.Columns.Add("Адрес", "Адрес");
-            dataGridView.Columns.Add("Телефон", "Телефон");
-            dataGridView.Columns.Add("Электронная почта", "Электронная почта");
-            dataGridView.Columns.Add("Количество животных", "Количество животных");
-            dataGridView.Columns.Add("Количество кошек", "Количество кошек");
-            dataGridView.Columns.Add("Количество собак", "Количество собак");
-            dataGridView.Columns[0].Visible = false;
-            ownerCompanyCountryCheckedListBox.Visible = true;
-
-
-            DataTable data = controller.OpenOwnersOrgRegistry();
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
-            }
-
-            ownerCompanyCountryCheckedListBox.Items.Clear();
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                var row = data.Rows[i];
-                if (!countryUsersCheckListBox.Items.Contains(row[4]))
-                    countryUsersCheckListBox.Items.Add(row[4]);
-            }
-        }
-
-        //private void sortOwnerCompanyButton_Click(object sender, EventArgs e)
-        //{
-        //    ownerCompanyFilterGroupBox.Visible = true;
-        //}
 
 
         private void моиДомашниеЖивотныеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -298,17 +275,18 @@ namespace PetRegistry
             openPetButton.Visible = false;
             deletePetButton.Visible = false;
             sortPetButton.Visible = false;
-            exportPetDataButton.Visible = false;
+            //exportPetDataButton.Visible = false;
 
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
 
             petFilterGroupBox.Visible = false;
-            ownerUserFilterGroupBox.Visible = false;
+            ownerFilterGroupBox.Visible = false;
 
             ownerCompanyCountryCheckedListBox.Visible = false;
             countryUsersCheckListBox.Visible = false;
-            // ownerCompanyFilterGroupBox.Visible = false;
+
+            typeOfOwner = "";
         }
         private void openPetButton_Click(object sender, EventArgs e)
         {
@@ -417,11 +395,14 @@ namespace PetRegistry
                     row[4], row[5], row[6], row[7], row[8]);
             }
         }
-
+        
         private void exportPetDataButton_Click(object sender, EventArgs e)
         {
+            string path = System.IO.Directory.GetCurrentDirectory() + @"\PetRegistry.xlsx";
 
-
+            Controller controller = new Controller();
+            controller.ExportPetRegistryToExcel(dataGridView, path);
+            MessageBox.Show("GOOD");
         }
 
         private void ownerTypeCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)

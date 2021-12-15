@@ -4,6 +4,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data;
 using System.Linq;
+using System.Reflection;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Drawing;
+
 
 namespace PetRegistry
 {
@@ -50,9 +54,23 @@ namespace PetRegistry
             
             return currentPet;
         } 
-        public void ExportPetRegistryToExcel(string pathToFile, Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public void ExportPetRegistryToExcel(DataGridView dataGridView, string pathToFile, Dictionary<string, string[]> filtersNames = null,
+            Dictionary<string, string[]> sortNames = null)
         {
+            Excel.Application excelApp = new Excel.Application();
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
 
+            for (int i = 1; i < dataGridView.RowCount+1; i++)
+            {
+                for (int j = 1; j < dataGridView.ColumnCount+1; j++)
+                {
+                    worksheet.Rows[i+1].Columns[j] = dataGridView.Rows[i - 1].Cells[j - 1].Value;
+                }
+            }
+            excelApp.AlertBeforeOverwriting = false;
+            workbook.SaveAs(pathToFile);
+            excelApp.Quit();
         }
         public void ExportPetCardToWord(string pathToFile, long cardNumber, long documentType)
         {
