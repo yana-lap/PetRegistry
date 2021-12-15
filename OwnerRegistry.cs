@@ -7,12 +7,12 @@ namespace PetRegistry
 {
     class OwnerRegistry
     {
-       public DataTable OpenOwnersUserRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+       public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
        {
             return OwnerService.GetOwnersUserRegistry(filtersNames, sortNames);
         }
 
-        public DataTable OpenOwnersOrgRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
         {
             return OwnerService.GetOwnersOrgRegistry(filtersNames, sortNames);
         }

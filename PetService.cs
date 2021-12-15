@@ -10,11 +10,41 @@ namespace PetRegistry
     {
 
        
-        public static DataTable GetPets(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public static DataTable GetPets(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
         {
             string query = "select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, Pets.IdentificationNum, Pets.ChipNum," +
                 " Pets.PetName, Pets.Photo, dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany) as OwnerPet from Pets" +
                 " inner join Categories on Pets.Category = Categories.IDCategory";
+
+            if (filtersNames != null)
+            {
+                List<string> filterQueries = new List<string>();
+
+                foreach (var key in filtersNames.Keys)
+                {
+                    string filter = "(";
+                    
+                    for (int i = 0; i < filtersNames[key].Count; i++)
+                    {
+                        filter += key + " = '" + filtersNames[key][i] + "'";
+
+                        if (i == filtersNames[key].Count - 1) filter += ")";
+                        else filter += " or ";
+                    }
+
+                    filterQueries.Add(filter);
+                }
+
+                query += " where ";
+                for (int i = 0; i < filterQueries.Count; i++)
+                {
+                    query += filterQueries[i];
+
+                    if (i == filterQueries.Count - 1) query += ";";
+                    else query += " and ";
+                }
+            }
+
             return Database.ExecuteQuery(query);
 
             /*string query1 = @"select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, Pets.IdentificationNum, Pets.ChipNum, 
@@ -37,7 +67,7 @@ namespace PetRegistry
 
         }
 
-        public static DataTable GetMyPets(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public static DataTable GetMyPets(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             string query = @"select Pets.IDPet, Categories.CategoryName, Pets.PetName, Pets.BirthDate, Pets.Breed, Pets.RegistrationDate, Pets.PassportNum, Users.UserName
 from Pets

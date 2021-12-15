@@ -17,22 +17,22 @@ namespace PetRegistry
 
             return (login != "" && password != "" && authorization.Login(login, password));
         }  
-        public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public DataTable OpenPetsRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
             return data;
         }
-        public DataTable OpenMyPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public DataTable OpenMyPetsRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             DataTable data = petRegistry.OpenMyPetsRegistry(filtersNames, sortNames);
             return data; //после создания фильтров снести метод, объединив с OpenPetsRegistry
         }
-        public DataTable OpenOwnersUserRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             DataTable data = ownerRegistry.OpenOwnersUserRegistry(filtersNames, sortNames);
             return data;
         }
-        public DataTable OpenOwnersOrgRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             DataTable data = ownerRegistry.OpenOwnersOrgRegistry(filtersNames, sortNames);
             return data;

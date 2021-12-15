@@ -7,13 +7,13 @@ namespace PetRegistry
 {
     class PetRegistry
     {
-        public DataTable OpenPetsRegistry(Dictionary<string, string[]> filtersNames, Dictionary<string, string[]> sortNames)
+        public DataTable OpenPetsRegistry(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
         {
             DataTable data = PetService.GetPets(filtersNames, sortNames);
 
             return data;
         }
-        public DataTable OpenMyPetsRegistry(Dictionary<string, string[]> filtersNames = null, Dictionary<string, string[]> sortNames = null)
+        public DataTable OpenMyPetsRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
         {
             DataTable data = PetService.GetMyPets(filtersNames, sortNames);
             return data;

@@ -57,9 +57,51 @@ namespace PetRegistry
             this.typeLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
+            this.sortOwnerUserButton = new System.Windows.Forms.Button();
+            this.ownerUserFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.countryUsersCheckListBox = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.getOwnerUsersParams = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.userPetsNumberFrom = new System.Windows.Forms.TextBox();
+            this.userPetsNumberTo = new System.Windows.Forms.TextBox();
+            this.userDogsNumberFrom = new System.Windows.Forms.TextBox();
+            this.userDogsNumberTo = new System.Windows.Forms.TextBox();
+            this.userCatsNumberTo = new System.Windows.Forms.TextBox();
+            this.userCatsNumberFrom = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ownerCompanyFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.owCCatNumberFrom = new System.Windows.Forms.TextBox();
+            this.owCCatNumberTo = new System.Windows.Forms.TextBox();
+            this.owCDogNumberTo = new System.Windows.Forms.TextBox();
+            this.owCDogNumberFrom = new System.Windows.Forms.TextBox();
+            this.owCPetNumberTo = new System.Windows.Forms.TextBox();
+            this.owCPetNumberFrom = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.ownerCompanyCountryCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.getOwCParams = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.sortOwnerCompanyButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.petFilterGroupBox.SuspendLayout();
+            this.ownerUserFilterGroupBox.SuspendLayout();
+            this.ownerCompanyFilterGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -71,15 +113,15 @@ namespace PetRegistry
             this.моиДомашниеЖивотныеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1229, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(922, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // реестрЖивотныхToolStripMenuItem
             // 
             this.реестрЖивотныхToolStripMenuItem.Name = "реестрЖивотныхToolStripMenuItem";
-            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.реестрЖивотныхToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.реестрЖивотныхToolStripMenuItem.Text = "Реест животных";
             this.реестрЖивотныхToolStripMenuItem.Visible = false;
             this.реестрЖивотныхToolStripMenuItem.Click += new System.EventHandler(this.реестрЖивотныхToolStripMenuItem_Click);
@@ -90,28 +132,28 @@ namespace PetRegistry
             this.физическиеЛицаToolStripMenuItem,
             this.юридическиеЛицаToolStripMenuItem});
             this.реестрВладельцевToolStripMenuItem.Name = "реестрВладельцевToolStripMenuItem";
-            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.реестрВладельцевToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.реестрВладельцевToolStripMenuItem.Text = "Реестр владельцев";
             this.реестрВладельцевToolStripMenuItem.Visible = false;
             // 
             // физическиеЛицаToolStripMenuItem
             // 
             this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
-            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
             this.физическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.физическиеЛицаToolStripMenuItem_Click);
             // 
             // юридическиеЛицаToolStripMenuItem
             // 
             this.юридическиеЛицаToolStripMenuItem.Name = "юридическиеЛицаToolStripMenuItem";
-            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.юридическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.юридическиеЛицаToolStripMenuItem.Text = "Юридические лица";
             this.юридическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.юридическиеЛицаToolStripMenuItem_Click);
             // 
             // моиДомашниеЖивотныеToolStripMenuItem
             // 
             this.моиДомашниеЖивотныеToolStripMenuItem.Name = "моиДомашниеЖивотныеToolStripMenuItem";
-            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.моиДомашниеЖивотныеToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
             this.моиДомашниеЖивотныеToolStripMenuItem.Text = "Мои домашние животные";
             this.моиДомашниеЖивотныеToolStripMenuItem.Visible = false;
             this.моиДомашниеЖивотныеToolStripMenuItem.Click += new System.EventHandler(this.моиДомашниеЖивотныеToolStripMenuItem_Click);
@@ -125,13 +167,12 @@ namespace PetRegistry
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(23, 130);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Location = new System.Drawing.Point(17, 106);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1193, 409);
+            this.dataGridView.Size = new System.Drawing.Size(895, 332);
             this.dataGridView.TabIndex = 11;
             // 
             // sortPetButton
@@ -141,10 +182,9 @@ namespace PetRegistry
             this.sortPetButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.sortPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sortPetButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.sortPetButton.Location = new System.Drawing.Point(988, 80);
-            this.sortPetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.sortPetButton.Location = new System.Drawing.Point(741, 65);
             this.sortPetButton.Name = "sortPetButton";
-            this.sortPetButton.Size = new System.Drawing.Size(228, 28);
+            this.sortPetButton.Size = new System.Drawing.Size(171, 23);
             this.sortPetButton.TabIndex = 10;
             this.sortPetButton.Text = "Параметры фильтрации...";
             this.sortPetButton.UseVisualStyleBackColor = false;
@@ -157,10 +197,9 @@ namespace PetRegistry
             this.deletePetButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.deletePetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePetButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.deletePetButton.Location = new System.Drawing.Point(239, 80);
-            this.deletePetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.deletePetButton.Location = new System.Drawing.Point(179, 65);
             this.deletePetButton.Name = "deletePetButton";
-            this.deletePetButton.Size = new System.Drawing.Size(100, 28);
+            this.deletePetButton.Size = new System.Drawing.Size(75, 23);
             this.deletePetButton.TabIndex = 9;
             this.deletePetButton.Text = "Удалить";
             this.deletePetButton.UseVisualStyleBackColor = false;
@@ -173,10 +212,9 @@ namespace PetRegistry
             this.openPetButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.openPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openPetButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.openPetButton.Location = new System.Drawing.Point(131, 80);
-            this.openPetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.openPetButton.Location = new System.Drawing.Point(98, 65);
             this.openPetButton.Name = "openPetButton";
-            this.openPetButton.Size = new System.Drawing.Size(100, 28);
+            this.openPetButton.Size = new System.Drawing.Size(75, 23);
             this.openPetButton.TabIndex = 8;
             this.openPetButton.Text = "Открыть";
             this.openPetButton.UseVisualStyleBackColor = false;
@@ -189,10 +227,9 @@ namespace PetRegistry
             this.addPetButton.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
             this.addPetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addPetButton.Location = new System.Drawing.Point(23, 80);
-            this.addPetButton.Margin = new System.Windows.Forms.Padding(4);
+            this.addPetButton.Location = new System.Drawing.Point(17, 65);
             this.addPetButton.Name = "addPetButton";
-            this.addPetButton.Size = new System.Drawing.Size(100, 28);
+            this.addPetButton.Size = new System.Drawing.Size(75, 23);
             this.addPetButton.TabIndex = 7;
             this.addPetButton.Text = "Добавить";
             this.addPetButton.UseVisualStyleBackColor = false;
@@ -204,10 +241,9 @@ namespace PetRegistry
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label.Location = new System.Drawing.Point(17, 45);
-            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Location = new System.Drawing.Point(13, 37);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(49, 31);
+            this.label.Size = new System.Drawing.Size(42, 25);
             this.label.TabIndex = 6;
             this.label.Text = "     ";
             // 
@@ -217,10 +253,9 @@ namespace PetRegistry
             this.exportPetDataButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.exportPetDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exportPetDataButton.ForeColor = System.Drawing.Color.CadetBlue;
-            this.exportPetDataButton.Location = new System.Drawing.Point(383, 80);
-            this.exportPetDataButton.Margin = new System.Windows.Forms.Padding(4);
+            this.exportPetDataButton.Location = new System.Drawing.Point(287, 65);
             this.exportPetDataButton.Name = "exportPetDataButton";
-            this.exportPetDataButton.Size = new System.Drawing.Size(115, 28);
+            this.exportPetDataButton.Size = new System.Drawing.Size(86, 23);
             this.exportPetDataButton.TabIndex = 12;
             this.exportPetDataButton.Text = "Экспорт";
             this.exportPetDataButton.UseVisualStyleBackColor = false;
@@ -244,9 +279,11 @@ namespace PetRegistry
             this.petFilterGroupBox.Controls.Add(this.genderLabel);
             this.petFilterGroupBox.Controls.Add(this.categoryLabel);
             this.petFilterGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.petFilterGroupBox.Location = new System.Drawing.Point(797, 115);
+            this.petFilterGroupBox.Location = new System.Drawing.Point(598, 93);
+            this.petFilterGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.petFilterGroupBox.Name = "petFilterGroupBox";
-            this.petFilterGroupBox.Size = new System.Drawing.Size(419, 408);
+            this.petFilterGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.petFilterGroupBox.Size = new System.Drawing.Size(314, 345);
             this.petFilterGroupBox.TabIndex = 13;
             this.petFilterGroupBox.TabStop = false;
             this.petFilterGroupBox.Visible = false;
@@ -255,9 +292,10 @@ namespace PetRegistry
             // 
             this.ownerCheckedListBox.CheckOnClick = true;
             this.ownerCheckedListBox.FormattingEnabled = true;
-            this.ownerCheckedListBox.Location = new System.Drawing.Point(233, 279);
+            this.ownerCheckedListBox.Location = new System.Drawing.Point(175, 227);
+            this.ownerCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ownerCheckedListBox.Name = "ownerCheckedListBox";
-            this.ownerCheckedListBox.Size = new System.Drawing.Size(158, 55);
+            this.ownerCheckedListBox.Size = new System.Drawing.Size(120, 34);
             this.ownerCheckedListBox.TabIndex = 140;
             // 
             // ownerTypeCheckedListBox
@@ -267,9 +305,10 @@ namespace PetRegistry
             this.ownerTypeCheckedListBox.Items.AddRange(new object[] {
             "Физическое лицо",
             "Юридическое лицо"});
-            this.ownerTypeCheckedListBox.Location = new System.Drawing.Point(233, 220);
+            this.ownerTypeCheckedListBox.Location = new System.Drawing.Point(175, 179);
+            this.ownerTypeCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ownerTypeCheckedListBox.Name = "ownerTypeCheckedListBox";
-            this.ownerTypeCheckedListBox.Size = new System.Drawing.Size(158, 55);
+            this.ownerTypeCheckedListBox.Size = new System.Drawing.Size(120, 34);
             this.ownerTypeCheckedListBox.TabIndex = 139;
             this.ownerTypeCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.ownerTypeCheckedListBox_SelectedIndexChanged);
             // 
@@ -280,9 +319,10 @@ namespace PetRegistry
             this.genderCheckedListBox.Items.AddRange(new object[] {
             "Женский",
             "Мужской"});
-            this.genderCheckedListBox.Location = new System.Drawing.Point(233, 94);
+            this.genderCheckedListBox.Location = new System.Drawing.Point(175, 76);
+            this.genderCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genderCheckedListBox.Name = "genderCheckedListBox";
-            this.genderCheckedListBox.Size = new System.Drawing.Size(158, 55);
+            this.genderCheckedListBox.Size = new System.Drawing.Size(120, 34);
             this.genderCheckedListBox.TabIndex = 138;
             // 
             // categoryCheckedListBox
@@ -292,9 +332,10 @@ namespace PetRegistry
             this.categoryCheckedListBox.Items.AddRange(new object[] {
             "Кошка",
             "Собака"});
-            this.categoryCheckedListBox.Location = new System.Drawing.Point(233, 32);
+            this.categoryCheckedListBox.Location = new System.Drawing.Point(175, 26);
+            this.categoryCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryCheckedListBox.Name = "categoryCheckedListBox";
-            this.categoryCheckedListBox.Size = new System.Drawing.Size(158, 55);
+            this.categoryCheckedListBox.Size = new System.Drawing.Size(120, 34);
             this.categoryCheckedListBox.TabIndex = 14;
             // 
             // label3
@@ -302,9 +343,10 @@ namespace PetRegistry
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label3.Location = new System.Drawing.Point(194, 188);
+            this.label3.Location = new System.Drawing.Point(146, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 20);
+            this.label3.Size = new System.Drawing.Size(26, 17);
             this.label3.TabIndex = 137;
             this.label3.Text = "до";
             // 
@@ -313,17 +355,19 @@ namespace PetRegistry
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(196, 155);
+            this.label1.Location = new System.Drawing.Point(147, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 20);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 136;
             this.label1.Text = "от";
             // 
             // birthDate2
             // 
-            this.birthDate2.Location = new System.Drawing.Point(233, 188);
+            this.birthDate2.Location = new System.Drawing.Point(175, 153);
+            this.birthDate2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.birthDate2.Name = "birthDate2";
-            this.birthDate2.Size = new System.Drawing.Size(158, 22);
+            this.birthDate2.Size = new System.Drawing.Size(120, 20);
             this.birthDate2.TabIndex = 135;
             // 
             // getPetParams
@@ -332,9 +376,10 @@ namespace PetRegistry
             this.getPetParams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.getPetParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.getPetParams.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.getPetParams.Location = new System.Drawing.Point(233, 354);
+            this.getPetParams.Location = new System.Drawing.Point(175, 288);
+            this.getPetParams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getPetParams.Name = "getPetParams";
-            this.getPetParams.Size = new System.Drawing.Size(154, 32);
+            this.getPetParams.Size = new System.Drawing.Size(116, 26);
             this.getPetParams.TabIndex = 125;
             this.getPetParams.Text = "Oк";
             this.getPetParams.UseVisualStyleBackColor = false;
@@ -342,9 +387,10 @@ namespace PetRegistry
             // 
             // birthDate
             // 
-            this.birthDate.Location = new System.Drawing.Point(233, 155);
+            this.birthDate.Location = new System.Drawing.Point(175, 126);
+            this.birthDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(158, 22);
+            this.birthDate.Size = new System.Drawing.Size(120, 20);
             this.birthDate.TabIndex = 118;
             // 
             // label2
@@ -352,9 +398,10 @@ namespace PetRegistry
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(15, 153);
+            this.label2.Location = new System.Drawing.Point(11, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 20);
+            this.label2.Size = new System.Drawing.Size(124, 17);
             this.label2.TabIndex = 117;
             this.label2.Text = "Дата рождения";
             // 
@@ -363,9 +410,10 @@ namespace PetRegistry
             this.ownerLabel.AutoSize = true;
             this.ownerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ownerLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.ownerLabel.Location = new System.Drawing.Point(15, 279);
+            this.ownerLabel.Location = new System.Drawing.Point(11, 227);
+            this.ownerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ownerLabel.Name = "ownerLabel";
-            this.ownerLabel.Size = new System.Drawing.Size(101, 20);
+            this.ownerLabel.Size = new System.Drawing.Size(81, 17);
             this.ownerLabel.TabIndex = 115;
             this.ownerLabel.Text = "Владелец";
             // 
@@ -374,9 +422,10 @@ namespace PetRegistry
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.typeLabel.Location = new System.Drawing.Point(15, 220);
+            this.typeLabel.Location = new System.Drawing.Point(11, 179);
+            this.typeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(149, 20);
+            this.typeLabel.Size = new System.Drawing.Size(120, 17);
             this.typeLabel.TabIndex = 114;
             this.typeLabel.Text = "Тип владельца";
             // 
@@ -385,9 +434,10 @@ namespace PetRegistry
             this.genderLabel.AutoSize = true;
             this.genderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.genderLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.genderLabel.Location = new System.Drawing.Point(15, 94);
+            this.genderLabel.Location = new System.Drawing.Point(11, 76);
+            this.genderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(45, 20);
+            this.genderLabel.Size = new System.Drawing.Size(37, 17);
             this.genderLabel.TabIndex = 107;
             this.genderLabel.Text = "Пол";
             // 
@@ -396,29 +446,499 @@ namespace PetRegistry
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.categoryLabel.ForeColor = System.Drawing.Color.CadetBlue;
-            this.categoryLabel.Location = new System.Drawing.Point(15, 32);
+            this.categoryLabel.Location = new System.Drawing.Point(11, 26);
+            this.categoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(107, 20);
+            this.categoryLabel.Size = new System.Drawing.Size(86, 17);
             this.categoryLabel.TabIndex = 106;
             this.categoryLabel.Text = "Категория";
             // 
+            // sortOwnerUserButton
+            // 
+            this.sortOwnerUserButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sortOwnerUserButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.sortOwnerUserButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.sortOwnerUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortOwnerUserButton.ForeColor = System.Drawing.Color.CadetBlue;
+            this.sortOwnerUserButton.Location = new System.Drawing.Point(739, 65);
+            this.sortOwnerUserButton.Name = "sortOwnerUserButton";
+            this.sortOwnerUserButton.Size = new System.Drawing.Size(171, 23);
+            this.sortOwnerUserButton.TabIndex = 14;
+            this.sortOwnerUserButton.Text = "Параметры фильтрации...";
+            this.sortOwnerUserButton.UseVisualStyleBackColor = false;
+            this.sortOwnerUserButton.Visible = false;
+            this.sortOwnerUserButton.Click += new System.EventHandler(this.sortOwnerUserButton_Click);
+            // 
+            // ownerUserFilterGroupBox
+            // 
+            this.ownerUserFilterGroupBox.Controls.Add(this.ownerCompanyFilterGroupBox);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label12);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label13);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label11);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userCatsNumberFrom);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userCatsNumberTo);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userDogsNumberTo);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userDogsNumberFrom);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userPetsNumberTo);
+            this.ownerUserFilterGroupBox.Controls.Add(this.userPetsNumberFrom);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label7);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label8);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label9);
+            this.ownerUserFilterGroupBox.Controls.Add(this.countryUsersCheckListBox);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label4);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label5);
+            this.ownerUserFilterGroupBox.Controls.Add(this.getOwnerUsersParams);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label6);
+            this.ownerUserFilterGroupBox.Controls.Add(this.label10);
+            this.ownerUserFilterGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ownerUserFilterGroupBox.Location = new System.Drawing.Point(0, 93);
+            this.ownerUserFilterGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ownerUserFilterGroupBox.Name = "ownerUserFilterGroupBox";
+            this.ownerUserFilterGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.ownerUserFilterGroupBox.Size = new System.Drawing.Size(314, 345);
+            this.ownerUserFilterGroupBox.TabIndex = 141;
+            this.ownerUserFilterGroupBox.TabStop = false;
+            this.ownerUserFilterGroupBox.Visible = false;
+            // 
+            // countryUsersCheckListBox
+            // 
+            this.countryUsersCheckListBox.CheckOnClick = true;
+            this.countryUsersCheckListBox.FormattingEnabled = true;
+            this.countryUsersCheckListBox.Location = new System.Drawing.Point(175, 26);
+            this.countryUsersCheckListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.countryUsersCheckListBox.Name = "countryUsersCheckListBox";
+            this.countryUsersCheckListBox.Size = new System.Drawing.Size(120, 34);
+            this.countryUsersCheckListBox.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label4.Location = new System.Drawing.Point(144, 99);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 17);
+            this.label4.TabIndex = 137;
+            this.label4.Text = "до";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label5.Location = new System.Drawing.Point(145, 74);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 17);
+            this.label5.TabIndex = 136;
+            this.label5.Text = "от";
+            // 
+            // getOwnerUsersParams
+            // 
+            this.getOwnerUsersParams.BackColor = System.Drawing.Color.CadetBlue;
+            this.getOwnerUsersParams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getOwnerUsersParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.getOwnerUsersParams.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.getOwnerUsersParams.Location = new System.Drawing.Point(175, 288);
+            this.getOwnerUsersParams.Margin = new System.Windows.Forms.Padding(2);
+            this.getOwnerUsersParams.Name = "getOwnerUsersParams";
+            this.getOwnerUsersParams.Size = new System.Drawing.Size(116, 26);
+            this.getOwnerUsersParams.TabIndex = 125;
+            this.getOwnerUsersParams.Text = "Oк";
+            this.getOwnerUsersParams.UseVisualStyleBackColor = false;
+            this.getOwnerUsersParams.Click += new System.EventHandler(this.getOwnerUsersParams_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label6.Location = new System.Drawing.Point(6, 73);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 17);
+            this.label6.TabIndex = 117;
+            this.label6.Text = "Кол-во животных";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label10.Location = new System.Drawing.Point(6, 26);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 17);
+            this.label10.TabIndex = 106;
+            this.label10.Text = "Страна";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label7.Location = new System.Drawing.Point(143, 166);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 17);
+            this.label7.TabIndex = 140;
+            this.label7.Text = "до";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label8.Location = new System.Drawing.Point(144, 140);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 17);
+            this.label8.TabIndex = 139;
+            this.label8.Text = "от";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label9.Location = new System.Drawing.Point(6, 140);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 17);
+            this.label9.TabIndex = 138;
+            this.label9.Text = "Кол-во собак";
+            // 
+            // userPetsNumberFrom
+            // 
+            this.userPetsNumberFrom.Location = new System.Drawing.Point(175, 73);
+            this.userPetsNumberFrom.Name = "userPetsNumberFrom";
+            this.userPetsNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.userPetsNumberFrom.TabIndex = 141;
+            // 
+            // userPetsNumberTo
+            // 
+            this.userPetsNumberTo.Location = new System.Drawing.Point(175, 98);
+            this.userPetsNumberTo.Name = "userPetsNumberTo";
+            this.userPetsNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.userPetsNumberTo.TabIndex = 142;
+            // 
+            // userDogsNumberFrom
+            // 
+            this.userDogsNumberFrom.Location = new System.Drawing.Point(175, 139);
+            this.userDogsNumberFrom.Name = "userDogsNumberFrom";
+            this.userDogsNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.userDogsNumberFrom.TabIndex = 143;
+            // 
+            // userDogsNumberTo
+            // 
+            this.userDogsNumberTo.Location = new System.Drawing.Point(175, 165);
+            this.userDogsNumberTo.Name = "userDogsNumberTo";
+            this.userDogsNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.userDogsNumberTo.TabIndex = 144;
+            // 
+            // userCatsNumberTo
+            // 
+            this.userCatsNumberTo.Location = new System.Drawing.Point(175, 233);
+            this.userCatsNumberTo.Name = "userCatsNumberTo";
+            this.userCatsNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.userCatsNumberTo.TabIndex = 145;
+            // 
+            // userCatsNumberFrom
+            // 
+            this.userCatsNumberFrom.Location = new System.Drawing.Point(175, 207);
+            this.userCatsNumberFrom.Name = "userCatsNumberFrom";
+            this.userCatsNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.userCatsNumberFrom.TabIndex = 146;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label11.Location = new System.Drawing.Point(6, 208);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 17);
+            this.label11.TabIndex = 147;
+            this.label11.Text = "Кол-во кошек";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label12.Location = new System.Drawing.Point(144, 234);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 17);
+            this.label12.TabIndex = 149;
+            this.label12.Text = "до";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label13.Location = new System.Drawing.Point(145, 208);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 17);
+            this.label13.TabIndex = 148;
+            this.label13.Text = "от";
+            // 
+            // ownerCompanyFilterGroupBox
+            // 
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label14);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label15);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label16);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCCatNumberFrom);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCCatNumberTo);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCDogNumberTo);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCDogNumberFrom);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCPetNumberTo);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.owCPetNumberFrom);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label17);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label18);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label19);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.ownerCompanyCountryCheckedListBox);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label20);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label21);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.getOwCParams);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label22);
+            this.ownerCompanyFilterGroupBox.Controls.Add(this.label23);
+            this.ownerCompanyFilterGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ownerCompanyFilterGroupBox.Location = new System.Drawing.Point(38, 0);
+            this.ownerCompanyFilterGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ownerCompanyFilterGroupBox.Name = "ownerCompanyFilterGroupBox";
+            this.ownerCompanyFilterGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.ownerCompanyFilterGroupBox.Size = new System.Drawing.Size(314, 345);
+            this.ownerCompanyFilterGroupBox.TabIndex = 150;
+            this.ownerCompanyFilterGroupBox.TabStop = false;
+            this.ownerCompanyFilterGroupBox.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label14.Location = new System.Drawing.Point(144, 234);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 17);
+            this.label14.TabIndex = 149;
+            this.label14.Text = "до";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label15.Location = new System.Drawing.Point(145, 208);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 17);
+            this.label15.TabIndex = 148;
+            this.label15.Text = "от";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label16.Location = new System.Drawing.Point(6, 208);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 17);
+            this.label16.TabIndex = 147;
+            this.label16.Text = "Кол-во кошек";
+            // 
+            // owCCatNumberFrom
+            // 
+            this.owCCatNumberFrom.Location = new System.Drawing.Point(175, 207);
+            this.owCCatNumberFrom.Name = "owCCatNumberFrom";
+            this.owCCatNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.owCCatNumberFrom.TabIndex = 146;
+            // 
+            // owCCatNumberTo
+            // 
+            this.owCCatNumberTo.Location = new System.Drawing.Point(175, 233);
+            this.owCCatNumberTo.Name = "owCCatNumberTo";
+            this.owCCatNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.owCCatNumberTo.TabIndex = 145;
+            // 
+            // owCDogNumberTo
+            // 
+            this.owCDogNumberTo.Location = new System.Drawing.Point(175, 165);
+            this.owCDogNumberTo.Name = "owCDogNumberTo";
+            this.owCDogNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.owCDogNumberTo.TabIndex = 144;
+            // 
+            // owCDogNumberFrom
+            // 
+            this.owCDogNumberFrom.Location = new System.Drawing.Point(175, 139);
+            this.owCDogNumberFrom.Name = "owCDogNumberFrom";
+            this.owCDogNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.owCDogNumberFrom.TabIndex = 143;
+            // 
+            // owCPetNumberTo
+            // 
+            this.owCPetNumberTo.Location = new System.Drawing.Point(175, 98);
+            this.owCPetNumberTo.Name = "owCPetNumberTo";
+            this.owCPetNumberTo.Size = new System.Drawing.Size(120, 20);
+            this.owCPetNumberTo.TabIndex = 142;
+            // 
+            // owCPetNumberFrom
+            // 
+            this.owCPetNumberFrom.Location = new System.Drawing.Point(175, 73);
+            this.owCPetNumberFrom.Name = "owCPetNumberFrom";
+            this.owCPetNumberFrom.Size = new System.Drawing.Size(120, 20);
+            this.owCPetNumberFrom.TabIndex = 141;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label17.Location = new System.Drawing.Point(143, 166);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(26, 17);
+            this.label17.TabIndex = 140;
+            this.label17.Text = "до";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label18.Location = new System.Drawing.Point(144, 140);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(25, 17);
+            this.label18.TabIndex = 139;
+            this.label18.Text = "от";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label19.Location = new System.Drawing.Point(6, 140);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(107, 17);
+            this.label19.TabIndex = 138;
+            this.label19.Text = "Кол-во собак";
+            // 
+            // ownerCompanyCountryCheckedListBox
+            // 
+            this.ownerCompanyCountryCheckedListBox.CheckOnClick = true;
+            this.ownerCompanyCountryCheckedListBox.FormattingEnabled = true;
+            this.ownerCompanyCountryCheckedListBox.Location = new System.Drawing.Point(175, 26);
+            this.ownerCompanyCountryCheckedListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ownerCompanyCountryCheckedListBox.Name = "ownerCompanyCountryCheckedListBox";
+            this.ownerCompanyCountryCheckedListBox.Size = new System.Drawing.Size(120, 34);
+            this.ownerCompanyCountryCheckedListBox.TabIndex = 14;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label20.Location = new System.Drawing.Point(144, 99);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(26, 17);
+            this.label20.TabIndex = 137;
+            this.label20.Text = "до";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label21.Location = new System.Drawing.Point(145, 74);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 17);
+            this.label21.TabIndex = 136;
+            this.label21.Text = "от";
+            // 
+            // getOwCParams
+            // 
+            this.getOwCParams.BackColor = System.Drawing.Color.CadetBlue;
+            this.getOwCParams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getOwCParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.getOwCParams.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.getOwCParams.Location = new System.Drawing.Point(175, 288);
+            this.getOwCParams.Margin = new System.Windows.Forms.Padding(2);
+            this.getOwCParams.Name = "getOwCParams";
+            this.getOwCParams.Size = new System.Drawing.Size(116, 26);
+            this.getOwCParams.TabIndex = 125;
+            this.getOwCParams.Text = "Oк";
+            this.getOwCParams.UseVisualStyleBackColor = false;
+            this.getOwCParams.Click += new System.EventHandler(this.getOwCParams_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label22.Location = new System.Drawing.Point(6, 73);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(135, 17);
+            this.label22.TabIndex = 117;
+            this.label22.Text = "Кол-во животных";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label23.Location = new System.Drawing.Point(6, 26);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 17);
+            this.label23.TabIndex = 106;
+            this.label23.Text = "Страна";
+            // 
+            // sortOwnerCompanyButton
+            // 
+            this.sortOwnerCompanyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sortOwnerCompanyButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.sortOwnerCompanyButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.sortOwnerCompanyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortOwnerCompanyButton.ForeColor = System.Drawing.Color.CadetBlue;
+            this.sortOwnerCompanyButton.Location = new System.Drawing.Point(558, 65);
+            this.sortOwnerCompanyButton.Name = "sortOwnerCompanyButton";
+            this.sortOwnerCompanyButton.Size = new System.Drawing.Size(171, 23);
+            this.sortOwnerCompanyButton.TabIndex = 142;
+            this.sortOwnerCompanyButton.Text = "Параметры фильтрации...";
+            this.sortOwnerCompanyButton.UseVisualStyleBackColor = false;
+            this.sortOwnerCompanyButton.Visible = false;
+            this.sortOwnerCompanyButton.Click += new System.EventHandler(this.sortOwnerCompanyButton_Click);
+            // 
             // RegistryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1229, 554);
+            this.ClientSize = new System.Drawing.Size(922, 450);
+            this.Controls.Add(this.sortOwnerCompanyButton);
+            this.Controls.Add(this.ownerUserFilterGroupBox);
             this.Controls.Add(this.petFilterGroupBox);
             this.Controls.Add(this.exportPetDataButton);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.sortPetButton);
             this.Controls.Add(this.deletePetButton);
             this.Controls.Add(this.openPetButton);
             this.Controls.Add(this.addPetButton);
             this.Controls.Add(this.label);
+            this.Controls.Add(this.sortOwnerUserButton);
+            this.Controls.Add(this.dataGridView);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реестры";
@@ -427,6 +947,10 @@ namespace PetRegistry
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.petFilterGroupBox.ResumeLayout(false);
             this.petFilterGroupBox.PerformLayout();
+            this.ownerUserFilterGroupBox.ResumeLayout(false);
+            this.ownerUserFilterGroupBox.PerformLayout();
+            this.ownerCompanyFilterGroupBox.ResumeLayout(false);
+            this.ownerCompanyFilterGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,5 +986,45 @@ namespace PetRegistry
         private System.Windows.Forms.CheckedListBox categoryCheckedListBox;
         private System.Windows.Forms.CheckedListBox ownerCheckedListBox;
         private System.Windows.Forms.CheckedListBox ownerTypeCheckedListBox;
+        private System.Windows.Forms.Button sortOwnerUserButton;
+        private System.Windows.Forms.GroupBox ownerUserFilterGroupBox;
+        private System.Windows.Forms.CheckedListBox countryUsersCheckListBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button getOwnerUsersParams;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox userCatsNumberFrom;
+        private System.Windows.Forms.TextBox userCatsNumberTo;
+        private System.Windows.Forms.TextBox userDogsNumberTo;
+        private System.Windows.Forms.TextBox userDogsNumberFrom;
+        private System.Windows.Forms.TextBox userPetsNumberTo;
+        private System.Windows.Forms.TextBox userPetsNumberFrom;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox ownerCompanyFilterGroupBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox owCCatNumberFrom;
+        private System.Windows.Forms.TextBox owCCatNumberTo;
+        private System.Windows.Forms.TextBox owCDogNumberTo;
+        private System.Windows.Forms.TextBox owCDogNumberFrom;
+        private System.Windows.Forms.TextBox owCPetNumberTo;
+        private System.Windows.Forms.TextBox owCPetNumberFrom;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.CheckedListBox ownerCompanyCountryCheckedListBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button getOwCParams;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button sortOwnerCompanyButton;
     }
 }
