@@ -40,5 +40,17 @@ namespace PetRegistry
             loginTextBox.Text = "sapov";
             passwordTextBox.Text = "sapov";
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            loginTextBox.Text = "yana";
+            passwordTextBox.Text = "yana1";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            loginTextBox.Text = "sapov";
+            passwordTextBox.Text = "sapov1";
+        }
     }
 }

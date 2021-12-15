@@ -36,5 +36,4 @@ C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.AddPetCard.re
 C:\ПИС\PetRegistry\obj\Debug\PetRegistry.AddPetCard.resources
 C:\ПИС\PetRegistry\obj\Debug\PetRegistry.PetCardForm.resources
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\obj\Debug\PetRegistry.PetCardForm.resources
-C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\obj\Debug\PetRegistry.CardParams.resources
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.PetCardForm.resources

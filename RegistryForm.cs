@@ -13,6 +13,7 @@ namespace PetRegistry
     public partial class RegistryForm : Form
     {
         Controller controller = new Controller();
+        string typeOfOwner = "";
 
         public RegistryForm()
         {
@@ -68,6 +69,7 @@ namespace PetRegistry
         {
             ResetSettings();
             sortOwnerUserButton.Visible = true;
+            typeOfOwner = "физическиеЛица";
 
             label.Text = "Реестр владельцев";
             dataGridView.Columns.Add("ID", "ID");
@@ -80,6 +82,8 @@ namespace PetRegistry
             dataGridView.Columns.Add("Количество кошек", "Количество кошек");
             dataGridView.Columns.Add("Количество собак", "Количество собак");
             dataGridView.Columns[0].Visible = false;
+            countryUsersCheckListBox.Visible = true;
+
 
             DataTable data = controller.OpenOwnersUserRegistry();
             for (int i = 0; i < data.Rows.Count; i++)
@@ -102,43 +106,75 @@ namespace PetRegistry
             ownerUserFilterGroupBox.Visible = true;
         }
 
-        private void getOwnerUsersParams_Click(object sender, EventArgs e)
+        private void getOwnerUsersParams_Click(object sender, EventArgs e) ////////////////
         {
-            if (countryUsersCheckListBox.CheckedItems.Count == 0 && userPetsNumberFrom.TextLength == 0 
-                && userDogsNumberFrom.TextLength == 0 && userCatsNumberFrom.TextLength == 0)
+            if (countryUsersCheckListBox.CheckedItems.Count == 0 && petsNumberFrom.TextLength == 0 
+                && dogsNumberFrom.TextLength == 0 && catsNumberFrom.TextLength == 0)
             {
                 ownerUserFilterGroupBox.Visible = false;
                 return;
             }
             
             Dictionary<string, List<string>> ownerFilter = new Dictionary<string, List<string>>();
-            
-            if (countryUsersCheckListBox.CheckedItems.Count != 0)
+            if (typeOfOwner == "физическиеЛица")
             {
-                ownerFilter["Users.Country"] = new List<string>();
-                foreach (var el in categoryCheckedListBox.CheckedItems)
-                    ownerFilter["Users.Country"].Add(el.ToString());
-            }
-            if (userPetsNumberFrom.TextLength > 0)
-            {
-                ownerFilter["Count(Pets.OwnerUser)"] = new List<string>();
+                if (countryUsersCheckListBox.CheckedItems.Count != 0)
+                {
+                    ownerFilter["Users.Country"] = new List<string>();
+                    foreach (var el in categoryCheckedListBox.CheckedItems)
+                        ownerFilter["Users.Country"].Add(el.ToString());
+                }
+                if (petsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["Count(Pets.OwnerUser)"] = new List<string>();
 
-                ownerFilter["Count(Pets.OwnerUser)"].Add(userPetsNumberFrom.Text);
-                ownerFilter["Count(Pets.OwnerUser)"].Add(userPetsNumberTo.Text);
-            }
-            if (userDogsNumberFrom.TextLength > 0)
-            {
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"] = new List<string>();
+                    ownerFilter["Count(Pets.OwnerUser)"].Add(petsNumberFrom.Text);
+                    ownerFilter["Count(Pets.OwnerUser)"].Add(petsNumberTo.Text);
+                }
+                if (dogsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"] = new List<string>();
 
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(userDogsNumberFrom.Text);
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(userDogsNumberTo.Text);
-            }
-            if (userCatsNumberFrom.TextLength > 0)
-            {
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"] = new List<string>();
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(dogsNumberFrom.Text);
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(dogsNumberTo.Text);
+                }
+                if (catsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"] = new List<string>();
 
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(userCatsNumberFrom.Text);
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(userCatsNumberTo.Text);
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(catsNumberFrom.Text);
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(catsNumberTo.Text);
+                }
+            }
+            else
+            {
+                if (ownerCompanyCountryCheckedListBox.CheckedItems.Count != 0)
+                {
+                    ownerFilter["Organizations.Country"] = new List<string>();
+                    foreach (var el in categoryCheckedListBox.CheckedItems)
+                        ownerFilter["Organizations.Country"].Add(el.ToString());
+                }
+                if (petsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["Count(Pets.OwnerUser)"] = new List<string>();
+
+                    ownerFilter["Count(Pets.OwnerUser)"].Add(petsNumberFrom.Text);
+                    ownerFilter["Count(Pets.OwnerUser)"].Add(petsNumberTo.Text);
+                }
+                if (dogsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"] = new List<string>();
+
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(dogsNumberFrom.Text);
+                    ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(dogsNumberTo.Text);
+                }
+                if (catsNumberFrom.TextLength > 0)
+                {
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"] = new List<string>();
+
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(catsNumberFrom.Text);
+                    ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(catsNumberTo.Text);
+                }
             }
 
             DataTable data = controller.OpenOwnersUserRegistry(ownerFilter);
@@ -152,10 +188,29 @@ namespace PetRegistry
             ownerUserFilterGroupBox.Visible = false;
         }
 
+
+        //private void getOwCParams_Click(object sender, EventArgs e) ///////////////
+        //{
+        //    Dictionary<string, List<string>> ownerFilter = new Dictionary<string, List<string>>();
+
+            
+
+        //    DataTable data = controller.OpenOwnersOrgRegistry(ownerFilter);
+        //    dataGridView.Rows.Clear();
+        //    for (int i = 0; i < data.Rows.Count; i++)
+        //    {
+        //        var row = data.Rows[i];
+        //        dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
+        //    }
+
+        //    // ownerCompanyFilterGroupBox.Visible = false;
+        //}
+
         private void юридическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResetSettings();
-            sortOwnerCompanyButton.Visible = true;
+            //sortOwnerCompanyButton.Visible = true;
+            typeOfOwner = "юридическиеЛица";
 
             label.Text = "Реестр владельцев";
             dataGridView.Columns.Add("ID", "ID");
@@ -170,6 +225,8 @@ namespace PetRegistry
             dataGridView.Columns.Add("Количество кошек", "Количество кошек");
             dataGridView.Columns.Add("Количество собак", "Количество собак");
             dataGridView.Columns[0].Visible = false;
+            ownerCompanyCountryCheckedListBox.Visible = true;
+
 
             DataTable data = controller.OpenOwnersOrgRegistry();
             for (int i = 0; i < data.Rows.Count; i++)
@@ -187,53 +244,11 @@ namespace PetRegistry
             }
         }
 
-        private void sortOwnerCompanyButton_Click(object sender, EventArgs e)
-        {
-            ownerCompanyFilterGroupBox.Visible = true;
-        }
+        //private void sortOwnerCompanyButton_Click(object sender, EventArgs e)
+        //{
+        //    ownerCompanyFilterGroupBox.Visible = true;
+        //}
 
-        private void getOwCParams_Click(object sender, EventArgs e)
-        {
-            Dictionary<string, List<string>> ownerFilter = new Dictionary<string, List<string>>();
-
-            if (ownerCompanyCountryCheckedListBox.CheckedItems.Count != 0)
-            {
-                ownerFilter["Organizations.Country"] = new List<string>();
-                foreach (var el in categoryCheckedListBox.CheckedItems)
-                    ownerFilter["Organizations.Country"].Add(el.ToString());
-            }
-            if (owCPetNumberFrom.TextLength > 0)
-            {
-                ownerFilter["Count(Pets.OwnerUser)"] = new List<string>();
-
-                ownerFilter["Count(Pets.OwnerUser)"].Add(userPetsNumberFrom.Text);
-                ownerFilter["Count(Pets.OwnerUser)"].Add(userPetsNumberTo.Text);
-            }
-            if (owCDogNumberFrom.TextLength > 0)
-            {
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"] = new List<string>();
-
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(userDogsNumberFrom.Text);
-                ownerFilter["dbo.GetCatDogCount(1,Users.IDUser,2)"].Add(userDogsNumberTo.Text);
-            }
-            if (owCCatNumberFrom.TextLength > 0)
-            {
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"] = new List<string>();
-
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(userCatsNumberFrom.Text);
-                ownerFilter["dbo.GetCatDogCount(1, Users.IDUser, 1)"].Add(userCatsNumberTo.Text);
-            }
-
-            DataTable data = controller.OpenOwnersOrgRegistry(ownerFilter);
-            dataGridView.Rows.Clear();
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                var row = data.Rows[i];
-                dataGridView.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10]);
-            }
-
-            ownerCompanyFilterGroupBox.Visible = false;
-        }
 
         private void моиДомашниеЖивотныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -289,6 +304,11 @@ namespace PetRegistry
             dataGridView.Columns.Clear();
 
             petFilterGroupBox.Visible = false;
+            ownerUserFilterGroupBox.Visible = false;
+
+            ownerCompanyCountryCheckedListBox.Visible = false;
+            countryUsersCheckListBox.Visible = false;
+            // ownerCompanyFilterGroupBox.Visible = false;
         }
         private void openPetButton_Click(object sender, EventArgs e)
         {
@@ -449,7 +469,5 @@ namespace PetRegistry
             }
             else { ownerCheckedListBox.Items.Clear(); }
         }
-
-        
     }
 }
