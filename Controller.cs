@@ -60,6 +60,11 @@ namespace PetRegistry
             Excel.Workbook workbook = excelApp.Workbooks.Add();
             Excel.Worksheet worksheet = workbook.ActiveSheet;
 
+            for (int i = 1; i < dataGridView.ColumnCount + 1; i++)
+            {
+                worksheet.Rows[1].Columns[i] = dataGridView.Columns[i - 1].Name;
+            }
+
             for (int i = 1; i < dataGridView.RowCount+1; i++)
             {
                 for (int j = 1; j < dataGridView.ColumnCount+1; j++)

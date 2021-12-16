@@ -39,3 +39,4 @@ C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.PetCardForm.resources
 C:\Users\м видео\Desktop\прежде чем ты начнешь\5 сем\пис\PetRegistry\obj\Debug\PetRegistry.csproj.ResolveComReference.cache
 C:\Users\Sergey\Documents\GitHub\PetRegistry\obj\Debug\PetRegistry.csproj.ResolveComReference.cache
+C:\ПИС\PetRegistry\obj\Debug\PetRegistry.csproj.ResolveComReference.cache

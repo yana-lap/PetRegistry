@@ -11,8 +11,8 @@ namespace PetRegistry
 {
     static class Database
     {
-        static string connectionString = "Data Source=DESKTOP-B6GV2B9\\SQLEXPRESS;Initial Catalog=VetDB;Integrated Security=True"; //Серёжа
-        //static string connectionString = "Data Source=LAPTOP-57SUD57M;Initial Catalog=VetDB;Integrated Security=True"; //Яна
+        //static string connectionString = "Data Source=DESKTOP-B6GV2B9\\SQLEXPRESS;Initial Catalog=VetDB;Integrated Security=True"; //Серёжа
+        static string connectionString = "Data Source=LAPTOP-57SUD57M;Initial Catalog=VetDB;Integrated Security=True"; //Яна
         //static string connectionString = "Data Source=LAPTOP-AA2OJELS\\SQLEXPRESS;Initial Catalog=VetDB;Integrated Security=True"; //Настя
 
         static SqlConnection connect = new SqlConnection(connectionString);
