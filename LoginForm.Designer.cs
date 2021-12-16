@@ -90,9 +90,9 @@ namespace PetRegistry
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(170, 261);
+            this.button1.Location = new System.Drawing.Point(12, 261);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 41);
+            this.button1.Size = new System.Drawing.Size(60, 25);
             this.button1.TabIndex = 5;
             this.button1.Text = "vet";
             this.button1.UseVisualStyleBackColor = false;
@@ -101,9 +101,9 @@ namespace PetRegistry
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(170, 303);
+            this.button2.Location = new System.Drawing.Point(12, 292);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 41);
+            this.button2.Size = new System.Drawing.Size(60, 25);
             this.button2.TabIndex = 6;
             this.button2.Text = "sapov";
             this.button2.UseVisualStyleBackColor = false;
@@ -112,23 +112,25 @@ namespace PetRegistry
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(397, 261);
+            this.button3.Location = new System.Drawing.Point(562, 261);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 41);
+            this.button3.Size = new System.Drawing.Size(60, 25);
             this.button3.TabIndex = 7;
             this.button3.Text = "yana";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(397, 308);
+            this.button4.Location = new System.Drawing.Point(562, 292);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 41);
+            this.button4.Size = new System.Drawing.Size(60, 25);
             this.button4.TabIndex = 8;
             this.button4.Text = "sapov";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // LoginForm

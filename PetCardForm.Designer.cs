@@ -89,7 +89,7 @@ namespace PetRegistry
             this.petCardTabControl.Controls.Add(this.vetAppointmentsTab);
             this.petCardTabControl.Controls.Add(this.documentsTab);
             this.petCardTabControl.Location = new System.Drawing.Point(0, 98);
-            this.petCardTabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.petCardTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.petCardTabControl.Name = "petCardTabControl";
             this.petCardTabControl.SelectedIndex = 0;
             this.petCardTabControl.Size = new System.Drawing.Size(1067, 454);
@@ -120,9 +120,9 @@ namespace PetRegistry
             this.petCharacteristicsTab.Controls.Add(this.label2);
             this.petCharacteristicsTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.petCharacteristicsTab.Location = new System.Drawing.Point(4, 25);
-            this.petCharacteristicsTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.petCharacteristicsTab.Margin = new System.Windows.Forms.Padding(4);
             this.petCharacteristicsTab.Name = "petCharacteristicsTab";
-            this.petCharacteristicsTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.petCharacteristicsTab.Padding = new System.Windows.Forms.Padding(4);
             this.petCharacteristicsTab.Size = new System.Drawing.Size(1059, 425);
             this.petCharacteristicsTab.TabIndex = 0;
             this.petCharacteristicsTab.Text = "Основные характеристики животного";
@@ -132,7 +132,7 @@ namespace PetRegistry
             this.owner.BackColor = System.Drawing.SystemColors.Control;
             this.owner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.owner.Location = new System.Drawing.Point(749, 74);
-            this.owner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.owner.Margin = new System.Windows.Forms.Padding(4);
             this.owner.Name = "owner";
             this.owner.ReadOnly = true;
             this.owner.Size = new System.Drawing.Size(265, 23);
@@ -143,7 +143,7 @@ namespace PetRegistry
             this.ownerType.BackColor = System.Drawing.SystemColors.Control;
             this.ownerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ownerType.Location = new System.Drawing.Point(749, 37);
-            this.ownerType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ownerType.Margin = new System.Windows.Forms.Padding(4);
             this.ownerType.Name = "ownerType";
             this.ownerType.ReadOnly = true;
             this.ownerType.Size = new System.Drawing.Size(265, 23);
@@ -154,7 +154,7 @@ namespace PetRegistry
             this.category.BackColor = System.Drawing.SystemColors.Control;
             this.category.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.category.Location = new System.Drawing.Point(219, 155);
-            this.category.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.category.Margin = new System.Windows.Forms.Padding(4);
             this.category.Name = "category";
             this.category.ReadOnly = true;
             this.category.Size = new System.Drawing.Size(265, 23);
@@ -165,7 +165,7 @@ namespace PetRegistry
             this.gender.BackColor = System.Drawing.SystemColors.Control;
             this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gender.Location = new System.Drawing.Point(219, 73);
-            this.gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gender.Margin = new System.Windows.Forms.Padding(4);
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             this.gender.Size = new System.Drawing.Size(265, 23);
@@ -180,7 +180,7 @@ namespace PetRegistry
             "Физическое лицо",
             "Юридическое лицо"});
             this.ownerTypeComboBox.Location = new System.Drawing.Point(749, 36);
-            this.ownerTypeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ownerTypeComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ownerTypeComboBox.Name = "ownerTypeComboBox";
             this.ownerTypeComboBox.Size = new System.Drawing.Size(265, 25);
             this.ownerTypeComboBox.TabIndex = 15;
@@ -205,7 +205,7 @@ namespace PetRegistry
             this.ownerComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ownerComboBox.FormattingEnabled = true;
             this.ownerComboBox.Location = new System.Drawing.Point(749, 73);
-            this.ownerComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ownerComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ownerComboBox.Name = "ownerComboBox";
             this.ownerComboBox.Size = new System.Drawing.Size(265, 25);
             this.ownerComboBox.TabIndex = 13;
@@ -228,7 +228,7 @@ namespace PetRegistry
             this.petName.BackColor = System.Drawing.SystemColors.Control;
             this.petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.petName.Location = new System.Drawing.Point(219, 27);
-            this.petName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.petName.Margin = new System.Windows.Forms.Padding(4);
             this.petName.Name = "petName";
             this.petName.ReadOnly = true;
             this.petName.Size = new System.Drawing.Size(265, 23);
@@ -238,7 +238,7 @@ namespace PetRegistry
             // 
             this.breed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.breed.Location = new System.Drawing.Point(219, 190);
-            this.breed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.breed.Margin = new System.Windows.Forms.Padding(4);
             this.breed.Name = "breed";
             this.breed.ReadOnly = true;
             this.breed.Size = new System.Drawing.Size(265, 23);
@@ -253,7 +253,7 @@ namespace PetRegistry
             "Кошка",
             "Собака"});
             this.categoryComboBox.Location = new System.Drawing.Point(219, 155);
-            this.categoryComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoryComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(265, 25);
             this.categoryComboBox.TabIndex = 9;
@@ -268,7 +268,7 @@ namespace PetRegistry
             "Мужской",
             "Женский"});
             this.genderComboBox.Location = new System.Drawing.Point(219, 73);
-            this.genderComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genderComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(265, 25);
             this.genderComboBox.TabIndex = 8;
@@ -279,7 +279,7 @@ namespace PetRegistry
             this.birthDate.Enabled = false;
             this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.birthDate.Location = new System.Drawing.Point(219, 111);
-            this.birthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.birthDate.Margin = new System.Windows.Forms.Padding(4);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(265, 23);
             this.birthDate.TabIndex = 7;
@@ -289,7 +289,7 @@ namespace PetRegistry
             this.registrationDate.Enabled = false;
             this.registrationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrationDate.Location = new System.Drawing.Point(219, 384);
-            this.registrationDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registrationDate.Margin = new System.Windows.Forms.Padding(4);
             this.registrationDate.Name = "registrationDate";
             this.registrationDate.Size = new System.Drawing.Size(265, 23);
             this.registrationDate.TabIndex = 6;
@@ -373,9 +373,9 @@ namespace PetRegistry
             this.vacinationTab.Controls.Add(this.vacinationDate);
             this.vacinationTab.Controls.Add(this.label8);
             this.vacinationTab.Location = new System.Drawing.Point(4, 25);
-            this.vacinationTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vacinationTab.Margin = new System.Windows.Forms.Padding(4);
             this.vacinationTab.Name = "vacinationTab";
-            this.vacinationTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vacinationTab.Padding = new System.Windows.Forms.Padding(4);
             this.vacinationTab.Size = new System.Drawing.Size(1059, 425);
             this.vacinationTab.TabIndex = 1;
             this.vacinationTab.Text = "Вакцинация";
@@ -386,7 +386,7 @@ namespace PetRegistry
             this.vacinationDateEnd.Enabled = false;
             this.vacinationDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.vacinationDateEnd.Location = new System.Drawing.Point(205, 64);
-            this.vacinationDateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vacinationDateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.vacinationDateEnd.Name = "vacinationDateEnd";
             this.vacinationDateEnd.Size = new System.Drawing.Size(265, 23);
             this.vacinationDateEnd.TabIndex = 10;
@@ -408,7 +408,7 @@ namespace PetRegistry
             this.vacinationDate.Enabled = false;
             this.vacinationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.vacinationDate.Location = new System.Drawing.Point(205, 23);
-            this.vacinationDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vacinationDate.Margin = new System.Windows.Forms.Padding(4);
             this.vacinationDate.Name = "vacinationDate";
             this.vacinationDate.Size = new System.Drawing.Size(265, 23);
             this.vacinationDate.TabIndex = 8;
@@ -432,9 +432,9 @@ namespace PetRegistry
             this.dewormingTab.Controls.Add(this.dewormingDate);
             this.dewormingTab.Controls.Add(this.label11);
             this.dewormingTab.Location = new System.Drawing.Point(4, 25);
-            this.dewormingTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dewormingTab.Margin = new System.Windows.Forms.Padding(4);
             this.dewormingTab.Name = "dewormingTab";
-            this.dewormingTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dewormingTab.Padding = new System.Windows.Forms.Padding(4);
             this.dewormingTab.Size = new System.Drawing.Size(1059, 425);
             this.dewormingTab.TabIndex = 2;
             this.dewormingTab.Text = "Дегельминтизация";
@@ -445,7 +445,7 @@ namespace PetRegistry
             this.dewormingDateEnd.Enabled = false;
             this.dewormingDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dewormingDateEnd.Location = new System.Drawing.Point(279, 64);
-            this.dewormingDateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dewormingDateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dewormingDateEnd.Name = "dewormingDateEnd";
             this.dewormingDateEnd.Size = new System.Drawing.Size(265, 23);
             this.dewormingDateEnd.TabIndex = 14;
@@ -467,7 +467,7 @@ namespace PetRegistry
             this.dewormingDate.Enabled = false;
             this.dewormingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dewormingDate.Location = new System.Drawing.Point(279, 23);
-            this.dewormingDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dewormingDate.Margin = new System.Windows.Forms.Padding(4);
             this.dewormingDate.Name = "dewormingDate";
             this.dewormingDate.Size = new System.Drawing.Size(265, 23);
             this.dewormingDate.TabIndex = 12;
@@ -488,9 +488,9 @@ namespace PetRegistry
             // 
             this.vetAppointmentsTab.Controls.Add(this.vetAppointments);
             this.vetAppointmentsTab.Location = new System.Drawing.Point(4, 25);
-            this.vetAppointmentsTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vetAppointmentsTab.Margin = new System.Windows.Forms.Padding(4);
             this.vetAppointmentsTab.Name = "vetAppointmentsTab";
-            this.vetAppointmentsTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vetAppointmentsTab.Padding = new System.Windows.Forms.Padding(4);
             this.vetAppointmentsTab.Size = new System.Drawing.Size(1059, 425);
             this.vetAppointmentsTab.TabIndex = 3;
             this.vetAppointmentsTab.Text = "Ветеринарные назначения";
@@ -500,7 +500,7 @@ namespace PetRegistry
             // 
             this.vetAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.vetAppointments.Location = new System.Drawing.Point(17, 7);
-            this.vetAppointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vetAppointments.Margin = new System.Windows.Forms.Padding(4);
             this.vetAppointments.Multiline = true;
             this.vetAppointments.Name = "vetAppointments";
             this.vetAppointments.ReadOnly = true;
@@ -516,9 +516,9 @@ namespace PetRegistry
             this.documentsTab.Controls.Add(this.passportNum);
             this.documentsTab.Controls.Add(this.label41);
             this.documentsTab.Location = new System.Drawing.Point(4, 25);
-            this.documentsTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.documentsTab.Margin = new System.Windows.Forms.Padding(4);
             this.documentsTab.Name = "documentsTab";
-            this.documentsTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.documentsTab.Padding = new System.Windows.Forms.Padding(4);
             this.documentsTab.Size = new System.Drawing.Size(1059, 425);
             this.documentsTab.TabIndex = 4;
             this.documentsTab.Text = "Фото/Документы";
@@ -528,7 +528,7 @@ namespace PetRegistry
             // 
             this.chipNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chipNum.Location = new System.Drawing.Point(313, 87);
-            this.chipNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chipNum.Margin = new System.Windows.Forms.Padding(4);
             this.chipNum.Name = "chipNum";
             this.chipNum.ReadOnly = true;
             this.chipNum.Size = new System.Drawing.Size(265, 23);
@@ -550,7 +550,7 @@ namespace PetRegistry
             // 
             this.identificationNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.identificationNum.Location = new System.Drawing.Point(313, 55);
-            this.identificationNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.identificationNum.Margin = new System.Windows.Forms.Padding(4);
             this.identificationNum.Name = "identificationNum";
             this.identificationNum.ReadOnly = true;
             this.identificationNum.Size = new System.Drawing.Size(265, 23);
@@ -572,7 +572,7 @@ namespace PetRegistry
             // 
             this.passportNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passportNum.Location = new System.Drawing.Point(313, 23);
-            this.passportNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passportNum.Margin = new System.Windows.Forms.Padding(4);
             this.passportNum.Name = "passportNum";
             this.passportNum.ReadOnly = true;
             this.passportNum.Size = new System.Drawing.Size(265, 23);
@@ -609,7 +609,7 @@ namespace PetRegistry
             this.changeCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeCardButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.changeCardButton.Location = new System.Drawing.Point(951, 63);
-            this.changeCardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.changeCardButton.Margin = new System.Windows.Forms.Padding(4);
             this.changeCardButton.Name = "changeCardButton";
             this.changeCardButton.Size = new System.Drawing.Size(100, 28);
             this.changeCardButton.TabIndex = 8;
@@ -624,7 +624,7 @@ namespace PetRegistry
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.okButton.Location = new System.Drawing.Point(951, 63);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(100, 28);
             this.okButton.TabIndex = 9;
@@ -643,7 +643,7 @@ namespace PetRegistry
             this.Controls.Add(this.changeCardButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.petCardTabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PetCardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Карточка питомца";

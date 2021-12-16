@@ -4,15 +4,13 @@ using System.Text;
 
 namespace PetRegistry
 {
-    class Journal
+    static class Journal
     {
-        public string OperationType;
-        public User User;
-        public string Description;
-        public DateTime Date;
-        public void CommitSystemChangeInfo(DateTime date, string typeOfChange, User user)
+        public static void CommitSystemChangeInfo(DateTime date, string typeOfChange, string userID)
         {
-
+            string query = @"insert into Journal (OperationType, UserId, LogDate) 
+values ('" + typeOfChange + "', " + userID  + ", '" + date.ToString("yyyy-MM-dd") + "')";
+            Database.ExecuteNonQuery(query);
         }
     }
 }

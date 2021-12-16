@@ -15,6 +15,7 @@ namespace PetRegistry
         public LoginForm()
         {
             InitializeComponent();
+            passwordTextBox.PasswordChar = '*';
         }
 
         private void logInButton_Click(object sender, EventArgs e)

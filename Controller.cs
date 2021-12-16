@@ -21,24 +21,24 @@ namespace PetRegistry
 
             return (login != "" && password != "" && authorization.Login(login, password));
         }  
-        public DataTable OpenPetsRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
+        public DataTable OpenPetsRegistry(Dictionary<string, List<string>> filtersNames)
         {
-            DataTable data = petRegistry.OpenPetsRegistry(filtersNames, sortNames);
+            DataTable data = petRegistry.OpenPetsRegistry(filtersNames);
             return data;
         }
-        public DataTable OpenMyPetsRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
+        public DataTable OpenMyPetsRegistry(Dictionary<string, List<string>> filtersNames)
         {
-            DataTable data = petRegistry.OpenMyPetsRegistry(filtersNames, sortNames);
+            DataTable data = petRegistry.OpenMyPetsRegistry(filtersNames);
             return data; //после создания фильтров снести метод, объединив с OpenPetsRegistry
         }
-        public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
+        public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames)
         {
-            DataTable data = ownerRegistry.OpenOwnersUserRegistry(filtersNames, sortNames);
+            DataTable data = ownerRegistry.OpenOwnersUserRegistry(filtersNames);
             return data;
         }
-        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
+        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames)
         {
-            DataTable data = ownerRegistry.OpenOwnersOrgRegistry(filtersNames, sortNames);
+            DataTable data = ownerRegistry.OpenOwnersOrgRegistry(filtersNames);
             return data;
         }
 
@@ -54,8 +54,7 @@ namespace PetRegistry
             
             return currentPet;
         } 
-        public void ExportPetRegistryToExcel(DataGridView dataGridView, string pathToFile, Dictionary<string, string[]> filtersNames = null,
-            Dictionary<string, string[]> sortNames = null)
+        public void ExportPetRegistryToExcel(DataGridView dataGridView, string pathToFile)
         {
             Excel.Application excelApp = new Excel.Application();
             Excel.Workbook workbook = excelApp.Workbooks.Add();

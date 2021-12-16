@@ -7,14 +7,14 @@ namespace PetRegistry
 {
     class OwnerRegistry
     {
-       public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
+       public DataTable OpenOwnersUserRegistry(Dictionary<string, List<string>> filtersNames)
        {
-            return OwnerService.GetOwnersUserRegistry(filtersNames, sortNames);
+            return OwnerService.GetOwnersUserRegistry(filtersNames);
         }
 
-        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
+        public DataTable OpenOwnersOrgRegistry(Dictionary<string, List<string>> filtersNames)
         {
-            return OwnerService.GetOwnersOrgRegistry(filtersNames, sortNames);
+            return OwnerService.GetOwnersOrgRegistry(filtersNames);
         }
     }
 }

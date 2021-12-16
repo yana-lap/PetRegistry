@@ -10,64 +10,56 @@ namespace PetRegistry
     {
 
        
-        public static DataTable GetPets(Dictionary<string, List<string>> filtersNames, Dictionary<string, List<string>> sortNames)
+        public static DataTable GetPets(Dictionary<string, List<string>> filtersNames)
         {
-            string query = "select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, Pets.IdentificationNum, Pets.ChipNum," +
-                " Pets.PetName, Pets.Photo, dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany) as OwnerPet from Pets" +
-                " inner join Categories on Pets.Category = Categories.IDCategory";
+            string query = @"select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, 
+Pets.IdentificationNum, Pets.ChipNum, Pets.PetName, Pets.Photo, 
+dbo.GetPetOwner(OwnerType, OwnerUser, OwnerCompany) as OwnerPet, OwnerTypes.TypeName from Pets
+inner join Categories on Pets.Category = Categories.IDCategory
+inner join OwnerTypes on Pets.OwnerType = OwnerTypes.IDType";
 
-            if (filtersNames != null)
+            if (filtersNames != null && filtersNames.Keys.Count != 0)
             {
-                List<string> filterQueries = new List<string>();
+                query += " where ";
 
+                List<string> filterQuery = new List<string>();
+                
                 foreach (var key in filtersNames.Keys)
                 {
-                    string filter = "(";
-                    
-                    for (int i = 0; i < filtersNames[key].Count; i++)
+                    string filterKey = "(";
+
+                    if (key == "Pets.BirthDateS")
                     {
-                        filter += key + " = '" + filtersNames[key][i] + "'";
-
-                        if (i == filtersNames[key].Count - 1) filter += ")";
-                        else filter += " or ";
+                        filterKey += "Pets.BirthDate > '" + filtersNames["Pets.BirthDateS"][0] + "'";
+                    } else
+                    if (key == "Pets.BirthDateE")
+                    {
+                        filterKey += "Pets.BirthDate < '" + filtersNames["Pets.BirthDateE"][0] + "'";
                     }
+                    else
+                    for (int i = 0; i < filtersNames[key].Count; i++) //filtersNames[key] это лист
+                    {
+                        filterKey += key + " = '" + filtersNames[key][i] + "'";
 
-                    filterQueries.Add(filter);
+                        if (i != filtersNames[key].Count - 1) filterKey += " or ";
+                    }
+                    filterKey += ")";
+                    filterQuery.Add(filterKey);
                 }
 
-                query += " where ";
-                for (int i = 0; i < filterQueries.Count; i++)
+                for (int i = 0; i < filterQuery.Count; i++)
                 {
-                    query += filterQueries[i];
+                    query += filterQuery[i];
 
-                    if (i == filterQueries.Count - 1) query += ";";
+                    if (i == filterQuery.Count - 1) query += ";";
                     else query += " and ";
                 }
             }
 
             return Database.ExecuteQuery(query);
-
-            /*string query1 = @"select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, Pets.IdentificationNum, Pets.ChipNum, 
- Pets.PetName, Pets.Photo, Users.UserName as OwnerPet from Pets
- inner join Categories on Pets.Category = Categories.IDCategory
- inner join Users on Pets.OwnerUser = Users.IDUser
- Where OwnerType = '1'";
-             string query2 = @"select Pets.IDPet, Categories.CategoryName, Pets.Gender, Pets.BirthDate, Pets.IdentificationNum, Pets.ChipNum, 
- Pets.PetName, Pets.Photo, Organizations.OrgName as OwnerPet from Pets
- inner join Categories on Pets.Category = Categories.IDCategory
- inner join Organizations on Pets.OwnerCompany = Organizations.IDOrganization
- Where OwnerType = '2'";
-
-             DataTable dataTable = Database.ExecuteQuery(query1);
-             DataTable dataTableOrg = Database.ExecuteQuery(query2);
-
-             dataTable.Merge(dataTableOrg);
-
-             return dataTable;*/
-
         }
 
-        public static DataTable GetMyPets(Dictionary<string, List<string>> filtersNames = null, Dictionary<string, List<string>> sortNames = null)
+        public static DataTable GetMyPets(Dictionary<string, List<string>> filtersNames = null)
         {
             string query = @"select Pets.IDPet, Categories.CategoryName, Pets.PetName, Pets.BirthDate, Pets.Breed, Pets.RegistrationDate, Pets.PassportNum, Users.UserName
 from Pets

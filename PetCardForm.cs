@@ -12,10 +12,11 @@ namespace PetRegistry
 {
     public partial class PetCardForm : Form
     {
-        Controller Controller = new Controller();
+        Controller controller = new Controller();
         string CurrentPetID;
         Pet CurrentPet;
-        
+        Dictionary<string, List<string>> filterParams = new Dictionary<string, List<string>>();
+
         public PetCardForm()
         {
             InitializeComponent();
@@ -32,31 +33,32 @@ namespace PetRegistry
 
         private void changeCardButton_Click(object sender, EventArgs e)
         {
-            ResetVisibility();
+            if (controller.roleIsMaching("изменение"))
+            {
+                ResetVisibility();
+                okButton.Visible = true;
 
-            okButton.Visible = true;
+                genderComboBox.Visible = true;
+                genderComboBox.Text = gender.Text;
 
-            genderComboBox.Visible = true;
-            //genderComboBox.SelectedIndex = genderComboBox.Items.IndexOf(gender.Text);
-            genderComboBox.Text = gender.Text;
+                categoryComboBox.Visible = true;
+                categoryComboBox.Text = category.Text;
 
-            categoryComboBox.Visible = true;
-            //categoryComboBox.SelectedIndex = categoryComboBox.Items.IndexOf(category.Text);
-            categoryComboBox.Text = category.Text;
+                ownerTypeComboBox.Visible = true;
+                ownerTypeComboBox.Text = ownerType.Text;
 
-            ownerTypeComboBox.Visible = true;
-            //ownerTypeComboBox.SelectedIndex = ownerTypeComboBox.Items.IndexOf(ownerType.Text);
-            ownerTypeComboBox.Text = ownerType.Text;
+                ownerComboBox.Visible = true;
+                ownerComboBox.Text = owner.Text;
 
-            ownerComboBox.Visible = true;
-            ownerComboBox.Text = owner.Text;
-
-            birthDate.Enabled = true;
-            registrationDate.Enabled = true;
-            vacinationDate.Enabled = true;
-            vacinationDateEnd.Enabled = true;
-            dewormingDate.Enabled = true;
-            dewormingDateEnd.Enabled = true;
+                birthDate.Enabled = true;
+                registrationDate.Enabled = true;
+                vacinationDate.Enabled = true;
+                vacinationDateEnd.Enabled = true;
+                dewormingDate.Enabled = true;
+                dewormingDateEnd.Enabled = true;
+            }
+            else MessageBox.Show("Недостаточно прав.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -82,12 +84,13 @@ namespace PetRegistry
                 ownerComboBox.SelectedValue.ToString() //16
             };
 
-            string answer = Controller.UpdatePetData(CurrentPetID, petData);
+            string answer = controller.UpdatePetData(CurrentPetID, petData);
 
             switch (answer)
             {
                 case "Карточка успешно изменена.":
                     MessageBox.Show(answer, "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Journal.CommitSystemChangeInfo(DateTime.Now, "изменение", Variables.CurrentUser.ID);
                     break;
                 case "Неверные данные.":
                     MessageBox.Show(answer, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -168,14 +171,14 @@ namespace PetRegistry
         {
             if (ownerTypeComboBox.SelectedIndex == 0)
             {
-                DataTable data = Controller.OpenOwnersUserRegistry();
+                DataTable data = controller.OpenOwnersUserRegistry(filterParams);
                 ownerComboBox.DataSource = data;
                 ownerComboBox.ValueMember = data.Columns[0].ToString();
                 ownerComboBox.DisplayMember = data.Columns[1].ToString();
             }
             else if (ownerTypeComboBox.SelectedIndex == 1)
             {
-                DataTable data = Controller.OpenOwnersOrgRegistry();
+                DataTable data = controller.OpenOwnersOrgRegistry(filterParams);
                 ownerComboBox.DataSource = data;
                 ownerComboBox.ValueMember = data.Columns[0].ToString();
                 ownerComboBox.DisplayMember = data.Columns[1].ToString();

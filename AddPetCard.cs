@@ -13,6 +13,7 @@ namespace PetRegistry
     public partial class AddPetCard : Form
     {
         Controller controller = new Controller();
+        Dictionary<string, List<string>> filterParams = new Dictionary<string, List<string>>();
         public AddPetCard()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace PetRegistry
             {
                 case "Животное успешно добавлено.":
                     MessageBox.Show(answer, "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Journal.CommitSystemChangeInfo(DateTime.Now, "добавление", Variables.CurrentUser.ID);
                     this.Close();
                     break;
                 case "Неверные данные.":
@@ -64,7 +66,7 @@ namespace PetRegistry
         {
             if (ownerTypeComboBox.SelectedIndex == 0)
             {
-                DataTable data = controller.OpenOwnersUserRegistry();
+                DataTable data = controller.OpenOwnersUserRegistry(filterParams);
                 ownerComboBox.DataSource = data;
                 ownerComboBox.ValueMember = data.Columns[0].ToString(); 
                 ownerComboBox.DisplayMember = data.Columns[1].ToString();
@@ -72,7 +74,7 @@ namespace PetRegistry
             else
             if (ownerTypeComboBox.SelectedIndex == 1)
             {
-                DataTable data = controller.OpenOwnersOrgRegistry();
+                DataTable data = controller.OpenOwnersOrgRegistry(filterParams);
                 ownerComboBox.DataSource = data;
                 ownerComboBox.ValueMember = data.Columns[0].ToString();
                 ownerComboBox.DisplayMember = data.Columns[1].ToString();
